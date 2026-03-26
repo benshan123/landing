@@ -350,7 +350,7 @@ function DownloadSection() {
             <div className="text-4xl mb-3">💻</div>
             <h3 className="font-bold text-lg text-gray-900 mb-1">Windows</h3>
             <p className="text-sm text-gray-400 mb-4">Windows 10 2004+ · v1.0.0 · 236 MB</p>
-            <a href="https://github.com/benshan123/wdz/releases/download/v1.0/StealthMate-Setup-1.0.0.exe" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/benshan123/woyaoyanpai/releases/download/v1.0.0/StealthMate-Setup-1.0.0.exe" target="_blank" rel="noopener noreferrer"
               className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center mb-3">
               下载 Windows 版
             </a>
@@ -361,7 +361,7 @@ function DownloadSection() {
             <div className="text-4xl mb-3">🍎</div>
             <h3 className="font-bold text-lg text-gray-900 mb-1">macOS</h3>
             <p className="text-sm text-gray-400 mb-4">macOS 12+ · Apple Silicon & Intel</p>
-            <a href="https://github.com/benshan123/wdz/releases/tag/v1.0" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/benshan123/woyaoyanpai/releases/download/1.0.2/StealthMate-1.0.0-arm64.dmg" target="_blank" rel="noopener noreferrer"
               className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center mb-3">
               下载 Mac 版
             </a>
