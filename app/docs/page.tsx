@@ -125,6 +125,7 @@ export default function DocsPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm">
               {[
                 ['#install', '安装与激活'],
+                ['#api', 'API 配置（可选）'],
                 ['#usage', '基本操作（笔试 / 面试）'],
                 ['#shortcuts', '快捷键表格'],
                 ['#settings', '设置说明'],
@@ -185,8 +186,83 @@ export default function DocsPage() {
             </SectionCard>
 
             <SectionCard
+              id="api"
+              eyebrow="02 · API 配置（可选）"
+              title="内置免费模型，开箱即用"
+              description="软件已内置免费 AI 模型，安装激活后即可直接使用，无需任何额外配置。如果你希望获得更快的响应速度或使用更强的模型，可以自行申请 API Key。"
+            >
+              <div className="rounded-2xl border border-green-200 bg-green-50 p-5 mb-6">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">🎉</span>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">无需配置，直接使用</h3>
+                    <p className="text-gray-700 leading-7">软件已内置免费模型，激活后即可截图生成答案、面试语音监听等全部功能。以下 API 配置仅为<strong>可选的进阶设置</strong>。</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid lg:grid-cols-2 gap-6 mb-6">
+                <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-xl">🟢</span>
+                    <h3 className="text-lg font-semibold text-gray-900">通义千问（QWEN）</h3>
+                  </div>
+                  <p className="text-gray-700 leading-7 mb-3">阿里云大模型，<strong>新用户有免费额度</strong>，国内直连无需科学上网。</p>
+                  <a href="https://bailian.console.aliyun.com/?tab=model#/api-key" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary hover:underline text-sm font-medium">
+                    前往申请 API Key →
+                  </a>
+                </div>
+
+                <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-xl">🟡</span>
+                    <h3 className="text-lg font-semibold text-gray-900">Kimi（月之暗面）</h3>
+                  </div>
+                  <p className="text-gray-700 leading-7 mb-3">国产大模型，需充值后使用，国内直连。</p>
+                  <a href="https://platform.moonshot.cn/console/api-keys" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary hover:underline text-sm font-medium">
+                    前往申请 API Key →
+                  </a>
+                </div>
+
+                <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-xl">🔵</span>
+                    <h3 className="text-lg font-semibold text-gray-900">OpenRouter</h3>
+                  </div>
+                  <p className="text-gray-700 leading-7">聚合多种模型（GPT、Claude 等），需科学上网。</p>
+                </div>
+
+                <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-xl">🔵</span>
+                    <h3 className="text-lg font-semibold text-gray-900">Gemini</h3>
+                  </div>
+                  <p className="text-gray-700 leading-7">Google 大模型，需科学上网。</p>
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-purple-100 bg-purple-50 p-5">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">如何写入 API Key</h3>
+                <div className="space-y-3 text-gray-700 leading-7">
+                  <div className="flex items-start gap-3">
+                    <div className="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-white text-primary text-sm font-bold border border-purple-100">1</div>
+                    <span>点击软件右上角的<strong>齿轮图标</strong>进入设置页面。</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-white text-primary text-sm font-bold border border-purple-100">2</div>
+                    <span>点击<strong>「高级设置」</strong>，选择想使用的 AI 平台和模型。</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-white text-primary text-sm font-bold border border-purple-100">3</div>
+                    <span>粘贴 API Key → 点击<strong>「测试连接」</strong>确认可用 → 点击<strong>「保存设置」</strong>。</span>
+                  </div>
+                </div>
+              </div>
+            </SectionCard>
+
+            <SectionCard
               id="usage"
-              eyebrow="02 · 基本操作"
+              eyebrow="03 · 基本操作"
               title="默认先用笔试模式，需要时切到面试模式"
               description="启动后，屏幕上方会出现一个可拖动的悬浮横条。大多数情况下，你只需要记住截图、生成答案、切换模式这几个动作。"
             >
@@ -243,7 +319,7 @@ export default function DocsPage() {
 
             <SectionCard
               id="shortcuts"
-              eyebrow="03 · 快捷键表格"
+              eyebrow="04 · 快捷键表格"
               title="常用快捷键一览"
               description="快捷键都支持在高级设置中自定义。如果你是 Mac 用户，建议优先修改和系统快捷键冲突的那两个组合键。"
             >
@@ -280,7 +356,7 @@ export default function DocsPage() {
 
             <SectionCard
               id="settings"
-              eyebrow="04 · 设置说明"
+              eyebrow="05 · 设置说明"
               title="齿轮按钮里可以完成大部分配置"
               description="点击工具条上的齿轮图标，会打开快捷设置。这里能快速调整语言、主题、透明度、模型等常用项；继续进入高级设置，则可以配置 API Key 和自定义快捷键。"
             >
@@ -296,7 +372,7 @@ export default function DocsPage() {
 
             <SectionCard
               id="mac"
-              eyebrow="05 · Mac 用户须知"
+              eyebrow="06 · Mac 用户须知"
               title="Mac 上主要注意快捷键冲突和音频驱动"
             >
               <div className="grid md:grid-cols-2 gap-6">
@@ -329,7 +405,7 @@ export default function DocsPage() {
 
             <SectionCard
               id="faq"
-              eyebrow="06 · 常见问题"
+              eyebrow="07 · 常见问题"
               title="先看这里，很多问题都能快速解决"
             >
               <div className="space-y-4">
