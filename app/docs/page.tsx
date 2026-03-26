@@ -17,10 +17,9 @@ const shortcutRows = [
 ];
 
 const installSteps = [
-  '启动 Cheapest Interview 后，会先看到激活界面。',
-  '复制界面上的机器码，发送给卖家或客服。',
-  '拿到激活码后输入并点击“激活”。',
-  '如果网络波动，稍等几秒即可，应用会自动重试。',
+  '启动软件，看到激活界面。',
+  '输入激活码，点击"激活"。',
+  '网络波动稍等即可，应用会自动重试。',
 ];
 
 const settingsItems = [
@@ -43,11 +42,11 @@ const faqItems = [
   },
   {
     q: '截图后没有生成答案？',
-    a: '请先检查是否已经在“高级设置”里配置好可用的 API Key。',
+    a: '请先检查是否已经在"高级设置"里配置好可用的 API Key。',
   },
   {
     q: '面试模式没有转录内容？',
-    a: '请确认已经点击“开始监听”或按下对应快捷键。Mac 用户还需要提前安装虚拟音频驱动。',
+    a: '请确认已经点击"开始监听"或按下对应快捷键。Mac 用户还需要提前安装虚拟音频驱动。',
   },
   {
     q: '如何完全卸载？',
@@ -188,15 +187,15 @@ export default function DocsPage() {
             <SectionCard
               id="api"
               eyebrow="02 · API 配置（可选）"
-              title="内置免费模型，开箱即用"
-              description="软件已内置免费 AI 模型，安装激活后即可直接使用，无需任何额外配置。如果你希望获得更快的响应速度或使用更强的模型，可以自行申请 API Key。"
+              title="内置免费模型 + 自配 API 教程"
+              description="软件内置 Gemini 2.5 Flash Lite 免费模型，激活后即可直接使用，无需任何配置。免费额度每日 1000 次（全体用户共享，先到先得），超出后需自行配置 API Key。"
             >
               <div className="rounded-2xl border border-green-200 bg-green-50 p-5 mb-6">
                 <div className="flex items-start gap-3">
                   <span className="text-2xl">🎉</span>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">无需配置，直接使用</h3>
-                    <p className="text-gray-700 leading-7">软件已内置免费模型，激活后即可截图生成答案、面试语音监听等全部功能。以下 API 配置仅为<strong>可选的进阶设置</strong>。</p>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">内置免费模型：Gemini 2.5 Flash Lite</h3>
+                    <p className="text-gray-700 leading-7">激活后即可使用全部功能（截图解题、面试语音监听等）。免费额度为<strong>每日 1000 次</strong>，全体用户共享，先到先得。额度用完后需自行配置以下任一平台的 API Key。</p>
                   </div>
                 </div>
               </div>

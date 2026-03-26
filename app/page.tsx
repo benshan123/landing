@@ -306,7 +306,7 @@ function PricingSection() {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">选择适合你的方案</h2>
           <p className="text-gray-500 text-center mb-4">购买激活码后即可使用，比同类产品便宜 60%+</p>
-          <p className="text-center text-sm text-gray-400 mb-12">💡 需自行准备 AI API Key（如 OpenRouter / Gemini），配置教程购买后提供</p>
+          <p className="text-center text-sm text-gray-400 mb-12">💡 内置 Gemini 2.5 Flash Lite 免费模型（每日 1000 次），也支持自配 API Key 使用更强模型</p>
           <div className="grid md:grid-cols-2 gap-6 items-stretch max-w-3xl mx-auto">
             {plans.map(p => (
               <div key={p.name} className={`rounded-2xl p-6 flex flex-col ${p.highlight ? 'bg-white border-2 border-primary shadow-lg shadow-purple-100' : 'bg-white border border-gray-200'}`}>
@@ -451,8 +451,8 @@ function OrderQuerySection() {
 function FAQSection() {
   const faqs = [
     { q: '真的完全隐身吗？', a: '是的。我们使用 WebRTC 标准协议的不可见模式，在腾讯会议、飞书、Zoom 等平台共享整个屏幕时，对方完全看不到窗口。建议正式使用前先和朋友测试一次。' },
-    { q: '什么是"自配 API Key"？', a: '支持自己配置 AI 模型 API Key（如 OpenRouter、Gemini）。不限使用次数，按用量付费，每次只需几分钱。购买后提供配置教程。' },
-    { q: '如何购买？', a: '选择套餐 → 扫码付款 → 提交订单。确认收款后系统自动分配激活码，通过订单号查询获取。通常 5 分钟内处理。' },
+    { q: '什么是"自配 API Key"？', a: '软件已内置免费模型，开箱即用。如需更快速度或更强模型，可自行配置 API Key（如通义千问、Kimi、OpenRouter、Gemini），按用量付费，每次只需几分钱。' },
+    { q: '如何购买？', a: '加 QQ（1245980446）或进群（1094796213）联系客服，选择套餐后付款即可获得激活码。' },
     { q: '月卡到期后怎么办？', a: '重新购买即可获得新的激活码。推荐直接购买永久卡（¥59.9），一次付费永久使用，无需续费。' },
     { q: '支持哪些系统？', a: 'Windows 10 2004+ 和 macOS 12+。' },
     { q: '安装时弹出安全警告？', a: '暂未购买代码签名证书，Windows SmartScreen 会提示"未知发布者"。点击「更多信息」→「仍要运行」即可。' },
@@ -488,14 +488,17 @@ function FooterSection() {
     <section id="contact" className="py-16 px-4 border-t border-gray-200">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">联系客服</h2>
-        <p className="text-gray-500 mb-8">扫码添加微信，咨询任何问题</p>
-        <div className="inline-block bg-white rounded-2xl p-6 border border-gray-200 shadow-sm mb-8">
-          <Image src="/wechat-qr.png" alt="微信二维码" width={200} height={200} className="rounded-xl" />
-          <p className="text-sm text-gray-400 mt-3">扫码添加微信</p>
+        <p className="text-gray-500 mb-8">扫码添加 QQ 好友，咨询购买与使用问题</p>
+        <div className="inline-block bg-white rounded-2xl p-6 border border-gray-200 shadow-sm mb-6">
+          <Image src="/qq-qr.png" alt="QQ名片二维码" width={200} height={200} className="rounded-xl" />
+          <p className="text-sm text-gray-600 mt-3 font-medium">QQ：1245980446</p>
         </div>
-        <div className="text-sm text-gray-400 space-y-2">
-          <p>📧 support@cheapest-interview.com</p>
-          <p className="mt-8 text-xs text-gray-300">© 2026 {BRAND} · 本产品为 AI 学习辅助工具，请合理使用</p>
+        <div className="mt-4 inline-block bg-gray-50 rounded-xl px-6 py-4 border border-gray-200">
+          <p className="text-sm text-gray-700"><strong>QQ 交流群：</strong><span className="text-primary font-mono font-bold">1094796213</span></p>
+          <p className="text-xs text-gray-400 mt-1">加群获取最新版本、交流使用技巧</p>
+        </div>
+        <div className="text-sm text-gray-400 space-y-2 mt-8">
+          <p className="text-xs text-gray-300">© 2026 {BRAND} · 本产品为 AI 学习辅助工具，请合理使用</p>
         </div>
       </div>
     </section>
