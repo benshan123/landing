@@ -500,14 +500,20 @@ function FooterSection() {
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">联系客服</h2>
         <p className="text-gray-500 mb-8">扫码添加 QQ 好友，咨询购买与使用问题</p>
-        <div className="inline-block bg-white rounded-2xl p-6 border border-gray-200 shadow-sm mb-6">
-          <Image src="/qq-qr.png" alt="QQ名片二维码" width={200} height={200} className="rounded-xl" />
-          <p className="text-sm text-gray-600 mt-3 font-medium">QQ：1245980446</p>
-        </div>
-        <div className="mt-4 inline-block bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
-          <Image src="/qq_group.jpg" alt="QQ交流群二维码" width={200} height={200} className="rounded-xl" />
-          <p className="text-sm text-gray-600 mt-3 font-medium">QQ 交流群：<span className="text-primary font-mono font-bold">1094796213</span></p>
-          <p className="text-xs text-gray-400 mt-1">加群获取最新版本、交流使用技巧</p>
+        <div className="flex flex-col sm:flex-row justify-center items-stretch gap-6">
+          <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm flex flex-col items-center">
+            <div className="flex-1 flex items-center">
+              <Image src="/qq-qr.png" alt="QQ名片二维码" width={200} height={200} className="rounded-xl" />
+            </div>
+            <p className="text-sm text-gray-600 mt-3 font-medium">QQ：1245980446</p>
+          </div>
+          <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm flex flex-col items-center">
+            <div className="flex-1 flex items-center">
+              <Image src="/qq_group.jpg" alt="QQ交流群二维码" width={200} height={200} className="rounded-xl" />
+            </div>
+            <p className="text-sm text-gray-600 mt-3 font-medium">QQ 交流群：<span className="text-primary font-mono font-bold">1094796213</span></p>
+            <p className="text-xs text-gray-400 mt-1">加群获取最新版本、交流使用技巧</p>
+          </div>
         </div>
         <div className="text-sm text-gray-400 space-y-2 mt-8">
           <p className="text-xs text-gray-300">© 2026 {BRAND} · 本产品为 AI 学习辅助工具，请合理使用</p>
