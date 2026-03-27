@@ -48,10 +48,6 @@ const faqItems = [
     q: '面试模式没有转录内容？',
     a: '请确认已经点击"开始监听"或按下对应快捷键。Mac 用户还需要提前安装虚拟音频驱动。',
   },
-  {
-    q: '如何完全卸载？',
-    a: '卸载应用后，删除配置目录即可：Windows 为 %APPDATA%\\cheapest-interview\\，macOS 为 ~/Library/Application Support/cheapest-interview/。',
-  },
 ];
 
 function SectionCard({
