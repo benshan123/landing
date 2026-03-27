@@ -21,6 +21,7 @@ function Navbar() {
           <span className="font-bold text-lg">{BRAND}</span>
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm text-gray-600">
+          <a href="https://www.bilibili.com/video/BV1WuXPB7Esu/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition">📺 效果演示</a>
           <a href="#features" className="hover:text-primary transition">功能</a>
           <a href="#stealth" className="hover:text-primary transition">隐身</a>
           <a href="#pricing" className="hover:text-primary transition">价格</a>
