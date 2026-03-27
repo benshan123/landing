@@ -504,8 +504,9 @@ function FooterSection() {
           <Image src="/qq-qr.png" alt="QQ名片二维码" width={200} height={200} className="rounded-xl" />
           <p className="text-sm text-gray-600 mt-3 font-medium">QQ：1245980446</p>
         </div>
-        <div className="mt-4 inline-block bg-gray-50 rounded-xl px-6 py-4 border border-gray-200">
-          <p className="text-sm text-gray-700"><strong>QQ 交流群：</strong><span className="text-primary font-mono font-bold">1094796213</span></p>
+        <div className="mt-4 inline-block bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+          <Image src="/qq_group.jpg" alt="QQ交流群二维码" width={200} height={200} className="rounded-xl" />
+          <p className="text-sm text-gray-600 mt-3 font-medium">QQ 交流群：<span className="text-primary font-mono font-bold">1094796213</span></p>
           <p className="text-xs text-gray-400 mt-1">加群获取最新版本、交流使用技巧</p>
         </div>
         <div className="text-sm text-gray-400 space-y-2 mt-8">
