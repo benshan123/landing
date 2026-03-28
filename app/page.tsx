@@ -356,9 +356,9 @@ function DownloadSection() {
               快速下载 Windows 版
             </a>
             <p className="text-xs text-gray-400 mb-3">⚡ 快速下载需要 GitHub 账号</p>
-            <a href="https://pan.baidu.com/s/1PIwALyc7VPpYWzmhv1h8yw" target="_blank" rel="noopener noreferrer"
+            <a href="https://pan.baidu.com/s/1S0kQiU2dw1PhOBc7U3FrAg" target="_blank" rel="noopener noreferrer"
               className="btn-outline px-6 py-2.5 rounded-xl font-semibold inline-block w-full text-center text-sm mb-3">
-              百度网盘下载（提取码: jfsp）
+              百度网盘下载（提取码: bn6b）
             </a>
             <p className="text-xs text-gray-400">⚠️ 首次运行点击「更多信息」→「仍要运行」</p>
           </div>
@@ -372,9 +372,9 @@ function DownloadSection() {
               快速下载 Mac 版
             </a>
             <p className="text-xs text-gray-400 mb-3">⚡ 快速下载需要 GitHub 账号</p>
-            <a href="https://pan.baidu.com/s/1SA6YFI8F53QQZjFUyuZuWA" target="_blank" rel="noopener noreferrer"
+            <a href="https://pan.baidu.com/s/1RsOJSYweUEL4ESTLpoyN7Q" target="_blank" rel="noopener noreferrer"
               className="btn-outline px-6 py-2.5 rounded-xl font-semibold inline-block w-full text-center text-sm mb-3">
-              百度网盘下载（提取码: c2e5）
+              百度网盘下载（提取码: bmcq）
             </a>
             <p className="text-xs text-gray-400">⚠️ 面试模式需安装 BlackHole 音频驱动</p>
           </div>
