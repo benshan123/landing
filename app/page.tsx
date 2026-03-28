@@ -350,15 +350,15 @@ function DownloadSection() {
           <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
             <div className="text-4xl mb-3">💻</div>
             <h3 className="font-bold text-lg text-gray-900 mb-1">Windows</h3>
-            <p className="text-sm text-gray-400 mb-4">Windows 10 2004+ · v1.1.5 · 236 MB</p>
-            <a href="https://github.com/benshan123/wdz/releases/download/v1.1.5/StealthMate-Setup-1.1.5.exe" target="_blank" rel="noopener noreferrer"
+            <p className="text-sm text-gray-400 mb-4">Windows 10 2004+ · v1.1.6 · 236 MB</p>
+            <a href="https://github.com/benshan123/wdz/releases/download/v1.1.6/StealthMate-Setup-1.1.6.exe" target="_blank" rel="noopener noreferrer"
               className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center mb-2">
               快速下载 Windows 版
             </a>
             <p className="text-xs text-gray-400 mb-3">⚡ 快速下载需要 GitHub 账号</p>
-            <a href="https://pan.baidu.com/s/12rjwCl8qwj9QcnxRbRAyKQ" target="_blank" rel="noopener noreferrer"
+            <a href="https://pan.baidu.com/s/1EDRfKekQElL-exNy4zY6PA" target="_blank" rel="noopener noreferrer"
               className="btn-outline px-6 py-2.5 rounded-xl font-semibold inline-block w-full text-center text-sm mb-3">
-              百度网盘下载（提取码: gimw）
+              百度网盘下载（提取码: cxi5）
             </a>
             <p className="text-xs text-gray-400">⚠️ 首次运行点击「更多信息」→「仍要运行」</p>
           </div>
@@ -367,14 +367,14 @@ function DownloadSection() {
             <div className="text-4xl mb-3">🍎</div>
             <h3 className="font-bold text-lg text-gray-900 mb-1">macOS</h3>
             <p className="text-sm text-gray-400 mb-4">macOS 12+ · Apple Silicon & Intel</p>
-            <a href="https://github.com/benshan123/wdz/releases/download/v1.1.5/StealthMate-1.1.5-arm64.dmg" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/benshan123/wdz/releases/download/v1.1.6/StealthMate-1.1.6-arm64.dmg" target="_blank" rel="noopener noreferrer"
               className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center mb-2">
               快速下载 Mac 版
             </a>
             <p className="text-xs text-gray-400 mb-3">⚡ 快速下载需要 GitHub 账号</p>
-            <a href="https://pan.baidu.com/s/14mf5oCEsqK9P5MvU4ZkCsQ" target="_blank" rel="noopener noreferrer"
+            <a href="https://pan.baidu.com/s/17abICCfVyUpjr6eB9KDH3w" target="_blank" rel="noopener noreferrer"
               className="btn-outline px-6 py-2.5 rounded-xl font-semibold inline-block w-full text-center text-sm mb-3">
-              百度网盘下载（提取码: v1ed）
+              百度网盘下载（提取码: keeb）
             </a>
             <p className="text-xs text-gray-400">⚠️ 面试模式需安装 BlackHole 音频驱动</p>
           </div>
