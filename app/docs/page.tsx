@@ -1,54 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-
-const shortcutRows = [
-  ['截图', 'Ctrl+H', 'Cmd+H *'],
-  ['生成答案', 'Ctrl+Enter', 'Cmd+Enter'],
-  ['隐藏 / 显示窗口', 'Ctrl+B', 'Cmd+B'],
-  ['重置清空', 'Ctrl+R', 'Cmd+R'],
-  ['切换面试模式', 'Ctrl+M', 'Cmd+M *'],
-  ['面试录音开关', 'Alt+X', 'Option+X'],
-  ['滚动答案（上 / 下）', 'Ctrl+, / Ctrl+.', 'Cmd+, / Cmd+.'],
-  ['移动窗口', 'Ctrl+方向键', 'Cmd+方向键'],
-  ['放大 / 缩小窗口', 'Ctrl++ / Ctrl+-', 'Cmd++ / Cmd+-'],
-  ['透明度调节', 'Ctrl+[ / Ctrl+]', 'Cmd+[ / Cmd+]'],
-  ['退出应用', 'Ctrl+Q', 'Cmd+Q'],
-];
-
-const installSteps = [
-  '启动软件，看到激活界面。',
-  '输入激活码，点击"激活"。',
-  '网络波动稍等即可，应用会自动重试。',
-];
-
-const settingsItems = [
-  '编程语言 / 面试语言',
-  '浅色 / 深色主题',
-  '窗口透明度',
-  '解题模型',
-  '截图模式（全屏 / 区域）',
-  'AI 服务商、API Key、自定义快捷键',
-];
-
-const faqItems = [
-  {
-    q: '快捷键全部不生效？',
-    a: '通常是后台存在多个 Cheapest Interview 进程。请先完全退出所有进程，再重新启动应用。',
-  },
-  {
-    q: '激活失败怎么办？',
-    a: '大多数情况是网络波动导致。保持联网状态，等待几秒后再次尝试即可。',
-  },
-  {
-    q: '截图后没有生成答案？',
-    a: '请先检查是否已经在"高级设置"里配置好可用的 API Key。',
-  },
-  {
-    q: '面试模式没有转录内容？',
-    a: '请确认已经点击"开始监听"或按下对应快捷键。Mac 用户还需要提前安装虚拟音频驱动。',
-  },
-];
+import { useLanguage } from '../LanguageContext';
+import { docsTranslations } from './i18n-docs';
 
 function SectionCard({
   id,
@@ -75,58 +29,69 @@ function SectionCard({
   );
 }
 
+function LanguageSwitch() {
+  const { locale, setLocale } = useLanguage();
+  return (
+    <button
+      onClick={() => setLocale(locale === 'zh' ? 'en' : 'zh')}
+      className="px-3 py-1.5 rounded-lg text-sm font-medium border border-gray-200 hover:border-primary hover:text-primary transition bg-white/80"
+      title={locale === 'zh' ? 'Switch to English' : '切换到中文'}
+    >
+      {locale === 'zh' ? 'EN' : '中文'}
+    </button>
+  );
+}
+
 export default function DocsPage() {
+  const { locale } = useLanguage();
+  const t = docsTranslations[locale];
+
   return (
     <main className="min-h-screen bg-white text-gray-900">
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-6xl mx-auto h-16 px-4 flex items-center justify-between">
           <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-primary transition">
             <span aria-hidden="true">←</span>
-            <span>返回首页</span>
+            <span>{t.back}</span>
           </Link>
-          <div className="text-sm font-semibold gradient-text">Cheapest Interview Docs</div>
+          <div className="flex items-center gap-3">
+            <div className="text-sm font-semibold gradient-text">{t.docsTitle}</div>
+            <LanguageSwitch />
+          </div>
         </div>
       </nav>
 
       <div className="pt-24 pb-20 px-4">
         <div className="max-w-6xl mx-auto">
+          {/* Hero */}
           <section className="relative overflow-hidden rounded-[32px] border border-purple-100 bg-gradient-to-br from-purple-50 via-white to-blue-50 px-6 py-10 md:px-10 md:py-14 mb-10">
             <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top_right,rgba(124,58,237,0.12),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(37,99,235,0.10),transparent_32%)]" />
             <div className="relative max-w-4xl">
               <div className="inline-flex items-center rounded-full bg-white/90 px-4 py-1.5 text-sm font-medium text-primary border border-purple-100 shadow-sm mb-5">
-                使用文档 · v1.0.0
+                {t.badge}
               </div>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
-                快速上手 <span className="gradient-text">Cheapest Interview</span>
+                {t.heroTitle_prefix}<span className="gradient-text">Cheapest Interview</span>
               </h1>
-              <p className="text-lg text-gray-600 leading-8 max-w-3xl mb-8">
-                这是一份网页版使用说明，涵盖安装与激活、笔试 / 面试操作流程、快捷键、设置项、Mac 注意事项和常见问题。第一次使用，建议按顺序看完前四部分。
-              </p>
+              <p className="text-lg text-gray-600 leading-8 max-w-3xl mb-8">{t.heroDesc}</p>
               <div className="flex flex-wrap gap-3">
-                <a href="#install" className="btn-primary px-6 py-3 rounded-xl font-semibold">开始阅读</a>
-                <Link href="/" className="btn-outline px-6 py-3 rounded-xl font-semibold">返回首页</Link>
+                <a href="#install" className="btn-primary px-6 py-3 rounded-xl font-semibold">{t.startReading}</a>
+                <Link href="/" className="btn-outline px-6 py-3 rounded-xl font-semibold">{t.backHome}</Link>
               </div>
             </div>
           </section>
 
+          {/* Quick Nav */}
           <section className="feature-card rounded-3xl border border-gray-200 bg-white p-6 md:p-8 mb-10">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-5">
               <div>
-                <p className="text-sm font-semibold text-primary mb-2">快速导航</p>
-                <h2 className="text-2xl font-bold text-gray-900">你可以直接跳到需要的部分</h2>
+                <p className="text-sm font-semibold text-primary mb-2">{t.quickNavTag}</p>
+                <h2 className="text-2xl font-bold text-gray-900">{t.quickNavTitle}</h2>
               </div>
-              <Link href="/" className="text-sm font-medium text-primary hover:underline">返回产品首页</Link>
+              <Link href="/" className="text-sm font-medium text-primary hover:underline">{t.quickNavBackHome}</Link>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm">
-              {[
-                ['#install', '安装与激活'],
-                ['#api', 'API 配置（可选）'],
-                ['#usage', '基本操作（笔试 / 面试）'],
-                ['#shortcuts', '快捷键表格'],
-                ['#settings', '设置说明'],
-                ['#mac', 'Mac 用户须知'],
-                ['#faq', '常见问题'],
-              ].map(([href, label]) => (
+              {t.quickNavItems.map(([href, label]) => (
                 <a
                   key={href}
                   href={href}
@@ -139,32 +104,27 @@ export default function DocsPage() {
           </section>
 
           <div className="space-y-8">
-            <SectionCard
-              id="install"
-              eyebrow="01 · 安装与激活"
-              title="先安装，再完成激活"
-              description="首次使用时，建议先确认安装包正确、网络可用，然后再输入激活码。整个流程通常只需要 1~2 分钟。"
-            >
+            {/* 01 Install */}
+            <SectionCard id="install" eyebrow={t.s01_eyebrow} title={t.s01_title} description={t.s01_desc}>
               <div className="grid lg:grid-cols-2 gap-6">
                 <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">安装方式</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">{t.s01_installTitle}</h3>
                   <div className="space-y-4 text-gray-600 leading-7">
                     <div>
-                      <p className="font-medium text-gray-900 mb-1">Windows</p>
-                      <p>双击 <code className="rounded bg-white px-2 py-1 text-sm border border-gray-200">StealthMate-Setup-1.0.0.exe</code> 安装即可。</p>
+                      <p className="font-medium text-gray-900 mb-1">{t.s01_win}</p>
+                      <p dangerouslySetInnerHTML={{ __html: t.s01_winDesc }} />
                     </div>
                     <div>
-                      <p className="font-medium text-gray-900 mb-1">macOS</p>
-                      <p>打开 <code className="rounded bg-white px-2 py-1 text-sm border border-gray-200">.dmg</code> 文件后，将应用拖入 Applications。</p>
+                      <p className="font-medium text-gray-900 mb-1">{t.s01_mac}</p>
+                      <p dangerouslySetInnerHTML={{ __html: t.s01_macDesc }} />
                     </div>
                   </div>
                 </div>
-
                 <div className="rounded-2xl border border-purple-100 bg-purple-50 p-5">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">首次激活步骤</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">{t.s01_activateTitle}</h3>
                   <div className="space-y-4">
-                    {installSteps.map((step, index) => (
-                      <div key={step} className="flex items-start gap-3">
+                    {t.s01_steps.map((step, index) => (
+                      <div key={index} className="flex items-start gap-3">
                         <div className="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-white text-primary text-sm font-bold border border-purple-100">
                           {index + 1}
                         </div>
@@ -173,163 +133,127 @@ export default function DocsPage() {
                     ))}
                   </div>
                   <div className="mt-5 rounded-2xl border border-white/80 bg-white/80 p-4 text-sm text-gray-600 leading-6">
-                    激活码格式示例：
+                    {t.s01_codeExample}
                     <code className="ml-2 rounded bg-purple-50 px-2 py-1 text-primary border border-purple-100">SM-XXXX-XXXX-XXXX</code>
                   </div>
                 </div>
               </div>
             </SectionCard>
 
-            <SectionCard
-              id="api"
-              eyebrow="02 · API 配置（可选）"
-              title="内置免费模型 + 自配 API 教程"
-              description="软件内置 Gemini 2.5 Flash Lite 免费模型，激活后即可直接使用，无需任何配置。免费额度每日 1000 次（全体用户共享，先到先得），超出后需自行配置 API Key。"
-            >
+            {/* 02 API */}
+            <SectionCard id="api" eyebrow={t.s02_eyebrow} title={t.s02_title} description={t.s02_desc}>
               <div className="rounded-2xl border border-green-200 bg-green-50 p-5 mb-6">
                 <div className="flex items-start gap-3">
                   <span className="text-2xl">🎉</span>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">内置免费模型：Gemini 2.5 Flash Lite</h3>
-                    <p className="text-gray-700 leading-7">激活后即可使用全部功能（截图解题、面试语音监听等）。免费额度为<strong>每日 1000 次</strong>，全体用户共享，先到先得。额度用完后需自行配置以下任一平台的 API Key。</p>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">{t.s02_freeTitle}</h3>
+                    <p className="text-gray-700 leading-7" dangerouslySetInnerHTML={{ __html: t.s02_freeDesc }} />
                   </div>
                 </div>
               </div>
-
               <div className="grid lg:grid-cols-2 gap-6 mb-6">
                 <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-xl">🟢</span>
-                    <h3 className="text-lg font-semibold text-gray-900">通义千问（QWEN）</h3>
+                    <h3 className="text-lg font-semibold text-gray-900">{t.s02_qwenTitle}</h3>
                   </div>
-                  <p className="text-gray-700 leading-7 mb-3">阿里云大模型，<strong>新用户有免费额度</strong>，国内直连无需科学上网。</p>
+                  <p className="text-gray-700 leading-7 mb-3" dangerouslySetInnerHTML={{ __html: t.s02_qwenDesc }} />
                   <a href="https://bailian.console.aliyun.com/?tab=model#/api-key" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary hover:underline text-sm font-medium">
-                    前往申请 API Key →
+                    {t.s02_applyKey}
                   </a>
                 </div>
-
                 <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-xl">🟡</span>
-                    <h3 className="text-lg font-semibold text-gray-900">Kimi（月之暗面）</h3>
+                    <h3 className="text-lg font-semibold text-gray-900">{t.s02_kimiTitle}</h3>
                   </div>
-                  <p className="text-gray-700 leading-7 mb-3">国产大模型，需充值后使用，国内直连。</p>
+                  <p className="text-gray-700 leading-7 mb-3" dangerouslySetInnerHTML={{ __html: t.s02_kimiDesc }} />
                   <a href="https://platform.moonshot.cn/console/api-keys" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary hover:underline text-sm font-medium">
-                    前往申请 API Key →
+                    {t.s02_applyKey}
                   </a>
                 </div>
-
                 <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-xl">🔵</span>
-                    <h3 className="text-lg font-semibold text-gray-900">OpenRouter</h3>
+                    <h3 className="text-lg font-semibold text-gray-900">{t.s02_openrouterTitle}</h3>
                   </div>
-                  <p className="text-gray-700 leading-7">聚合多种模型（GPT、Claude 等），需科学上网。</p>
+                  <p className="text-gray-700 leading-7" dangerouslySetInnerHTML={{ __html: t.s02_openrouterDesc }} />
                 </div>
-
                 <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-xl">🔵</span>
-                    <h3 className="text-lg font-semibold text-gray-900">Gemini</h3>
+                    <h3 className="text-lg font-semibold text-gray-900">{t.s02_geminiTitle}</h3>
                   </div>
-                  <p className="text-gray-700 leading-7">Google 大模型，需科学上网。</p>
+                  <p className="text-gray-700 leading-7" dangerouslySetInnerHTML={{ __html: t.s02_geminiDesc }} />
                 </div>
               </div>
-
               <div className="rounded-2xl border border-purple-100 bg-purple-50 p-5">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">如何写入 API Key</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">{t.s02_howToTitle}</h3>
                 <div className="space-y-3 text-gray-700 leading-7">
-                  <div className="flex items-start gap-3">
-                    <div className="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-white text-primary text-sm font-bold border border-purple-100">1</div>
-                    <span>点击软件右上角的<strong>齿轮图标</strong>进入设置页面。</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-white text-primary text-sm font-bold border border-purple-100">2</div>
-                    <span>点击<strong>「高级设置」</strong>，选择想使用的 AI 平台和模型。</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-white text-primary text-sm font-bold border border-purple-100">3</div>
-                    <span>粘贴 API Key → 点击<strong>「测试连接」</strong>确认可用 → 点击<strong>「保存设置」</strong>。</span>
-                  </div>
+                  {t.s02_howToSteps.map((step, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <div className="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-white text-primary text-sm font-bold border border-purple-100">{i + 1}</div>
+                      <span dangerouslySetInnerHTML={{ __html: step }} />
+                    </div>
+                  ))}
                 </div>
               </div>
             </SectionCard>
 
-            <SectionCard
-              id="usage"
-              eyebrow="03 · 基本操作"
-              title="默认先用笔试模式，需要时切到面试模式"
-              description="启动后，屏幕上方会出现一个可拖动的悬浮横条。大多数情况下，你只需要记住截图、生成答案、切换模式这几个动作。"
-            >
+            {/* 03 Usage */}
+            <SectionCard id="usage" eyebrow={t.s03_eyebrow} title={t.s03_title} description={t.s03_desc}>
               <div className="grid lg:grid-cols-2 gap-6">
                 <div className="rounded-2xl border border-blue-100 bg-blue-50 p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-xl border border-blue-100">📝</div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900">笔试模式（默认）</h3>
-                      <p className="text-sm text-gray-500">适合代码题、选择题、资料分析等场景</p>
+                      <h3 className="text-xl font-semibold text-gray-900">{t.s03_examTitle}</h3>
+                      <p className="text-sm text-gray-500">{t.s03_examSubtitle}</p>
                     </div>
                   </div>
                   <ol className="space-y-4 text-gray-700">
-                    <li className="flex items-start gap-3">
-                      <span className="rounded-lg bg-white px-2.5 py-1 text-xs font-bold text-blue-700 border border-blue-100">Ctrl+H</span>
-                      <span className="leading-7">截图，可连续多次截图，把同一题的多个区域拼在一起分析。</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="rounded-lg bg-white px-2.5 py-1 text-xs font-bold text-blue-700 border border-blue-100">Ctrl+Enter</span>
-                      <span className="leading-7">生成 AI 答案，系统会结合当前截图内容输出解题结果。</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="rounded-lg bg-white px-2.5 py-1 text-xs font-bold text-blue-700 border border-blue-100">Ctrl+R</span>
-                      <span className="leading-7">重置内容并回到初始横条状态，适合开始下一题。</span>
-                    </li>
+                    {t.s03_examSteps.map(s => (
+                      <li key={s.key} className="flex items-start gap-3">
+                        <span className="rounded-lg bg-white px-2.5 py-1 text-xs font-bold text-blue-700 border border-blue-100">{s.key}</span>
+                        <span className="leading-7">{s.desc}</span>
+                      </li>
+                    ))}
                   </ol>
                 </div>
-
                 <div className="rounded-2xl border border-purple-100 bg-purple-50 p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-xl border border-purple-100">🎙️</div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900">面试模式</h3>
-                      <p className="text-sm text-gray-500">适合技术面、HR 面、行为面等口语问答场景</p>
+                      <h3 className="text-xl font-semibold text-gray-900">{t.s03_interviewTitle}</h3>
+                      <p className="text-sm text-gray-500">{t.s03_interviewSubtitle}</p>
                     </div>
                   </div>
                   <ol className="space-y-4 text-gray-700">
-                    <li className="flex items-start gap-3">
-                      <span className="rounded-lg bg-white px-2.5 py-1 text-xs font-bold text-primary border border-purple-100">Ctrl+M</span>
-                      <span className="leading-7">切换到面试模式。</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="rounded-lg bg-white px-2.5 py-1 text-xs font-bold text-primary border border-purple-100">Alt+X</span>
-                      <span className="leading-7">开始监听系统音频，再按一次可停止监听。</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="rounded-lg bg-white px-2.5 py-1 text-xs font-bold text-primary border border-purple-100">实时转录</span>
-                      <span className="leading-7">面试官说话会被转成文字，停止后 AI 会自动生成参考回答。</span>
-                    </li>
+                    {t.s03_interviewSteps.map(s => (
+                      <li key={s.key} className="flex items-start gap-3">
+                        <span className="rounded-lg bg-white px-2.5 py-1 text-xs font-bold text-primary border border-purple-100">{s.key}</span>
+                        <span className="leading-7">{s.desc}</span>
+                      </li>
+                    ))}
                   </ol>
                 </div>
               </div>
             </SectionCard>
 
-            <SectionCard
-              id="shortcuts"
-              eyebrow="04 · 快捷键表格"
-              title="常用快捷键一览"
-              description="快捷键都支持在高级设置中自定义。如果你是 Mac 用户，建议优先修改和系统快捷键冲突的那两个组合键。"
-            >
+            {/* 04 Shortcuts */}
+            <SectionCard id="shortcuts" eyebrow={t.s04_eyebrow} title={t.s04_title} description={t.s04_desc}>
               <div className="overflow-hidden rounded-2xl border border-gray-200">
                 <div className="overflow-x-auto">
                   <table className="min-w-full border-collapse text-sm">
                     <thead>
                       <tr className="bg-gradient-to-r from-purple-50 to-blue-50 text-gray-700">
-                        <th className="px-5 py-4 text-left font-semibold border-b border-gray-200">功能</th>
-                        <th className="px-5 py-4 text-left font-semibold border-b border-gray-200">Windows</th>
-                        <th className="px-5 py-4 text-left font-semibold border-b border-gray-200">Mac</th>
+                        <th className="px-5 py-4 text-left font-semibold border-b border-gray-200">{t.s04_thFunc}</th>
+                        <th className="px-5 py-4 text-left font-semibold border-b border-gray-200">{t.s04_thWin}</th>
+                        <th className="px-5 py-4 text-left font-semibold border-b border-gray-200">{t.s04_thMac}</th>
                       </tr>
                     </thead>
                     <tbody>
-                      {shortcutRows.map(([label, win, mac], index) => (
+                      {t.shortcutRows.map(([label, win, mac], index) => (
                         <tr key={label} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50/70'}>
                           <td className="px-5 py-4 border-b border-gray-100 font-medium text-gray-800">{label}</td>
                           <td className="px-5 py-4 border-b border-gray-100">
@@ -344,19 +268,13 @@ export default function DocsPage() {
                   </table>
                 </div>
               </div>
-              <div className="mt-5 rounded-2xl border border-yellow-200 bg-yellow-50 p-4 text-sm text-yellow-800 leading-7">
-                <strong>Mac 提示：</strong> 带 * 的快捷键可能和系统行为冲突，建议把 <code className="rounded bg-white px-2 py-1 border border-yellow-200">Cmd+H</code> 改成 <code className="rounded bg-white px-2 py-1 border border-yellow-200">Cmd+Shift+H</code>，把 <code className="rounded bg-white px-2 py-1 border border-yellow-200">Cmd+M</code> 改成 <code className="rounded bg-white px-2 py-1 border border-yellow-200">Cmd+Shift+M</code>。
-              </div>
+              <div className="mt-5 rounded-2xl border border-yellow-200 bg-yellow-50 p-4 text-sm text-yellow-800 leading-7" dangerouslySetInnerHTML={{ __html: t.s04_macTip }} />
             </SectionCard>
 
-            <SectionCard
-              id="settings"
-              eyebrow="05 · 设置说明"
-              title="齿轮按钮里可以完成大部分配置"
-              description="点击工具条上的齿轮图标，会打开快捷设置。这里能快速调整语言、主题、透明度、模型等常用项；继续进入高级设置，则可以配置 API Key 和自定义快捷键。"
-            >
+            {/* 05 Settings */}
+            <SectionCard id="settings" eyebrow={t.s05_eyebrow} title={t.s05_title} description={t.s05_desc}>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {settingsItems.map((item) => (
+                {t.settingsItems.map((item) => (
                   <div key={item} className="rounded-2xl border border-gray-200 bg-gray-50 px-4 py-4 text-gray-700 flex items-start gap-3">
                     <span className="mt-0.5 text-primary font-bold">✓</span>
                     <span className="leading-7">{item}</span>
@@ -365,46 +283,24 @@ export default function DocsPage() {
               </div>
             </SectionCard>
 
-            <SectionCard
-              id="mac"
-              eyebrow="06 · Mac 用户须知"
-              title="Mac 上主要注意快捷键冲突和音频驱动"
-            >
+            {/* 06 Mac */}
+            <SectionCard id="mac" eyebrow={t.s06_eyebrow} title={t.s06_title}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="rounded-2xl border border-orange-200 bg-orange-50 p-5">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">快捷键冲突</h3>
-                  <p className="text-gray-700 leading-7">
-                    macOS 默认把 <code className="rounded bg-white px-2 py-1 text-sm border border-orange-200">Cmd+H</code> 用作隐藏应用，把 <code className="rounded bg-white px-2 py-1 text-sm border border-orange-200">Cmd+M</code> 用作最小化窗口，因此建议你在高级设置中改成
-                    <code className="mx-2 rounded bg-white px-2 py-1 text-sm border border-orange-200">Cmd+Shift+H</code>
-                    和
-                    <code className="ml-2 rounded bg-white px-2 py-1 text-sm border border-orange-200">Cmd+Shift+M</code>。
-                  </p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">{t.s06_shortcutTitle}</h3>
+                  <p className="text-gray-700 leading-7" dangerouslySetInnerHTML={{ __html: t.s06_shortcutDesc }} />
                 </div>
                 <div className="rounded-2xl border border-orange-200 bg-orange-50 p-5">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">面试模式音频</h3>
-                  <p className="text-gray-700 leading-7">
-                    如果需要捕获系统音频，请先安装
-                    <a
-                      href="https://existential.audio/blackhole/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mx-1 text-primary hover:underline"
-                    >
-                      BlackHole
-                    </a>
-                    虚拟音频驱动。安装完成后，再进入 Cheapest Interview 的面试模式进行监听即可。
-                  </p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">{t.s06_audioTitle}</h3>
+                  <p className="text-gray-700 leading-7" dangerouslySetInnerHTML={{ __html: t.s06_audioDesc }} />
                 </div>
               </div>
             </SectionCard>
 
-            <SectionCard
-              id="faq"
-              eyebrow="07 · 常见问题"
-              title="先看这里，很多问题都能快速解决"
-            >
+            {/* 07 FAQ */}
+            <SectionCard id="faq" eyebrow={t.s07_eyebrow} title={t.s07_title}>
               <div className="space-y-4">
-                {faqItems.map((item) => (
+                {t.faqItems.map((item) => (
                   <div key={item.q} className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.q}</h3>
                     <p className="text-gray-600 leading-7">{item.a}</p>
@@ -414,17 +310,18 @@ export default function DocsPage() {
             </SectionCard>
           </div>
 
+          {/* Footer */}
           <footer className="mt-10 rounded-3xl border border-gray-200 bg-white px-6 py-8 md:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <p className="text-sm font-semibold text-primary mb-1">Cheapest Interview</p>
-              <p className="text-gray-500">需要购买、续费或排查问题时，可直接返回首页查看下载与联系方式。</p>
+              <p className="text-gray-500">{t.footerDesc}</p>
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/" className="btn-outline px-5 py-3 rounded-xl font-semibold">
-                返回首页
+                {t.footerBack}
               </Link>
               <a href="/#contact" className="btn-primary px-5 py-3 rounded-xl font-semibold">
-                联系客服
+                {t.footerContact}
               </a>
             </div>
           </footer>

@@ -1,0 +1,281 @@
+export const docsTranslations = {
+  zh: {
+    back: '返回首页',
+    docsTitle: 'Cheapest Interview Docs',
+    badge: '使用文档 · v1.0.0',
+    heroTitle_prefix: '快速上手 ',
+    heroDesc: '这是一份网页版使用说明，涵盖安装与激活、笔试 / 面试操作流程、快捷键、设置项、Mac 注意事项和常见问题。第一次使用，建议按顺序看完前四部分。',
+    startReading: '开始阅读',
+    backHome: '返回首页',
+
+    // Quick nav
+    quickNavTag: '快速导航',
+    quickNavTitle: '你可以直接跳到需要的部分',
+    quickNavBackHome: '返回产品首页',
+    quickNavItems: [
+      ['#install', '安装与激活'],
+      ['#api', 'API 配置（可选）'],
+      ['#usage', '基本操作（笔试 / 面试）'],
+      ['#shortcuts', '快捷键表格'],
+      ['#settings', '设置说明'],
+      ['#mac', 'Mac 用户须知'],
+      ['#faq', '常见问题'],
+    ] as [string, string][],
+
+    // Section 01
+    s01_eyebrow: '01 · 安装与激活',
+    s01_title: '先安装，再完成激活',
+    s01_desc: '首次使用时，建议先确认安装包正确、网络可用，然后再输入激活码。整个流程通常只需要 1~2 分钟。',
+    s01_installTitle: '安装方式',
+    s01_win: 'Windows',
+    s01_winDesc: '双击 <code>StealthMate-Setup-1.0.0.exe</code> 安装即可。',
+    s01_mac: 'macOS',
+    s01_macDesc: '打开 <code>.dmg</code> 文件后，将应用拖入 Applications。',
+    s01_activateTitle: '首次激活步骤',
+    s01_steps: [
+      '启动软件，看到激活界面。',
+      '输入激活码，点击"激活"。',
+      '网络波动稍等即可，应用会自动重试。',
+    ],
+    s01_codeExample: '激活码格式示例：',
+
+    // Section 02
+    s02_eyebrow: '02 · API 配置（可选）',
+    s02_title: '内置免费模型 + 自配 API 教程',
+    s02_desc: '软件内置 Gemini 2.5 Flash Lite 免费模型，激活后即可直接使用，无需任何配置。免费额度每日 1000 次（全体用户共享，先到先得），超出后需自行配置 API Key。',
+    s02_freeTitle: '内置免费模型：Gemini 2.5 Flash Lite',
+    s02_freeDesc: '激活后即可使用全部功能（截图解题、面试语音监听等）。免费额度为<strong>每日 1000 次</strong>，全体用户共享，先到先得。额度用完后需自行配置以下任一平台的 API Key。',
+    s02_qwenTitle: '通义千问（QWEN）',
+    s02_qwenDesc: '阿里云大模型，<strong>新用户有免费额度</strong>，国内直连无需科学上网。',
+    s02_kimiTitle: 'Kimi（月之暗面）',
+    s02_kimiDesc: '国产大模型，需充值后使用，国内直连。',
+    s02_openrouterTitle: 'OpenRouter',
+    s02_openrouterDesc: '聚合多种模型（GPT、Claude 等），需科学上网。',
+    s02_geminiTitle: 'Gemini',
+    s02_geminiDesc: 'Google 大模型，需科学上网。',
+    s02_applyKey: '前往申请 API Key →',
+    s02_howToTitle: '如何写入 API Key',
+    s02_howToSteps: [
+      '点击软件右上角的<strong>齿轮图标</strong>进入设置页面。',
+      '点击<strong>「高级设置」</strong>，选择想使用的 AI 平台和模型。',
+      '粘贴 API Key → 点击<strong>「测试连接」</strong>确认可用 → 点击<strong>「保存设置」</strong>。',
+    ],
+
+    // Section 03
+    s03_eyebrow: '03 · 基本操作',
+    s03_title: '默认先用笔试模式，需要时切到面试模式',
+    s03_desc: '启动后，屏幕上方会出现一个可拖动的悬浮横条。大多数情况下，你只需要记住截图、生成答案、切换模式这几个动作。',
+    s03_examTitle: '笔试模式（默认）',
+    s03_examSubtitle: '适合代码题、选择题、资料分析等场景',
+    s03_examSteps: [
+      { key: 'Ctrl+H', desc: '截图，可连续多次截图，把同一题的多个区域拼在一起分析。' },
+      { key: 'Ctrl+Enter', desc: '生成 AI 答案，系统会结合当前截图内容输出解题结果。' },
+      { key: 'Ctrl+R', desc: '重置内容并回到初始横条状态，适合开始下一题。' },
+    ],
+    s03_interviewTitle: '面试模式',
+    s03_interviewSubtitle: '适合技术面、HR 面、行为面等口语问答场景',
+    s03_interviewSteps: [
+      { key: 'Ctrl+M', desc: '切换到面试模式。' },
+      { key: 'Alt+X', desc: '开始监听系统音频，再按一次可停止监听。' },
+      { key: '实时转录', desc: '面试官说话会被转成文字，停止后 AI 会自动生成参考回答。' },
+    ],
+
+    // Section 04
+    s04_eyebrow: '04 · 快捷键表格',
+    s04_title: '常用快捷键一览',
+    s04_desc: '快捷键都支持在高级设置中自定义。如果你是 Mac 用户，建议优先修改和系统快捷键冲突的那两个组合键。',
+    s04_thFunc: '功能',
+    s04_thWin: 'Windows',
+    s04_thMac: 'Mac',
+    s04_macTip: '<strong>Mac 提示：</strong> 带 * 的快捷键可能和系统行为冲突，建议把 <code>Cmd+H</code> 改成 <code>Cmd+Shift+H</code>，把 <code>Cmd+M</code> 改成 <code>Cmd+Shift+M</code>。',
+    shortcutRows: [
+      ['截图', 'Ctrl+H', 'Cmd+H *'],
+      ['生成答案', 'Ctrl+Enter', 'Cmd+Enter'],
+      ['隐藏 / 显示窗口', 'Ctrl+B', 'Cmd+B'],
+      ['重置清空', 'Ctrl+R', 'Cmd+R'],
+      ['切换面试模式', 'Ctrl+M', 'Cmd+M *'],
+      ['面试录音开关', 'Alt+X', 'Option+X'],
+      ['滚动答案（上 / 下）', 'Ctrl+, / Ctrl+.', 'Cmd+, / Cmd+.'],
+      ['移动窗口', 'Ctrl+方向键', 'Cmd+方向键'],
+      ['放大 / 缩小窗口', 'Ctrl++ / Ctrl+-', 'Cmd++ / Cmd+-'],
+      ['透明度调节', 'Ctrl+[ / Ctrl+]', 'Cmd+[ / Cmd+]'],
+      ['退出应用', 'Ctrl+Q', 'Cmd+Q'],
+    ],
+
+    // Section 05
+    s05_eyebrow: '05 · 设置说明',
+    s05_title: '齿轮按钮里可以完成大部分配置',
+    s05_desc: '点击工具条上的齿轮图标，会打开快捷设置。这里能快速调整语言、主题、透明度、模型等常用项；继续进入高级设置，则可以配置 API Key 和自定义快捷键。',
+    settingsItems: [
+      '编程语言 / 面试语言',
+      '浅色 / 深色主题',
+      '窗口透明度',
+      '解题模型',
+      '截图模式（全屏 / 区域）',
+      'AI 服务商、API Key、自定义快捷键',
+    ],
+
+    // Section 06
+    s06_eyebrow: '06 · Mac 用户须知',
+    s06_title: 'Mac 上主要注意快捷键冲突和音频驱动',
+    s06_shortcutTitle: '快捷键冲突',
+    s06_shortcutDesc: 'macOS 默认把 <code>Cmd+H</code> 用作隐藏应用，把 <code>Cmd+M</code> 用作最小化窗口，因此建议你在高级设置中改成 <code>Cmd+Shift+H</code> 和 <code>Cmd+Shift+M</code>。',
+    s06_audioTitle: '面试模式音频',
+    s06_audioDesc: '如果需要捕获系统音频，请先安装 <a href="https://existential.audio/blackhole/" target="_blank" rel="noreferrer" class="text-primary hover:underline">BlackHole</a> 虚拟音频驱动。安装完成后，再进入 Cheapest Interview 的面试模式进行监听即可。',
+
+    // Section 07
+    s07_eyebrow: '07 · 常见问题',
+    s07_title: '先看这里，很多问题都能快速解决',
+    faqItems: [
+      { q: '快捷键全部不生效？', a: '通常是后台存在多个 Cheapest Interview 进程。请先完全退出所有进程，再重新启动应用。' },
+      { q: '激活失败怎么办？', a: '大多数情况是网络波动导致。保持联网状态，等待几秒后再次尝试即可。' },
+      { q: '截图后没有生成答案？', a: '请先检查是否已经在"高级设置"里配置好可用的 API Key。' },
+      { q: '面试模式没有转录内容？', a: '请确认已经点击"开始监听"或按下对应快捷键。Mac 用户还需要提前安装虚拟音频驱动。' },
+    ],
+
+    // Footer
+    footerDesc: '需要购买、续费或排查问题时，可直接返回首页查看下载与联系方式。',
+    footerBack: '返回首页',
+    footerContact: '联系客服',
+  },
+
+  en: {
+    back: 'Back to Home',
+    docsTitle: 'Cheapest Interview Docs',
+    badge: 'Documentation · v1.0.0',
+    heroTitle_prefix: 'Get Started with ',
+    heroDesc: 'This is a web-based user guide covering installation & activation, exam/interview workflows, shortcuts, settings, Mac-specific notes, and FAQ. First-time users should read the first four sections in order.',
+    startReading: 'Start Reading',
+    backHome: 'Back to Home',
+
+    // Quick nav
+    quickNavTag: 'Quick Navigation',
+    quickNavTitle: 'Jump to the section you need',
+    quickNavBackHome: 'Back to Product Page',
+    quickNavItems: [
+      ['#install', 'Installation & Activation'],
+      ['#api', 'API Configuration (Optional)'],
+      ['#usage', 'Basic Usage (Exam / Interview)'],
+      ['#shortcuts', 'Shortcut Table'],
+      ['#settings', 'Settings'],
+      ['#mac', 'Mac Users Guide'],
+      ['#faq', 'FAQ'],
+    ] as [string, string][],
+
+    // Section 01
+    s01_eyebrow: '01 · Installation & Activation',
+    s01_title: 'Install first, then activate',
+    s01_desc: 'For first-time use, make sure the installer is correct and your network is available before entering the activation code. The entire process usually takes only 1-2 minutes.',
+    s01_installTitle: 'Installation',
+    s01_win: 'Windows',
+    s01_winDesc: 'Double-click <code>StealthMate-Setup-1.0.0.exe</code> to install.',
+    s01_mac: 'macOS',
+    s01_macDesc: 'Open the <code>.dmg</code> file and drag the app into Applications.',
+    s01_activateTitle: 'First-time Activation Steps',
+    s01_steps: [
+      'Launch the app and you\'ll see the activation screen.',
+      'Enter your activation code and click "Activate".',
+      'If there\'s network delay, just wait — the app will auto-retry.',
+    ],
+    s01_codeExample: 'Activation code format:',
+
+    // Section 02
+    s02_eyebrow: '02 · API Configuration (Optional)',
+    s02_title: 'Built-in Free Model + Custom API Tutorial',
+    s02_desc: 'The app includes Gemini 2.5 Flash Lite as a free model — ready to use after activation with no configuration needed. The free quota is 1,000 uses per day (shared among all users, first come first served). After the quota is exhausted, you need to configure your own API Key.',
+    s02_freeTitle: 'Built-in Free Model: Gemini 2.5 Flash Lite',
+    s02_freeDesc: 'All features available after activation (screenshot answers, interview voice monitoring, etc.). Free quota is <strong>1,000 uses per day</strong>, shared among all users, first come first served. After the quota runs out, configure any of the following platform API Keys.',
+    s02_qwenTitle: 'Qwen (QWEN)',
+    s02_qwenDesc: 'Alibaba Cloud LLM. <strong>Free quota for new users</strong>, direct connection in China.',
+    s02_kimiTitle: 'Kimi (Moonshot)',
+    s02_kimiDesc: 'Chinese LLM, requires top-up. Direct connection in China.',
+    s02_openrouterTitle: 'OpenRouter',
+    s02_openrouterDesc: 'Aggregates multiple models (GPT, Claude, etc.), requires VPN.',
+    s02_geminiTitle: 'Gemini',
+    s02_geminiDesc: 'Google LLM, requires VPN.',
+    s02_applyKey: 'Apply for API Key →',
+    s02_howToTitle: 'How to Enter Your API Key',
+    s02_howToSteps: [
+      'Click the <strong>gear icon</strong> in the top-right corner to open Settings.',
+      'Click <strong>"Advanced Settings"</strong> and select your preferred AI platform and model.',
+      'Paste your API Key → click <strong>"Test Connection"</strong> to verify → click <strong>"Save Settings"</strong>.',
+    ],
+
+    // Section 03
+    s03_eyebrow: '03 · Basic Usage',
+    s03_title: 'Start with Exam mode, switch to Interview mode when needed',
+    s03_desc: 'After launch, a draggable floating bar appears at the top of the screen. In most cases, you only need to remember screenshot, generate answer, and switch mode.',
+    s03_examTitle: 'Exam Mode (Default)',
+    s03_examSubtitle: 'For coding questions, multiple choice, data analysis, etc.',
+    s03_examSteps: [
+      { key: 'Ctrl+H', desc: 'Screenshot — take multiple screenshots to combine different areas of the same question.' },
+      { key: 'Ctrl+Enter', desc: 'Generate AI answer based on current screenshots.' },
+      { key: 'Ctrl+R', desc: 'Reset and return to the initial bar state for the next question.' },
+    ],
+    s03_interviewTitle: 'Interview Mode',
+    s03_interviewSubtitle: 'For technical, HR, and behavioral interview Q&A',
+    s03_interviewSteps: [
+      { key: 'Ctrl+M', desc: 'Switch to Interview mode.' },
+      { key: 'Alt+X', desc: 'Start listening to system audio. Press again to stop.' },
+      { key: 'Live Transcription', desc: 'Interviewer speech is transcribed in real-time. After stopping, AI automatically generates suggested answers.' },
+    ],
+
+    // Section 04
+    s04_eyebrow: '04 · Shortcut Table',
+    s04_title: 'Common Shortcuts at a Glance',
+    s04_desc: 'All shortcuts can be customized in Advanced Settings. Mac users should prioritize changing the two shortcuts that conflict with system defaults.',
+    s04_thFunc: 'Function',
+    s04_thWin: 'Windows',
+    s04_thMac: 'Mac',
+    s04_macTip: '<strong>Mac Tip:</strong> Shortcuts marked with * may conflict with system behavior. We recommend changing <code>Cmd+H</code> to <code>Cmd+Shift+H</code> and <code>Cmd+M</code> to <code>Cmd+Shift+M</code>.',
+    shortcutRows: [
+      ['Screenshot', 'Ctrl+H', 'Cmd+H *'],
+      ['Generate Answer', 'Ctrl+Enter', 'Cmd+Enter'],
+      ['Hide / Show Window', 'Ctrl+B', 'Cmd+B'],
+      ['Reset / Clear', 'Ctrl+R', 'Cmd+R'],
+      ['Toggle Interview Mode', 'Ctrl+M', 'Cmd+M *'],
+      ['Interview Recording Toggle', 'Alt+X', 'Option+X'],
+      ['Scroll Answer (Up / Down)', 'Ctrl+, / Ctrl+.', 'Cmd+, / Cmd+.'],
+      ['Move Window', 'Ctrl+Arrow Keys', 'Cmd+Arrow Keys'],
+      ['Resize Window (+/-)', 'Ctrl++ / Ctrl+-', 'Cmd++ / Cmd+-'],
+      ['Opacity Adjustment', 'Ctrl+[ / Ctrl+]', 'Cmd+[ / Cmd+]'],
+      ['Quit App', 'Ctrl+Q', 'Cmd+Q'],
+    ],
+
+    // Section 05
+    s05_eyebrow: '05 · Settings',
+    s05_title: 'Most configurations are in the gear button',
+    s05_desc: 'Click the gear icon on the toolbar to open Quick Settings. Here you can adjust language, theme, opacity, model, etc. Go into Advanced Settings to configure API Keys and custom shortcuts.',
+    settingsItems: [
+      'Programming / Interview Language',
+      'Light / Dark Theme',
+      'Window Opacity',
+      'AI Model',
+      'Screenshot Mode (Full / Region)',
+      'AI Provider, API Key, Custom Shortcuts',
+    ],
+
+    // Section 06
+    s06_eyebrow: '06 · Mac Users Guide',
+    s06_title: 'Key notes: shortcut conflicts and audio driver',
+    s06_shortcutTitle: 'Shortcut Conflicts',
+    s06_shortcutDesc: 'macOS uses <code>Cmd+H</code> to hide apps and <code>Cmd+M</code> to minimize windows by default. We recommend changing these to <code>Cmd+Shift+H</code> and <code>Cmd+Shift+M</code> in Advanced Settings.',
+    s06_audioTitle: 'Interview Mode Audio',
+    s06_audioDesc: 'To capture system audio, install <a href="https://existential.audio/blackhole/" target="_blank" rel="noreferrer" class="text-primary hover:underline">BlackHole</a> virtual audio driver first. Then use Interview mode in Cheapest Interview to start listening.',
+
+    // Section 07
+    s07_eyebrow: '07 · FAQ',
+    s07_title: 'Check here first — most issues are quickly resolved',
+    faqItems: [
+      { q: 'All shortcuts not working?', a: 'Usually caused by multiple Cheapest Interview processes running in the background. Fully quit all processes and restart the app.' },
+      { q: 'Activation failed?', a: 'Most likely due to network fluctuation. Stay connected and try again after a few seconds.' },
+      { q: 'No answer generated after screenshot?', a: 'Check if you\'ve configured a valid API Key in "Advanced Settings".' },
+      { q: 'No transcription in Interview mode?', a: 'Make sure you\'ve clicked "Start Listening" or pressed the corresponding shortcut. Mac users also need to install the virtual audio driver first.' },
+    ],
+
+    // Footer
+    footerDesc: 'For purchases, renewals, or troubleshooting, return to the homepage for download links and contact info.',
+    footerBack: 'Back to Home',
+    footerContact: 'Contact Support',
+  },
+};
