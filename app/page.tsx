@@ -364,7 +364,7 @@ function DownloadSection() {
               {t.download_mac_btn}
             </a>
             <p className="text-xs text-gray-400 mb-3">{t.download_mac_note}</p>
-            <a href="https://pan.baidu.com/s/17abICCfVyUpjr6eB9KDH3w" target="_blank" rel="noopener noreferrer"
+            <a href="https://pan.baidu.com/s/1UMV9cDJHf10OIxc6Y0lctQ" target="_blank" rel="noopener noreferrer"
               className="btn-outline px-6 py-2.5 rounded-xl font-semibold inline-block w-full text-center text-sm mb-3">
               {t.download_mac_baidu}
             </a>
