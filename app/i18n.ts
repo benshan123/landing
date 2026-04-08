@@ -169,7 +169,7 @@ export const translations = {
     twophone_badge: '🔥 2.0 全新功能',
     twophone_how_title: '如何配对连接',
     twophone_steps: [
-      { step: '1', title: '电脑端启动', desc: '安装并打开双机位版客户端，右键点击右下角系统托盘中的小图标，选择"双机位配对"，即可查看 6 位配对码。' },
+      { step: '1', title: '电脑端启动', desc: '安装并打开双机位版客户端。首次使用请进入设置，开启"双机位模式"；开启后右键点击右下角系统托盘中的小图标，选择"双机位配对"，即可查看 6 位配对码。' },
       { step: '2', title: '手机端打开', desc: '手机浏览器访问电脑显示的地址（同一 WiFi 下的局域网地址），进入配对页面。' },
       { step: '3', title: '输入配对码', desc: '在手机配对页面输入电脑上显示的 6 位配对码，点击连接。连接成功后会显示"已配对"绿色状态。' },
       { step: '4', title: '开始使用', desc: '配对成功后，电脑截屏会自动传到手机。在手机上点击"处理"或电脑按 Ctrl+Enter，即可 AI 分析出答案。' },
@@ -384,7 +384,7 @@ export const translations = {
     twophone_badge: '🔥 New in 2.0',
     twophone_how_title: 'How to Pair & Connect',
     twophone_steps: [
-      { step: '1', title: 'Launch on PC', desc: 'Install and open the Dual-Device client. Go to Settings → Dual-Device and enable "Dual-Device Mode". A 6-digit pairing code will appear.' },
+      { step: '1', title: 'Launch on PC', desc: 'Install and open the Dual-Device client. For first-time use, go to Settings and enable "Dual-Device Mode". Then right-click the system tray icon and select "Dual-Device Pairing" to view the 6-digit pairing code.' },
       { step: '2', title: 'Open on Phone', desc: 'On your phone browser, visit the URL displayed on the PC (local network address on the same WiFi).' },
       { step: '3', title: 'Enter Code', desc: 'Enter the 6-digit pairing code on the phone pairing page and tap Connect. A green "Paired" status confirms success.' },
       { step: '4', title: 'Start Using', desc: 'Once paired, PC screenshots auto-transfer to phone. Tap "Analyze" on phone or press Ctrl+Enter on PC to get AI answers.' },
