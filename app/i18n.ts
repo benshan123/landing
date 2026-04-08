@@ -159,6 +159,44 @@ export const translations = {
       { q: '支持退款吗？', a: '如遇质量问题，购买后 3 天内全额退款。' },
     ],
 
+    // Navbar - twophone
+    nav_twophone: '双机位版',
+
+    // TwoPhone page
+    twophone_title: '双机位模式',
+    twophone_subtitle: '物理隔离，终极隐身',
+    twophone_desc: '电脑只负责无感截屏，答案直接显示在手机上。电脑端无任何窗口痕迹，实现真正的物理隔离。',
+    twophone_badge: '🔥 2.0 全新功能',
+    twophone_how_title: '使用流程',
+    twophone_steps: [
+      { step: '1', title: '安装配对', desc: '电脑安装双机位版客户端，启动后显示配对二维码。用手机扫码完成配对。' },
+      { step: '2', title: '开始考试', desc: '电脑端只有系统托盘图标，无任何可疑窗口。正常打开考试/面试页面。' },
+      { step: '3', title: '快捷键截屏', desc: '按 Ctrl+H 无感截屏，截图自动通过加密通道发送到手机。' },
+      { step: '4', title: '手机看答案', desc: '手机自动接收截图并调用 AI 分析，实时显示完整答案。' },
+    ],
+    twophone_advantage_title: '核心优势',
+    twophone_advantages: [
+      { icon: '🔒', title: '物理隔离', desc: '答案在手机上显示，电脑端零痕迹，任何监控手段都无法检测。' },
+      { icon: '📱', title: '手机看答案', desc: '手机浏览器直接使用，像原生App一样全屏运行，无需安装任何软件。' },
+      { icon: '⚡', title: '秒级响应', desc: '截屏到手机显示答案仅需 1-3 秒，AI 流式输出实时呈现。' },
+      { icon: '🔑', title: 'API Key 更安全', desc: 'API Key 只存在手机端，不经过任何服务器，更加安全。' },
+    ],
+    twophone_vs_title: '对比标准版',
+    twophone_vs_headers: ['', '标准版', '双机位版'],
+    twophone_vs_rows: [
+      { label: '截屏方式', standard: '电脑截屏', twophone: '电脑截屏（不变）' },
+      { label: '答案显示', standard: '电脑隐身窗口', twophone: '手机浏览器' },
+      { label: '电脑端痕迹', standard: '有隐身窗口', twophone: '仅托盘图标' },
+      { label: 'AI 调用', standard: '电脑发起', twophone: '手机直接调用' },
+      { label: '安全等级', standard: '高', twophone: '极高' },
+    ],
+    twophone_download_title: '下载双机位版',
+    twophone_download_desc: '安装客户端 → 扫码配对 → 开始使用',
+    twophone_download_win: '下载 Windows 版',
+    twophone_download_mac: '下载 Mac 版',
+    twophone_download_coming: '即将上线，敬请期待',
+    twophone_back: '返回首页',
+
     // Footer
     footer_title: '联系客服',
     footer_desc: '扫码添加 QQ 好友，咨询购买与使用问题',
@@ -325,6 +363,44 @@ export const translations = {
       { q: 'Can one activation code be used on multiple computers?', a: 'No. Each activation code is bound to one computer. Contact support to rebind if you change computers.' },
       { q: 'Is there a refund policy?', a: 'Full refund within 3 days of purchase for quality issues.' },
     ],
+
+    // Navbar - twophone
+    nav_twophone: 'Dual-Device',
+
+    // TwoPhone page
+    twophone_title: 'Dual-Device Mode',
+    twophone_subtitle: 'Physical Isolation, Ultimate Stealth',
+    twophone_desc: 'PC only captures invisible screenshots. Answers are displayed on your phone. Zero traces on the PC — true physical isolation.',
+    twophone_badge: '🔥 New in 2.0',
+    twophone_how_title: 'How It Works',
+    twophone_steps: [
+      { step: '1', title: 'Install & Pair', desc: 'Install the Dual-Device client on your PC. Scan the QR code with your phone to pair.' },
+      { step: '2', title: 'Start Your Exam', desc: 'PC shows only a system tray icon — no suspicious windows. Open your exam/interview page normally.' },
+      { step: '3', title: 'Hotkey Screenshot', desc: 'Press Ctrl+H to take an invisible screenshot. It is sent to your phone via encrypted channel.' },
+      { step: '4', title: 'View Answers on Phone', desc: 'Phone receives the screenshot, calls AI for analysis, and displays the full answer in real-time.' },
+    ],
+    twophone_advantage_title: 'Key Advantages',
+    twophone_advantages: [
+      { icon: '🔒', title: 'Physical Isolation', desc: 'Answers on phone, zero traces on PC. Undetectable by any monitoring method.' },
+      { icon: '📱', title: 'Phone as Display', desc: 'Works in phone browser like a native app — no software installation needed on phone.' },
+      { icon: '⚡', title: 'Instant Response', desc: 'Screenshot to answer on phone in 1-3 seconds. AI streaming output in real-time.' },
+      { icon: '🔑', title: 'Safer API Keys', desc: 'API Keys stored only on your phone, never pass through any server.' },
+    ],
+    twophone_vs_title: 'vs Standard Version',
+    twophone_vs_headers: ['', 'Standard', 'Dual-Device'],
+    twophone_vs_rows: [
+      { label: 'Screenshot', standard: 'PC capture', twophone: 'PC capture (same)' },
+      { label: 'Answer Display', standard: 'PC stealth window', twophone: 'Phone browser' },
+      { label: 'PC Traces', standard: 'Stealth window exists', twophone: 'Tray icon only' },
+      { label: 'AI Calls', standard: 'From PC', twophone: 'Direct from phone' },
+      { label: 'Security Level', standard: 'High', twophone: 'Ultra High' },
+    ],
+    twophone_download_title: 'Download Dual-Device Version',
+    twophone_download_desc: 'Install client → Scan to pair → Start using',
+    twophone_download_win: 'Download for Windows',
+    twophone_download_mac: 'Download for Mac',
+    twophone_download_coming: 'Coming soon, stay tuned',
+    twophone_back: 'Back to Home',
 
     // Footer
     footer_title: 'Contact Us',

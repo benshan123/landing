@@ -45,6 +45,7 @@ function Navbar() {
           <a href="#faq" className="hover:text-primary transition">{t.nav_faq}</a>
         </div>
         <div className="flex items-center gap-3">
+          <a href="/twophone" className="px-4 py-2 rounded-lg text-sm font-semibold bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:opacity-90 transition">{t.nav_twophone}</a>
           <LanguageSwitch />
           <a href="#pricing" className="btn-primary px-5 py-2 rounded-lg text-sm font-medium">{t.nav_buy}</a>
         </div>
