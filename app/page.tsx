@@ -78,6 +78,11 @@ function HeroSection() {
         <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-400">
           <span>{t.hero_tag_stealth}</span><span>{t.hero_tag_fast}</span><span>{t.hero_tag_api}</span><span>{t.hero_tag_platform}</span>
         </div>
+        <div className="mt-10 max-w-2xl mx-auto">
+          <p className="text-sm text-gray-400 italic leading-relaxed border-l-2 border-purple-300 pl-4 text-left">
+            {t.hero_mission}
+          </p>
+        </div>
       </div>
     </section>
   );
@@ -372,7 +377,17 @@ function DownloadSection() {
             <p className="text-xs text-gray-400">{t.download_mac_warn}</p>
           </div>
         </div>
-        <p className="text-sm text-gray-400 mt-8">
+        <div className="mt-8 max-w-2xl mx-auto bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-2xl p-6">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="text-lg">🔥</span>
+            <h3 className="font-bold text-gray-900">{t.download_twophone_tip}</h3>
+          </div>
+          <p className="text-sm text-gray-600 mb-4">{t.download_twophone_tip_desc}</p>
+          <a href="/twophone" className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2.5 rounded-xl font-semibold text-sm hover:opacity-90 transition">
+            {t.download_twophone_btn}
+          </a>
+        </div>
+        <p className="text-sm text-gray-400 mt-6">
           {t.download_docs_prefix}<a href="/docs" className="text-primary hover:underline">{t.download_docs_link}</a>
         </p>
       </div>

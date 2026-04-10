@@ -23,6 +23,7 @@ export const translations = {
     hero_tag_fast: '⚡ 秒级响应',
     hero_tag_api: '🔑 支持自配 API Key',
     hero_tag_platform: '💻 Windows + Mac',
+    hero_mission: '我们相信：当所有人都能平等地获取 AI 辅助时，才是真正的公平竞争。Cheapest Interview 的初衷就是打破信息差，让每个人都站在同一起跑线上。',
 
     // Features
     feat_exam_tag: 'AI 笔试工具',
@@ -132,6 +133,9 @@ export const translations = {
     download_mac_note: '⚡ 快速下载需要 GitHub 账号',
     download_mac_baidu: '百度网盘下载（提取码: 4p2e）',
     download_mac_warn: '⚠️ 面试模式需安装 BlackHole 音频驱动',
+    download_twophone_tip: '推荐使用双机位版',
+    download_twophone_tip_desc: '双机位版兼容所有单机位功能，同时支持手机端查看答案，安全性更高。建议直接下载双机位版获得最佳体验。',
+    download_twophone_btn: '前往下载双机位版',
     download_docs_prefix: '📖 首次使用？请查看 ',
     download_docs_link: '使用文档',
 
@@ -266,6 +270,7 @@ export const translations = {
     hero_tag_fast: '⚡ Instant Response',
     hero_tag_api: '🔑 Bring Your Own API Key',
     hero_tag_platform: '💻 Windows + Mac',
+    hero_mission: 'We believe that true fair competition only exists when everyone has equal access to AI assistance. Cheapest Interview was built to bridge the information gap and put everyone on a level playing field.',
 
     // Features
     feat_exam_tag: 'AI Exam Tool',
@@ -375,6 +380,9 @@ export const translations = {
     download_mac_note: '⚡ Fast download requires GitHub account',
     download_mac_baidu: 'Baidu Netdisk (Code: 4p2e)',
     download_mac_warn: '⚠️ Interview mode requires BlackHole audio driver',
+    download_twophone_tip: 'Recommended: Dual-Device Version',
+    download_twophone_tip_desc: 'The Dual-Device version includes all standard features plus phone-side answer display for enhanced security. We recommend downloading it for the best experience.',
+    download_twophone_btn: 'Download Dual-Device Version',
     download_docs_prefix: '📖 First time? Check the ',
     download_docs_link: 'User Guide',
 
