@@ -111,6 +111,55 @@ function StepsSection() {
   );
 }
 
+/* ---- 注意事项 ---- */
+function TipsSection() {
+  const { t } = useLanguage();
+  return (
+    <section className="py-20 px-4">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">{t.twophone_tips_title}</h2>
+        <p className="text-center text-gray-500 mb-12 max-w-2xl mx-auto">{t.twophone_tips_desc}</p>
+        <div className="grid gap-6">
+          {t.twophone_tips.map((tip: any) => (
+            <div key={tip.title} className="bg-amber-50 border border-amber-200 rounded-2xl p-6 flex gap-4">
+              <div className="text-3xl flex-shrink-0">{tip.icon}</div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-2 text-lg">{tip.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{tip.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---- Qwen API 配置 ---- */
+function QwenSetupSection() {
+  const { t } = useLanguage();
+  return (
+    <section className="pb-20 px-4">
+      <div className="max-w-4xl mx-auto">
+        <div className="bg-blue-50 border border-blue-200 rounded-2xl p-8">
+          <h3 className="text-2xl font-bold text-gray-900 mb-2">{t.twophone_qwen_title}</h3>
+          <p className="text-gray-500 mb-6">{t.twophone_qwen_desc}</p>
+          <div className="space-y-4">
+            {t.twophone_qwen_steps.map((s: any) => (
+              <div key={s.step} className="flex gap-3 items-start">
+                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+                  {s.step}
+                </div>
+                <p className="text-gray-700 text-sm leading-relaxed pt-1">{s.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---- 快捷键一览 ---- */
 function HotkeySection() {
   const { t } = useLanguage();
@@ -240,6 +289,8 @@ export default function TwoPhonePage() {
       <HeroSection />
       <ArchitectureSection />
       <StepsSection />
+      <TipsSection />
+      <QwenSetupSection />
       <HotkeySection />
       <AdvantagesSection />
       <CompareSection />
