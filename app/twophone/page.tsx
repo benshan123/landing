@@ -249,7 +249,7 @@ function DownloadSection() {
           <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
             <div className="text-4xl mb-3">💻</div>
             <h3 className="font-bold text-lg text-gray-900 mb-4">Windows</h3>
-            <a href="https://github.com/benshan123/wdz/releases/download/v1.1.8-twophone/StealthMate-TwoPhone-Setup-1.1.8.exe" className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center hover:opacity-90 transition">
+            <a href="https://github.com/benshan123/wdz/releases/download/v1.1.9-twophone/StealthMate-TwoPhone-Setup-1.1.9.exe" className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center hover:opacity-90 transition">
               {t.twophone_download_win}
             </a>
             <p className="text-xs text-gray-400 mt-3">Windows 10+ / 64-bit</p>
@@ -258,7 +258,7 @@ function DownloadSection() {
           <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
             <div className="text-4xl mb-3">🍎</div>
             <h3 className="font-bold text-lg text-gray-900 mb-4">macOS</h3>
-            <a href="https://github.com/benshan123/wdz/releases/download/v1.1.8-twophone/StealthMate-TwoPhone-1.1.8-universal.dmg" className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center hover:opacity-90 transition">
+            <a href="https://github.com/benshan123/wdz/releases/download/v1.1.9-twophone/StealthMate-TwoPhone-1.1.9-arm64.dmg" className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center hover:opacity-90 transition">
               {t.twophone_download_mac}
             </a>
             <p className="text-xs text-gray-400 mt-3">macOS 12+ / Intel & Apple Silicon</p>
