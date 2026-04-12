@@ -159,6 +159,9 @@ function StealthSection() {
             {t.stealth_platforms.map(p => <span key={p} className="px-4 py-2 bg-gray-50 border border-gray-200 rounded-full text-sm text-gray-600">{p}</span>)}
           </div>
         </div>
+        <div className="mt-8 bg-amber-50 border border-amber-200 rounded-xl px-6 py-4 text-sm text-amber-800 leading-relaxed">
+          {t.stealth_lockscreen_warn}
+        </div>
       </div>
     </section>
   );
@@ -349,12 +352,12 @@ function DownloadSection() {
             <div className="text-4xl mb-3">💻</div>
             <h3 className="font-bold text-lg text-gray-900 mb-1">{t.download_win_title}</h3>
             <p className="text-sm text-gray-400 mb-4">{t.download_win_spec}</p>
-            <a href="https://github.com/benshan123/wdz/releases/download/v1.1.7/StealthMate-Setup-1.1.7.exe" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/benshan123/wdz/releases/download/v1.1.9-twophone/StealthMate-TwoPhone-Setup-1.1.9.exe" target="_blank" rel="noopener noreferrer"
               className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center mb-2">
               {t.download_win_btn}
             </a>
             <p className="text-xs text-gray-400 mb-3">{t.download_win_note}</p>
-            <a href="https://pan.baidu.com/s/1EDRfKekQElL-exNy4zY6PA" target="_blank" rel="noopener noreferrer"
+            <a href="https://pan.baidu.com/s/1WO71D3osyvGHxvKfgMJ3xw" target="_blank" rel="noopener noreferrer"
               className="btn-outline px-6 py-2.5 rounded-xl font-semibold inline-block w-full text-center text-sm mb-3">
               {t.download_win_baidu}
             </a>
@@ -365,12 +368,12 @@ function DownloadSection() {
             <div className="text-4xl mb-3">🍎</div>
             <h3 className="font-bold text-lg text-gray-900 mb-1">{t.download_mac_title}</h3>
             <p className="text-sm text-gray-400 mb-4">{t.download_mac_spec}</p>
-            <a href="https://github.com/benshan123/wdz/releases/download/v1.1.7/StealthMate-1.1.7-universal.dmg" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/benshan123/wdz/releases/download/v1.1.9-twophone/StealthMate-TwoPhone-1.1.9-arm64.dmg" target="_blank" rel="noopener noreferrer"
               className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center mb-2">
               {t.download_mac_btn}
             </a>
             <p className="text-xs text-gray-400 mb-3">{t.download_mac_note}</p>
-            <a href="https://pan.baidu.com/s/1UMV9cDJHf10OIxc6Y0lctQ" target="_blank" rel="noopener noreferrer"
+            <a href="https://pan.baidu.com/s/1VEGdF0wWfEQgndbORsc9Rw" target="_blank" rel="noopener noreferrer"
               className="btn-outline px-6 py-2.5 rounded-xl font-semibold inline-block w-full text-center text-sm mb-3">
               {t.download_mac_baidu}
             </a>
