@@ -302,8 +302,66 @@ export default function DocsPage() {
               </div>
             </SectionCard>
 
-            {/* 07 FAQ */}
-            <SectionCard id="faq" eyebrow={t.s07_eyebrow} title={t.s07_title}>
+            {/* 07 Dual-Device / 双机位 */}
+            <SectionCard id="twophone" eyebrow={t.s07_eyebrow} title={t.s07_title} description={t.s07_desc}>
+              {/* 配对步骤 */}
+              <div className="mb-8">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">{t.s07_howTitle}</h3>
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {t.s07_steps.map((s: any) => (
+                    <div key={s.step} className="rounded-2xl border border-purple-100 bg-purple-50 p-5 text-center">
+                      <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white text-lg font-bold mx-auto mb-3">{s.step}</div>
+                      <h4 className="font-bold text-gray-900 mb-1">{s.title}</h4>
+                      <p className="text-sm text-gray-600 leading-relaxed">{s.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* 快捷键 */}
+              <div className="mb-8">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t.s07_hotkeyTitle}</h3>
+                <p className="text-gray-500 text-sm mb-4">{t.s07_hotkeyDesc}</p>
+                <div className="overflow-hidden rounded-2xl border border-gray-200">
+                  <div className="grid gap-0">
+                    {t.s07_hotkeys.map((h: any, i: number) => (
+                      <div key={h.keys} className={`flex items-center gap-4 p-4 text-sm ${i < t.s07_hotkeys.length - 1 ? 'border-b border-gray-100' : ''} ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/70'}`}>
+                        <code className="flex-shrink-0 bg-gray-900 text-green-400 px-3 py-1.5 rounded-lg text-xs font-mono font-bold min-w-[140px] text-center">{h.keys}</code>
+                        <span className="font-semibold text-gray-900">{h.action}</span>
+                        <span className="text-gray-400">—</span>
+                        <span className="text-gray-500">{h.desc}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              {/* 注意事项 */}
+              <div className="mb-8">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">{t.s07_tipsTitle}</h3>
+                <div className="grid gap-4">
+                  {t.s07_tips.map((tip: any) => (
+                    <div key={tip.title} className="rounded-2xl border border-amber-200 bg-amber-50 p-5 flex gap-4">
+                      <div className="text-2xl flex-shrink-0">{tip.icon}</div>
+                      <div>
+                        <h4 className="font-bold text-gray-900 mb-1">{tip.title}</h4>
+                        <p className="text-sm text-gray-600 leading-relaxed">{tip.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* 下载 */}
+              <div className="rounded-2xl border border-purple-100 bg-gradient-to-r from-purple-50 to-pink-50 p-6 text-center">
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">{t.s07_downloadTitle}</h3>
+                <p className="text-sm text-gray-500 mb-4">{t.s07_downloadDesc}</p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <a href={t.s07_downloadWinUrl} className="btn-primary px-6 py-3 rounded-xl font-semibold text-sm">💻 {t.s07_downloadWin}</a>
+                  <a href={t.s07_downloadMacUrl} className="btn-primary px-6 py-3 rounded-xl font-semibold text-sm">🍎 {t.s07_downloadMac}</a>
+                </div>
+              </div>
+            </SectionCard>
+
+            {/* 08 FAQ */}
+            <SectionCard id="faq" eyebrow={t.s08_eyebrow} title={t.s08_title}>
               <div className="space-y-4">
                 {t.faqItems.map((item) => (
                   <div key={item.q} className="rounded-2xl border border-gray-200 bg-gray-50 p-5">

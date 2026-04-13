@@ -19,6 +19,7 @@ export const docsTranslations = {
       ['#shortcuts', '快捷键表格'],
       ['#settings', '设置说明'],
       ['#mac', 'Mac 用户须知'],
+      ['#twophone', '双机位模式'],
       ['#faq', '常见问题'],
     ] as [string, string][],
 
@@ -123,9 +124,44 @@ export const docsTranslations = {
     s06_audioTitle: '面试模式音频',
     s06_audioDesc: '如果需要捕获系统音频，请先安装 <a href="https://existential.audio/blackhole/" target="_blank" rel="noreferrer" class="text-primary hover:underline">BlackHole</a> 虚拟音频驱动。安装完成后，再进入 Cheapest Interview 的面试模式进行监听即可。',
 
-    // Section 07
-    s07_eyebrow: '07 · 常见问题',
-    s07_title: '先看这里，很多问题都能快速解决',
+    // Section 07 - 双机位模式
+    s07_eyebrow: '07 · 双机位模式',
+    s07_title: '物理隔离，答案显示在手机上',
+    s07_desc: '双机位模式下，电脑只负责无感截屏，答案直接显示在手机上。电脑端无任何窗口痕迹，实现真正的物理隔离。',
+    s07_howTitle: '配对连接步骤',
+    s07_steps: [
+      { step: '1', title: '电脑端启动', desc: '安装并打开双机位版客户端。首次使用请进入设置，开启"双机位模式"；开启后右键点击右下角系统托盘中的小图标，选择"双机位配对"，即可查看 6 位配对码。' },
+      { step: '2', title: '手机端打开', desc: '用手机扫描电脑配对窗口上的二维码，会自动打开手机端页面并完成配对。也可以手动在手机浏览器访问 stealthmate-phone.pages.dev。' },
+      { step: '3', title: '输入配对码', desc: '如果是手动访问，在手机页面输入电脑上显示的 6 位配对码，点击连接。配对成功后电脑端窗口会自动关闭。' },
+      { step: '4', title: '开始使用', desc: '配对成功后，电脑截屏会自动传到手机。在手机上点击"处理"或电脑按 Ctrl+Enter，即可 AI 分析出答案。' },
+    ],
+    s07_hotkeyTitle: '电脑端快捷键一览',
+    s07_hotkeyDesc: '配对成功后，所有操作都可以通过电脑端快捷键远程控制手机，无需触碰手机屏幕。',
+    s07_hotkeys: [
+      { keys: 'Ctrl + H', action: '无感截屏', desc: '截取当前屏幕并自动发送到手机' },
+      { keys: 'Ctrl + Enter', action: '分析答案', desc: '远程触发手机端 AI 分析截图' },
+      { keys: 'Ctrl + R', action: '清空重来', desc: '清空手机端的截图和答案' },
+      { keys: 'Ctrl + ↑ / ↓', action: '上下翻页', desc: '远程滚动手机端答案页面' },
+      { keys: 'Ctrl + ← / →', action: '代码左右滑动', desc: '远程滚动手机端代码块，查看被截断的代码' },
+      { keys: 'Ctrl + B', action: '隐藏/显示窗口', desc: '快速隐藏电脑端窗口' },
+      { keys: 'Ctrl + Q', action: '紧急退出', desc: '一键退出程序，紧急情况下快速关闭所有窗口' },
+    ],
+    s07_tipsTitle: '使用注意事项',
+    s07_tips: [
+      { icon: '💻', title: '电脑端图标位置', desc: '双机位版启动后，程序会最小化到电脑右下角的系统托盘区域（时钟旁边）。如果看不到图标，请点击托盘区域的「^」展开箭头查找。右键点击托盘图标即可进行配对、设置等操作。' },
+      { icon: '🔑', title: '手机端需要配置 API Key', desc: '双机位模式下，AI 分析由手机端直接调用，因此需要在手机端配置 API Key。配对成功后，点击手机页面右上角的设置图标，填入你的 API Key 即可。推荐使用通义千问（Qwen）的 qwen-vl-max 模型，性价比最高。' },
+      { icon: '🌐', title: '建议电脑端开启 VPN', desc: '电脑截图需要通过中转服务器发送到手机，如果不开 VPN，国内网络连接海外服务器会有一定延迟。建议电脑端开启 VPN 以获得最佳体验。如果没有 VPN，推荐配置通义千问（Qwen）API，因为它是国内服务，延迟更低。' },
+    ],
+    s07_downloadTitle: '下载双机位版',
+    s07_downloadDesc: '安装客户端 → 扫码配对 → 开始使用',
+    s07_downloadWin: '下载 Windows 版',
+    s07_downloadWinUrl: 'https://github.com/benshan123/wdz/releases/download/v1.1.9-twophone/StealthMate-TwoPhone-Setup-1.1.9.exe',
+    s07_downloadMac: '下载 Mac 版',
+    s07_downloadMacUrl: 'https://github.com/benshan123/wdz/releases/download/v1.1.9-twophone/StealthMate-TwoPhone-1.1.9-arm64.dmg',
+
+    // Section 08
+    s08_eyebrow: '08 · 常见问题',
+    s08_title: '先看这里，很多问题都能快速解决',
     faqItems: [
       { q: '快捷键全部不生效？', a: '通常是后台存在多个 Cheapest Interview 进程。请先完全退出所有进程，再重新启动应用。' },
       { q: '激活失败怎么办？', a: '大多数情况是网络波动导致。保持联网状态，等待几秒后再次尝试即可。' },
@@ -159,6 +195,7 @@ export const docsTranslations = {
       ['#shortcuts', 'Shortcut Table'],
       ['#settings', 'Settings'],
       ['#mac', 'Mac Users Guide'],
+      ['#twophone', 'Dual-Device Mode'],
       ['#faq', 'FAQ'],
     ] as [string, string][],
 
@@ -263,9 +300,44 @@ export const docsTranslations = {
     s06_audioTitle: 'Interview Mode Audio',
     s06_audioDesc: 'To capture system audio, install <a href="https://existential.audio/blackhole/" target="_blank" rel="noreferrer" class="text-primary hover:underline">BlackHole</a> virtual audio driver first. Then use Interview mode in Cheapest Interview to start listening.',
 
-    // Section 07
-    s07_eyebrow: '07 · FAQ',
-    s07_title: 'Check here first — most issues are quickly resolved',
+    // Section 07 - Dual-Device Mode
+    s07_eyebrow: '07 · Dual-Device Mode',
+    s07_title: 'Physical Isolation — Answers on Your Phone',
+    s07_desc: 'In Dual-Device mode, the PC only captures invisible screenshots. Answers are displayed on your phone. Zero traces on the PC — true physical isolation.',
+    s07_howTitle: 'How to Pair & Connect',
+    s07_steps: [
+      { step: '1', title: 'Launch on PC', desc: 'Install and open the Dual-Device client. For first-time use, go to Settings and enable "Dual-Device Mode". Then right-click the system tray icon and select "Dual-Device Pairing" to view the 6-digit pairing code.' },
+      { step: '2', title: 'Open on Phone', desc: 'Scan the QR code on the PC pairing window with your phone — it will auto-open the phone page and complete pairing. Or manually visit stealthmate-phone.pages.dev in your phone browser.' },
+      { step: '3', title: 'Enter Code', desc: 'If you opened the page manually, enter the 6-digit pairing code and tap Connect. The PC pairing window will close automatically once paired.' },
+      { step: '4', title: 'Start Using', desc: 'Once paired, PC screenshots auto-transfer to phone. Tap "Analyze" on phone or press Ctrl+Enter on PC to get AI answers.' },
+    ],
+    s07_hotkeyTitle: 'PC Shortcut Keys',
+    s07_hotkeyDesc: 'After pairing, control everything from the PC keyboard — no need to touch your phone.',
+    s07_hotkeys: [
+      { keys: 'Ctrl + H', action: 'Silent Screenshot', desc: 'Capture the screen and auto-send to phone' },
+      { keys: 'Ctrl + Enter', action: 'Analyze', desc: 'Remotely trigger AI analysis on phone' },
+      { keys: 'Ctrl + R', action: 'Clear All', desc: 'Clear screenshots and answers on phone' },
+      { keys: 'Ctrl + ↑ / ↓', action: 'Scroll Up/Down', desc: 'Remotely scroll the answer page on phone' },
+      { keys: 'Ctrl + ← / →', action: 'Scroll Code', desc: 'Horizontally scroll code blocks on phone' },
+      { keys: 'Ctrl + B', action: 'Hide/Show', desc: 'Toggle PC window visibility' },
+      { keys: 'Ctrl + Q', action: 'Emergency Exit', desc: 'Instantly quit the program, close all windows in emergency' },
+    ],
+    s07_tipsTitle: 'Important Notes',
+    s07_tips: [
+      { icon: '💻', title: 'PC Icon Location', desc: 'After launching the Dual-Device version, the program minimizes to the system tray area (near the clock) at the bottom-right corner of your screen. If you cannot see the icon, click the "^" expand arrow in the tray area. Right-click the tray icon to access pairing, settings, and more.' },
+      { icon: '🔑', title: 'Configure API Key on Phone', desc: 'In Dual-Device mode, AI analysis is called directly from the phone, so you need to configure an API Key on the phone side. After pairing, tap the settings icon at the top-right of the phone page and enter your API Key. We recommend using Qwen\'s qwen-vl-max model for the best value.' },
+      { icon: '🌐', title: 'Recommend VPN on PC', desc: 'Screenshots are sent from PC to phone via a relay server. Without a VPN, connections from mainland China to the overseas server may have noticeable latency. We recommend enabling a VPN on the PC for the best experience. If you don\'t have a VPN, consider using the Qwen API (a domestic service with lower latency).' },
+    ],
+    s07_downloadTitle: 'Download Dual-Device Version',
+    s07_downloadDesc: 'Install client → Scan to pair → Start using',
+    s07_downloadWin: 'Download for Windows',
+    s07_downloadWinUrl: 'https://github.com/benshan123/wdz/releases/download/v1.1.9-twophone/StealthMate-TwoPhone-Setup-1.1.9.exe',
+    s07_downloadMac: 'Download for Mac',
+    s07_downloadMacUrl: 'https://github.com/benshan123/wdz/releases/download/v1.1.9-twophone/StealthMate-TwoPhone-1.1.9-arm64.dmg',
+
+    // Section 08
+    s08_eyebrow: '08 · FAQ',
+    s08_title: 'Check here first — most issues are quickly resolved',
     faqItems: [
       { q: 'All shortcuts not working?', a: 'Usually caused by multiple Cheapest Interview processes running in the background. Fully quit all processes and restart the app.' },
       { q: 'Activation failed?', a: 'Most likely due to network fluctuation. Stay connected and try again after a few seconds.' },
