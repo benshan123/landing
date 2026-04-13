@@ -547,8 +547,8 @@ function ApiGuideSection() {
               {step.img && (
                 <div className="px-6 md:px-8 pb-6 md:pb-8">
                   <div className="rounded-xl overflow-hidden border border-gray-200 bg-gray-50">
-                    <Image src={step.img} alt={step.imgAlt} width={800} height={450}
-                      className="w-full h-auto" />
+                    <img src={step.img} alt={step.imgAlt}
+                      className="w-full h-auto" loading="lazy" />
                   </div>
                 </div>
               )}
