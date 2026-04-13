@@ -9,6 +9,7 @@ export const translations = {
     nav_pricing: '价格',
     nav_download: '下载',
     nav_docs: '使用文档',
+    nav_api_guide: 'API配置',
     nav_faq: 'FAQ',
     nav_buy: '立即购买',
 
@@ -76,7 +77,7 @@ export const translations = {
     // Pricing
     pricing_title: '选择适合你的方案',
     pricing_desc: '购买激活码后即可使用，比同类产品便宜 60%+',
-    pricing_note: '💡 内置 Gemini 2.5 Flash Lite 免费模型（每日 1000 次），也支持自配 API Key 使用更强模型',
+    pricing_note: '✨ 支持自配 API Key（如通义千问、Kimi、Gemini等），按用量计费，不限次数',
     pricing_plans: [
       {
         name: '月卡',
@@ -155,7 +156,7 @@ export const translations = {
     faq_title: '常见问题',
     faq_items: [
       { q: '真的完全隐身吗？', a: '是的。我们使用 WebRTC 标准协议的不可见模式，在腾讯会议、飞书、Zoom 等平台共享整个屏幕时，对方完全看不到窗口。建议正式使用前先和朋友测试一次。' },
-      { q: '什么是"自配 API Key"？', a: '软件已内置免费模型，开箱即用。如需更快速度或更强模型，可自行配置 API Key（如通义千问、Kimi、OpenRouter、Gemini），按用量付费，每次只需几分钱。' },
+      { q: '什么是“自配 API Key”？', a: '你可以自行配置 API Key（如通义千问、Kimi、OpenRouter、Gemini），按用量付费，每次只需几分钱。推荐使用通义千问，国内直连无需 VPN。详见 API 配置指南。' },
       { q: '如何购买？', a: '加 QQ（1245980446）或进群（1094796213）联系客服，选择套餐后付款即可获得激活码。' },
       { q: '月卡到期后怎么办？', a: '重新购买即可获得新的激活码。推荐直接购买永久卡（¥59.9），一次付费永久使用，无需续费。' },
       { q: '支持哪些系统？', a: 'Windows 10 2004+ 和 macOS 12+。' },
@@ -258,6 +259,7 @@ export const translations = {
     nav_pricing: 'Pricing',
     nav_download: 'Download',
     nav_docs: 'Docs',
+    nav_api_guide: 'API Guide',
     nav_faq: 'FAQ',
     nav_buy: 'Buy Now',
 
@@ -325,7 +327,7 @@ export const translations = {
     // Pricing
     pricing_title: 'Choose Your Plan',
     pricing_desc: 'Get your activation code and start using immediately — 60%+ cheaper than competitors',
-    pricing_note: '💡 Built-in free Gemini 2.5 Flash Lite model (1000 uses/day), also supports custom API Key for more powerful models',
+    pricing_note: '✨ Supports custom API Key (Qwen, Kimi, Gemini, etc.), pay-per-use with unlimited requests',
     pricing_plans: [
       {
         name: 'Monthly',
@@ -404,7 +406,7 @@ export const translations = {
     faq_title: 'FAQ',
     faq_items: [
       { q: 'Is it really fully stealth?', a: 'Yes. We use WebRTC invisible mode — completely undetectable on Tencent Meeting, Lark, Zoom, etc. even when sharing the full screen. We recommend testing with a friend before actual use.' },
-      { q: 'What is "Bring Your Own API Key"?', a: 'The app has a built-in free model ready to use. For faster speed or more powerful models, you can configure your own API Key (e.g., Qwen, Kimi, OpenRouter, Gemini) with pay-per-use pricing.' },
+      { q: 'What is "Bring Your Own API Key"?', a: 'You can configure your own API Key (e.g., Qwen, Kimi, OpenRouter, Gemini) with pay-per-use pricing. We recommend Qwen for users in China (no VPN needed). See our API configuration guide for details.' },
       { q: 'How to purchase?', a: 'Add QQ (1245980446) or join group (1094796213) to contact support. Choose a plan, pay, and receive your activation code.' },
       { q: 'What happens when the monthly plan expires?', a: 'Simply purchase a new activation code. We recommend the Lifetime plan (¥59.9) — pay once, use forever.' },
       { q: 'Which systems are supported?', a: 'Windows 10 2004+ and macOS 12+.' },

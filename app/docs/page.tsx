@@ -197,6 +197,11 @@ export default function DocsPage() {
                     </div>
                   ))}
                 </div>
+                <div className="mt-4">
+                  <Link href="/api-guide" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-5 py-2.5 rounded-xl font-semibold text-sm hover:opacity-90 transition">
+                    📖 查看保姆级 API 配置图文教程 →
+                  </Link>
+                </div>
               </div>
             </SectionCard>
 

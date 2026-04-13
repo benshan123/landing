@@ -14,7 +14,7 @@ export const docsTranslations = {
     quickNavBackHome: '返回产品首页',
     quickNavItems: [
       ['#install', '安装与激活'],
-      ['#api', 'API 配置（可选）'],
+      ['#api', 'API 配置'],
       ['#usage', '基本操作（笔试 / 面试）'],
       ['#shortcuts', '快捷键表格'],
       ['#settings', '设置说明'],
@@ -40,11 +40,11 @@ export const docsTranslations = {
     s01_codeExample: '激活码格式示例：',
 
     // Section 02
-    s02_eyebrow: '02 · API 配置（可选）',
-    s02_title: '内置免费模型 + 自配 API 教程',
-    s02_desc: '软件内置 Gemini 2.5 Flash Lite 免费模型，激活后即可直接使用，无需任何配置。免费额度每日 1000 次（全体用户共享，先到先得），超出后需自行配置 API Key。',
-    s02_freeTitle: '内置免费模型：Gemini 2.5 Flash Lite',
-    s02_freeDesc: '激活后即可使用全部功能（截图解题、面试语音监听等）。免费额度为<strong>每日 1000 次</strong>，全体用户共享，先到先得。额度用完后需自行配置以下任一平台的 API Key。',
+    s02_eyebrow: '02 · API 配置',
+    s02_title: '自配 API Key 教程',
+    s02_desc: '配置自己的 API Key 后即可使用全部功能，按用量计费，每次仅需几分钱。推荐使用通义千问，国内直连无需 VPN。',
+    s02_freeTitle: '推荐：通义千问（Qwen）',
+    s02_freeDesc: '国内直连、价格便宜、视觉理解能力强。<strong>新用户有免费额度</strong>，充值 1~5 元即可用很久。也可以选择以下其他平台的 API Key。',
     s02_qwenTitle: '通义千问（QWEN）',
     s02_qwenDesc: '阿里云大模型，<strong>新用户有免费额度</strong>，国内直连无需科学上网。',
     s02_kimiTitle: 'Kimi（月之暗面）',
@@ -154,7 +154,7 @@ export const docsTranslations = {
     quickNavBackHome: 'Back to Product Page',
     quickNavItems: [
       ['#install', 'Installation & Activation'],
-      ['#api', 'API Configuration (Optional)'],
+      ['#api', 'API Configuration'],
       ['#usage', 'Basic Usage (Exam / Interview)'],
       ['#shortcuts', 'Shortcut Table'],
       ['#settings', 'Settings'],
@@ -180,11 +180,11 @@ export const docsTranslations = {
     s01_codeExample: 'Activation code format:',
 
     // Section 02
-    s02_eyebrow: '02 · API Configuration (Optional)',
-    s02_title: 'Built-in Free Model + Custom API Tutorial',
-    s02_desc: 'The app includes Gemini 2.5 Flash Lite as a free model — ready to use after activation with no configuration needed. The free quota is 1,000 uses per day (shared among all users, first come first served). After the quota is exhausted, you need to configure your own API Key.',
-    s02_freeTitle: 'Built-in Free Model: Gemini 2.5 Flash Lite',
-    s02_freeDesc: 'All features available after activation (screenshot answers, interview voice monitoring, etc.). Free quota is <strong>1,000 uses per day</strong>, shared among all users, first come first served. After the quota runs out, configure any of the following platform API Keys.',
+    s02_eyebrow: '02 · API Configuration',
+    s02_title: 'Custom API Key Tutorial',
+    s02_desc: 'Configure your own API Key to use all features. Pay-per-use pricing, only a few cents per analysis. We recommend Qwen for users in China (no VPN needed).',
+    s02_freeTitle: 'Recommended: Qwen',
+    s02_freeDesc: 'Direct connection in China, affordable, strong vision understanding. <strong>Free quota for new users</strong>, top up 1-5 yuan for extended use. You can also choose any of the following platform API Keys.',
     s02_qwenTitle: 'Qwen (QWEN)',
     s02_qwenDesc: 'Alibaba Cloud LLM. <strong>Free quota for new users</strong>, direct connection in China.',
     s02_kimiTitle: 'Kimi (Moonshot)',
