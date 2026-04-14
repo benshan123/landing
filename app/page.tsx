@@ -369,7 +369,7 @@ function DownloadSection() {
             <div className="text-4xl mb-3">🍎</div>
             <h3 className="font-bold text-lg text-gray-900 mb-1">{t.download_mac_title}</h3>
             <p className="text-sm text-gray-400 mb-4">{t.download_mac_spec}</p>
-            <a href="https://github.com/benshan123/wdz/releases/download/v1.20.0-promax/StealthMate-1.1.7-arm64.dmg" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/benshan123/wdz/releases/download/v1.20.0-promax/StealthMate-ProMax-1.20.0-arm64.dmg" target="_blank" rel="noopener noreferrer"
               className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center mb-2">
               {t.download_mac_btn}
             </a>
