@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { useLanguage } from './LanguageContext';
+import { translations } from './i18n';
 
 const API_BASE = 'https://activation-server-puce.vercel.app';
 const BRAND = 'Cheapest Interview';
@@ -460,6 +461,32 @@ function OrderQuerySection() {
   );
 }
 
+/* ---- 注意事项 ---- */
+function TipsSection() {
+  const { locale } = useLanguage();
+  if (locale !== 'zh') return null;
+  const tips = (translations as any).zh;
+  return (
+    <section className="py-20 px-4">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">⚠️ {tips.tips_title}</h2>
+          <p className="text-gray-500">{tips.tips_desc}</p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {tips.tips_items.map((item: any) => (
+            <div key={item.title} className="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+              <div className="text-3xl mb-3">{item.icon}</div>
+              <h3 className="font-bold text-lg text-gray-900 mb-2">{item.title}</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---- FAQ ---- */
 function FAQSection() {
   const { t } = useLanguage();
@@ -529,6 +556,7 @@ export default function Home() {
       <PricingSection />
       <DownloadSection />
       <OrderQuerySection />
+      <TipsSection />
       <FAQSection />
       <FooterSection />
     </main>

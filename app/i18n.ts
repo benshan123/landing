@@ -209,6 +209,11 @@ export const translations = {
         title: '建议电脑端开启 VPN',
         desc: '电脑截图需要通过中转服务器发送到手机，如果不开 VPN，国内网络连接海外服务器会有一定延迟。建议电脑端开启 VPN 以获得最佳体验。如果没有 VPN，推荐配置通义千问（Qwen）API，因为它是国内服务，延迟更低。',
       },
+      {
+        icon: '⚠️',
+        title: '面试中避免使用快捷键',
+        desc: '面试过程中建议不要使用快捷键（可能会被检测到）。当系统未能自动识别面试官的问题时，请手动点击「回答」按钮。等到面试结束进入做题环节后，再使用快捷键操作。',
+      },
     ],
     twophone_qwen_title: '通义千问 API Key 配置步骤（推荐）',
     twophone_qwen_desc: '如果没有 VPN 或希望获得更低延迟，推荐使用通义千问的 qwen-vl-max 模型',
@@ -249,6 +254,22 @@ export const translations = {
     footer_group_label: 'QQ 交流群：',
     footer_group_note: '加群获取最新版本、交流使用技巧',
     footer_copyright: '© 2026 {brand} · 本产品为 AI 学习辅助工具，请合理使用',
+
+    // Preparation Tips
+    tips_title: '面试 / 笔试前注意事项',
+    tips_desc: '正式开始前，请务必完成以下准备工作，避免考试中出现意外',
+    tips_items: [
+      {
+        icon: '🔑',
+        title: '提前配置好 API 并测试成功',
+        desc: '在设置中填入你的 API Key，发送一条测试消息确认能正常返回结果。不要等到面试/笔试开始才配置！',
+      },
+      {
+        icon: '📐',
+        title: '提前摆放好客户端面板位置',
+        desc: '面试中 / 笔试中不能拖拽和缩放面板窗口！否则可以看到外轮廓。请提前将面板方框摆放到合适位置。如果出现遮挡，使用 Ctrl + B 隐藏即可。',
+      },
+    ],
   },
 
   en: {

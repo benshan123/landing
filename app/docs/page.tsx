@@ -349,15 +349,6 @@ export default function DocsPage() {
                   ))}
                 </div>
               </div>
-              {/* 下载 */}
-              <div className="rounded-2xl border border-purple-100 bg-gradient-to-r from-purple-50 to-pink-50 p-6 text-center">
-                <h3 className="text-lg font-semibold text-gray-900 mb-1">{t.s07_downloadTitle}</h3>
-                <p className="text-sm text-gray-500 mb-4">{t.s07_downloadDesc}</p>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <a href={t.s07_downloadWinUrl} className="btn-primary px-6 py-3 rounded-xl font-semibold text-sm">💻 {t.s07_downloadWin}</a>
-                  <a href={t.s07_downloadMacUrl} className="btn-primary px-6 py-3 rounded-xl font-semibold text-sm">🍎 {t.s07_downloadMac}</a>
-                </div>
-              </div>
             </SectionCard>
 
             {/* 08 FAQ */}
