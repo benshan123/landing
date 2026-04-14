@@ -269,7 +269,7 @@ function PurchaseModal({ plan, planName, price, onClose }: {
               <div className="flex justify-center">
                 <div className="text-center">
                   <div className="w-40 h-40 bg-gray-100 rounded-xl flex items-center justify-center border border-gray-200 overflow-hidden">
-                    <Image src="/wechat-qr.png" alt="QR" width={144} height={144} className="rounded-lg" />
+                    <Image src="/wechat-pay.png" alt="QR" width={144} height={144} className="rounded-lg" />
                   </div>
                   <p className="text-xs text-gray-400 mt-2">{t.modal_scan_note}</p>
                 </div>
