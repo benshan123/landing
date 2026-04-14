@@ -115,6 +115,8 @@ export const docsTranslations = {
       '截图模式（全屏 / 区域）',
       'AI 服务商、API Key、自定义快捷键',
     ],
+    s05_profileTitle: '面试画像',
+    s05_profileDesc: '在高级设置中可以填写你的背景信息（行业、技术栈、工作经验、项目经历、求职岗位等），AI 回答时会贴合你的经历和技术栈，让回答更符合你的实际情况。',
 
     // Section 06
     s06_eyebrow: '06 · Mac 用户须知',
@@ -291,8 +293,8 @@ export const docsTranslations = {
       'AI Model',
       'Screenshot Mode (Full / Region)',
       'AI Provider, API Key, Custom Shortcuts',
-    ],
-
+    ],    s05_profileTitle: 'Interview Profile',
+    s05_profileDesc: 'In Advanced Settings, you can fill in your background information (industry, tech stack, work experience, project history, target position, etc.). AI will tailor its answers to match your experience and skills, making responses more relevant and personalized.',
     // Section 06
     s06_eyebrow: '06 · Mac Users Guide',
     s06_title: 'Key notes: shortcut conflicts and audio driver',

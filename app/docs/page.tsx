@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useLanguage } from '../LanguageContext';
 import { docsTranslations } from './i18n-docs';
 
@@ -285,6 +286,18 @@ export default function DocsPage() {
                     <span className="leading-7">{item}</span>
                   </div>
                 ))}
+              </div>
+              {/* 面试画像 */}
+              <div className="mt-8 rounded-2xl border border-purple-100 bg-purple-50 p-6">
+                <div className="flex flex-col md:flex-row gap-6 items-center">
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2 flex items-center gap-2">🎯 {t.s05_profileTitle}</h3>
+                    <p className="text-gray-700 leading-7 text-sm">{t.s05_profileDesc}</p>
+                  </div>
+                  <div className="flex-shrink-0">
+                    <Image src="/background.png" alt={t.s05_profileTitle} width={280} height={360} className="rounded-xl border border-gray-200 shadow-sm" />
+                  </div>
+                </div>
               </div>
             </SectionCard>
 

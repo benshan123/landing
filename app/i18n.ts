@@ -520,6 +520,11 @@ export const translations = {
     footer_group_label: 'QQ Group: ',
     footer_group_note: 'Join for latest versions and tips',
     footer_copyright: '© 2026 {brand} · This is an AI learning tool, please use responsibly',
+
+    // Preparation Tips (Chinese only, but keys needed for type compatibility)
+    tips_title: '',
+    tips_desc: '',
+    tips_items: [] as { icon: string; title: string; desc: string }[],
   },
 };
 
