@@ -47,6 +47,14 @@ const steps = [
       <>
         <p className="mb-2">通义千问按用量计费，非常便宜（每次分析约几分钱）。需要先充值才能使用。</p>
         <p className="mb-2">进入阿里云 <strong>「费用与成本」→「充值汇款」</strong> 页面：</p>
+        <a
+          href="https://billing-cost.console.aliyun.com/fortune/fund-management/recharge"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-blue-50 text-blue-600 font-mono text-sm px-4 py-2 rounded-lg hover:bg-blue-100 transition break-all mb-3"
+        >
+          前往充值页面
+        </a>
         <ul className="list-disc list-inside space-y-1 text-gray-600">
           <li>选择 <strong>支付宝充值</strong>（实时到账，最方便）</li>
           <li>充值金额填 <strong>0.01 元</strong> 起即可测试</li>
