@@ -36,14 +36,13 @@ function Navbar() {
           <Image src="/logo.png" alt={BRAND} width={36} height={36} className="rounded-lg" />
           <span className="font-bold text-lg">{BRAND}</span>
         </div>
-        <div className="hidden md:flex items-center gap-8 text-sm text-gray-600">
+        <div className="hidden md:flex items-center gap-5 text-sm text-gray-600">
           <a href="https://www.bilibili.com/video/BV1WuXPB7Esu/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition">{t.nav_demo}</a>
+          <a href="/docs" className="px-3 py-1.5 rounded-lg bg-amber-50 text-amber-700 font-semibold hover:bg-amber-100 transition">{t.nav_docs}</a>
+          <a href="/api-guide" className="px-3 py-1.5 rounded-lg bg-purple-50 text-primary font-semibold hover:bg-purple-100 transition">{t.nav_api_guide}</a>
           <a href="#features" className="hover:text-primary transition">{t.nav_features}</a>
           <a href="#stealth" className="hover:text-primary transition">{t.nav_stealth}</a>
-          <a href="#pricing" className="hover:text-primary transition">{t.nav_pricing}</a>
           <a href="#download" className="hover:text-primary transition">{t.nav_download}</a>
-          <a href="/docs" className="hover:text-primary transition">{t.nav_docs}</a>
-          <a href="/api-guide" className="hover:text-primary transition">{t.nav_api_guide}</a>
           <a href="#faq" className="hover:text-primary transition">{t.nav_faq}</a>
         </div>
         <div className="flex items-center gap-3">
