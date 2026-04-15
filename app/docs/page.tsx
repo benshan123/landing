@@ -303,15 +303,9 @@ export default function DocsPage() {
 
             {/* 06 Mac */}
             <SectionCard id="mac" eyebrow={t.s06_eyebrow} title={t.s06_title}>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="rounded-2xl border border-orange-200 bg-orange-50 p-5">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">{t.s06_shortcutTitle}</h3>
-                  <p className="text-gray-700 leading-7" dangerouslySetInnerHTML={{ __html: t.s06_shortcutDesc }} />
-                </div>
-                <div className="rounded-2xl border border-orange-200 bg-orange-50 p-5">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">{t.s06_audioTitle}</h3>
-                  <p className="text-gray-700 leading-7" dangerouslySetInnerHTML={{ __html: t.s06_audioDesc }} />
-                </div>
+              <div className="rounded-2xl border border-orange-200 bg-orange-50 p-5">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">{t.s06_shortcutTitle}</h3>
+                <p className="text-gray-700 leading-7" dangerouslySetInnerHTML={{ __html: t.s06_shortcutDesc }} />
               </div>
             </SectionCard>
 

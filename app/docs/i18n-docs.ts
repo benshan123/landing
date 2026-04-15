@@ -123,8 +123,6 @@ export const docsTranslations = {
     s06_title: 'Mac 上主要注意快捷键冲突和音频驱动',
     s06_shortcutTitle: '快捷键冲突',
     s06_shortcutDesc: 'macOS 默认把 <code>Cmd+H</code> 用作隐藏应用，把 <code>Cmd+M</code> 用作最小化窗口，因此建议你在高级设置中改成 <code>Cmd+Shift+H</code> 和 <code>Cmd+Shift+M</code>。',
-    s06_audioTitle: '面试模式音频',
-    s06_audioDesc: '如果需要捕获系统音频，请先安装 <a href="https://existential.audio/blackhole/" target="_blank" rel="noreferrer" class="text-primary hover:underline">BlackHole</a> 虚拟音频驱动。安装完成后，再进入 Cheapest Interview 的面试模式进行监听即可。',
 
     // Section 07 - 双机位模式
     s07_eyebrow: '07 · 双机位模式',
@@ -300,8 +298,6 @@ export const docsTranslations = {
     s06_title: 'Key notes: shortcut conflicts and audio driver',
     s06_shortcutTitle: 'Shortcut Conflicts',
     s06_shortcutDesc: 'macOS uses <code>Cmd+H</code> to hide apps and <code>Cmd+M</code> to minimize windows by default. We recommend changing these to <code>Cmd+Shift+H</code> and <code>Cmd+Shift+M</code> in Advanced Settings.',
-    s06_audioTitle: 'Interview Mode Audio',
-    s06_audioDesc: 'To capture system audio, install <a href="https://existential.audio/blackhole/" target="_blank" rel="noreferrer" class="text-primary hover:underline">BlackHole</a> virtual audio driver first. Then use Interview mode in Cheapest Interview to start listening.',
 
     // Section 07 - Dual-Device Mode
     s07_eyebrow: '07 · Dual-Device Mode',
