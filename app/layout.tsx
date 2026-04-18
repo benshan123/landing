@@ -3,9 +3,9 @@ import './globals.css';
 import { LanguageProvider } from './LanguageContext';
 
 export const metadata: Metadata = {
-  title: 'Cheapest Interview - AI 笔试面试助手 | 完全隐身 截图秒出答案',
-  description: 'AI 驱动的笔试面试辅助工具，截图自动出答案，语音实时识别面试问题。屏幕共享完全隐身，支持腾讯会议、飞书、Zoom 等主流平台。Windows + Mac 双平台支持。',
-  keywords: 'AI面试助手,笔试助手,隐身,面试辅助,AI答题,截图出答案,语音识别,cheapest interview',
+  title: 'Cheapest Interview - AI 模拟面试助手 | 截图练习 智能解析',
+  description: 'AI 驱动的面试备考工具，截图练习题目智能解析，语音模拟面试训练。支持腾讯会议、飞书、Zoom 等主流平台。Windows + Mac 双平台支持。',
+  keywords: 'AI面试助手,模拟面试,面试练习,AI答题,截图解析,语音识别,cheapest interview',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

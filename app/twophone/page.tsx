@@ -68,7 +68,7 @@ function ArchitectureSection() {
           <div className="flex flex-col items-center text-center">
             <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-3xl mb-2">💻</div>
             <div className="font-bold text-gray-900">{locale === 'zh' ? '电脑' : 'PC'}</div>
-            <div className="text-xs text-gray-400 mt-1">{locale === 'zh' ? '无感截屏' : 'Silent Screenshot'}</div>
+            <div className="text-xs text-gray-400 mt-1">{locale === 'zh' ? '快捷截屏' : 'Quick Screenshot'}</div>
           </div>
           <div className="text-2xl text-gray-300 rotate-90 md:rotate-0">→</div>
           <div className="flex flex-col items-center text-center">
