@@ -24,7 +24,7 @@ export const translations = {
     hero_tag_fast: '⚡ 秒级响应',
     hero_tag_api: '🔑 支持自配 API Key',
     hero_tag_platform: '💻 Windows + Mac',
-    hero_mission: '我们相信：充分的面试准备是拿到理想 Offer 的关键。Cheapest Interview 让每位求职者都能用 AI 高效备考，随时随地进行模拟练习。',
+    hero_mission: '⚠️ 声明：本软件仅可用于模拟面试/笔试练习，请勿用于真实考试场景。',
 
     // Features
     feat_exam_tag: 'AI 笔试练习',

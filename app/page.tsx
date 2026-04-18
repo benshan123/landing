@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { useLanguage } from './LanguageContext';
 import { translations } from './i18n';
+import { useRevealAll } from './useReveal';
 
 const API_BASE = 'https://activation-server-puce.vercel.app';
 const BRAND = 'Cheapest Interview';
@@ -59,30 +60,74 @@ function Navbar() {
 function HeroSection() {
   const { t } = useLanguage();
   return (
-    <section className="pt-28 pb-16 px-4">
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="inline-block mb-4 px-4 py-1.5 bg-purple-50 text-primary text-sm font-medium rounded-full">
-          {t.hero_badge}
-        </div>
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-gray-900">
-          {t.hero_title_prefix}<span className="gradient-text">{t.hero_title_highlight}</span>
-        </h1>
-        <p className="text-lg md:text-xl text-gray-500 mb-10 max-w-2xl mx-auto leading-relaxed">
-          {BRAND} {t.hero_desc.split('\n').map((line, i) => (
-            <span key={i}>{i > 0 && <br />}{line}</span>
-          ))}
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#pricing" className="btn-primary px-8 py-3.5 rounded-xl text-lg font-semibold text-center">{t.hero_buy}</a>
-          <a href="#download" className="btn-outline px-8 py-3.5 rounded-xl text-lg font-semibold text-center">{t.hero_download}</a>
-        </div>
-        <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-400">
-          <span>{t.hero_tag_stealth}</span><span>{t.hero_tag_fast}</span><span>{t.hero_tag_api}</span><span>{t.hero_tag_platform}</span>
-        </div>
-        <div className="mt-10 max-w-2xl mx-auto">
-          <p className="text-sm text-gray-400 italic leading-relaxed border-l-2 border-purple-300 pl-4 text-left">
-            {t.hero_mission}
+    <section className="relative pt-28 pb-20 px-4 overflow-hidden">
+      {/* 背景装饰：blob + 网格 */}
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        <div className="absolute inset-0 grid-dots opacity-60" />
+        <div className="blob blob-purple w-[420px] h-[420px] -top-20 -left-20" />
+        <div className="blob blob-blue w-[360px] h-[360px] top-40 right-[-80px]" style={{ animationDelay: '-6s' }} />
+        <div className="blob blob-pink w-[300px] h-[300px] bottom-[-60px] left-1/3" style={{ animationDelay: '-12s' }} />
+      </div>
+
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 lg:gap-14 items-center">
+        {/* 左：文字 */}
+        <div className="text-center md:text-left">
+          <div className="reveal inline-block mb-4 px-4 py-1.5 bg-purple-50 text-primary text-sm font-medium rounded-full">
+            {t.hero_badge}
+          </div>
+          <h1 className="reveal reveal-delay-1 text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-gray-900">
+            {t.hero_title_prefix}<span className="gradient-text">{t.hero_title_highlight}</span>
+          </h1>
+          <p className="reveal reveal-delay-2 text-lg md:text-xl text-gray-500 mb-10 leading-relaxed">
+            {BRAND} {t.hero_desc.split('\n').map((line, i) => (
+              <span key={i}>{i > 0 && <br />}{line}</span>
+            ))}
           </p>
+          <div className="reveal reveal-delay-3 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <a href="#pricing" className="btn-primary px-8 py-3.5 rounded-xl text-lg font-semibold text-center">{t.hero_buy}</a>
+            <a href="#download" className="btn-outline px-8 py-3.5 rounded-xl text-lg font-semibold text-center">{t.hero_download}</a>
+          </div>
+          {/* 移动端标签行（桌面端由浮动 chip 替代） */}
+          <div className="reveal reveal-delay-4 mt-10 flex flex-wrap justify-center md:hidden gap-x-6 gap-y-3 text-sm text-gray-400">
+            <span>{t.hero_tag_stealth}</span><span>{t.hero_tag_fast}</span><span>{t.hero_tag_api}</span><span>{t.hero_tag_platform}</span>
+          </div>
+          <div className="reveal reveal-delay-4 mt-10 max-w-2xl">
+            <p className="text-sm text-gray-400 italic leading-relaxed border-l-2 border-purple-300 pl-4 text-left">
+              {t.hero_mission}
+            </p>
+          </div>
+        </div>
+
+        {/* 右：产品 mockup + 浮动 chip */}
+        <div className="reveal reveal-delay-2 relative mx-auto md:mx-0 w-full max-w-xl md:max-w-none">
+          <div className="mockup-tilt relative rounded-2xl overflow-hidden shadow-2xl shadow-purple-200/50 border border-gray-200 bg-white">
+            <Image
+              src="/interview-demo.png"
+              alt={t.feat_interview_alt}
+              width={900}
+              height={600}
+              priority
+              className="w-full h-auto block"
+            />
+          </div>
+
+          {/* 浮动 chip（仅桌面端） */}
+          <div className="hidden md:block absolute -top-4 -left-6 chip-float">
+            <div className="flex items-center gap-2 bg-white/95 backdrop-blur border border-purple-100 shadow-lg shadow-purple-100/60 rounded-full px-4 py-2 text-sm font-semibold text-gray-700">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              {t.hero_tag_stealth}
+            </div>
+          </div>
+          <div className="hidden md:block absolute -top-2 -right-4 chip-float chip-float-delay-1">
+            <div className="flex items-center gap-2 bg-white/95 backdrop-blur border border-purple-100 shadow-lg shadow-purple-100/60 rounded-full px-4 py-2 text-sm font-semibold text-gray-700">
+              {t.hero_tag_fast}
+            </div>
+          </div>
+          <div className="hidden md:block absolute -bottom-4 -right-2 chip-float chip-float-delay-2">
+            <div className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-300/50 rounded-full px-4 py-2 text-sm font-semibold">
+              {t.hero_tag_api}
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -96,7 +141,7 @@ function FeaturesSection() {
     <section id="features" className="py-20 px-4 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-12 mb-24">
-          <div className="flex-1">
+          <div className="flex-1 reveal">
             <div className="text-sm font-semibold text-primary mb-2">{t.feat_exam_tag}</div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t.feat_exam_title}</h2>
             <p className="text-gray-500 mb-6 leading-relaxed">{t.feat_exam_desc}</p>
@@ -108,10 +153,10 @@ function FeaturesSection() {
               ))}
             </div>
           </div>
-          <div className="flex-1"><Image src="/exam-demo.png" alt={t.feat_exam_alt} width={600} height={400} className="rounded-2xl shadow-xl border border-gray-200" /></div>
+          <div className="flex-1 reveal reveal-delay-2"><Image src="/exam-demo.png" alt={t.feat_exam_alt} width={600} height={400} className="rounded-2xl shadow-xl border border-gray-200 transition-transform duration-500 hover:scale-[1.02]" /></div>
         </div>
         <div className="flex flex-col md:flex-row-reverse items-center gap-12">
-          <div className="flex-1">
+          <div className="flex-1 reveal">
             <div className="text-sm font-semibold text-primary mb-2">{t.feat_interview_tag}</div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t.feat_interview_title}</h2>
             <p className="text-gray-500 mb-6 leading-relaxed">{t.feat_interview_desc}</p>
@@ -128,7 +173,7 @@ function FeaturesSection() {
               ))}
             </div>
           </div>
-          <div className="flex-1"><Image src="/interview-demo.png" alt={t.feat_interview_alt} width={600} height={400} className="rounded-2xl shadow-xl border border-gray-200" /></div>
+          <div className="flex-1 reveal reveal-delay-2"><Image src="/interview-demo.png" alt={t.feat_interview_alt} width={600} height={400} className="rounded-2xl shadow-xl border border-gray-200 transition-transform duration-500 hover:scale-[1.02]" /></div>
         </div>
       </div>
     </section>
@@ -141,13 +186,13 @@ function StealthSection() {
   return (
     <section id="stealth" className="py-20 px-4">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="reveal text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t.stealth_title}</h2>
           <p className="text-gray-500 max-w-2xl mx-auto">{t.stealth_desc}</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {t.stealth_cards.map(d => (
-            <div key={d.title} className="feature-card rounded-2xl p-6 text-center">
+          {t.stealth_cards.map((d, i) => (
+            <div key={d.title} className={`feature-card reveal reveal-delay-${(i % 4) + 1} rounded-2xl p-6 text-center`}>
               <div className="text-3xl mb-3">{d.icon}</div>
               <h3 className="font-semibold text-gray-900 mb-2">{d.title}</h3>
               <p className="text-sm text-gray-500">{d.desc}</p>
@@ -178,9 +223,9 @@ function CompareSection() {
   return (
     <section className="py-20 px-4 bg-gray-50">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">{t.compare_title}{BRAND}？</h2>
-        <p className="text-gray-500 text-center mb-12">{t.compare_desc}</p>
-        <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+        <h2 className="reveal text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">{t.compare_title}{BRAND}？</h2>
+        <p className="reveal reveal-delay-1 text-gray-500 text-center mb-12">{t.compare_desc}</p>
+        <div className="reveal reveal-delay-2 bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
           <div className="grid grid-cols-3 text-center p-4 bg-gray-50 border-b border-gray-200 font-semibold text-sm">
             <div className="text-left pl-4 text-gray-500">{t.compare_header_feature}</div>
             <div className="gradient-text">{BRAND}</div>
@@ -306,12 +351,12 @@ function PricingSection() {
     <>
       <section id="pricing" className="py-20 px-4">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">{t.pricing_title}</h2>
-          <p className="text-gray-500 text-center mb-4">{t.pricing_desc}</p>
-          <p className="text-center text-sm text-gray-400 mb-12">{t.pricing_note}</p>
+          <h2 className="reveal text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">{t.pricing_title}</h2>
+          <p className="reveal reveal-delay-1 text-gray-500 text-center mb-4">{t.pricing_desc}</p>
+          <p className="reveal reveal-delay-1 text-center text-sm text-gray-400 mb-12">{t.pricing_note}</p>
           <div className="grid md:grid-cols-2 gap-6 items-stretch max-w-3xl mx-auto">
-            {t.pricing_plans.map(p => (
-              <div key={p.name} className={`rounded-2xl p-6 flex flex-col ${p.highlight ? 'bg-white border-2 border-primary shadow-lg shadow-purple-100' : 'bg-white border border-gray-200'}`}>
+            {t.pricing_plans.map((p, i) => (
+              <div key={p.name} className={`reveal reveal-delay-${(i % 3) + 1} rounded-2xl p-6 flex flex-col transition-transform duration-300 hover:-translate-y-1 ${p.highlight ? 'bg-white border-2 border-primary shadow-lg shadow-purple-100 hover:shadow-xl hover:shadow-purple-200' : 'bg-white border border-gray-200 hover:shadow-lg'}`}>
                 <div className={`text-xs font-semibold mb-4 ${p.highlight ? 'text-primary' : 'text-gray-400'}`}>{p.tag}</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-1">{p.name}</h3>
                 <p className="text-sm text-gray-400 mb-4">{p.duration}</p>
@@ -345,11 +390,11 @@ function DownloadSection() {
   return (
     <section id="download" className="py-20 px-4 bg-gray-50">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t.download_title}{BRAND}</h2>
-        <p className="text-gray-500 mb-10">{t.download_desc}</p>
+        <h2 className="reveal text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t.download_title}{BRAND}</h2>
+        <p className="reveal reveal-delay-1 text-gray-500 mb-10">{t.download_desc}</p>
         <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {/* Windows */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+          <div className="reveal reveal-delay-1 bg-white rounded-2xl border border-gray-200 p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
             <div className="text-4xl mb-3">💻</div>
             <h3 className="font-bold text-lg text-gray-900 mb-1">{t.download_win_title}</h3>
             <p className="text-sm text-gray-400 mb-4">{t.download_win_spec}</p>
@@ -365,7 +410,7 @@ function DownloadSection() {
             <p className="text-xs text-gray-400">{t.download_win_warn}</p>
           </div>
           {/* Mac */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+          <div className="reveal reveal-delay-2 bg-white rounded-2xl border border-gray-200 p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
             <div className="text-4xl mb-3">🍎</div>
             <h3 className="font-bold text-lg text-gray-900 mb-1">{t.download_mac_title}</h3>
             <p className="text-sm text-gray-400 mb-4">{t.download_mac_spec}</p>
@@ -492,8 +537,8 @@ function FAQSection() {
   return (
     <section id="faq" className="py-20 px-4 bg-gray-50">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">{t.faq_title}</h2>
-        <div className="space-y-3">{t.faq_items.map(f => <FAQItem key={f.q} q={f.q} a={f.a} />)}</div>
+        <h2 className="reveal text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">{t.faq_title}</h2>
+        <div className="reveal reveal-delay-1 space-y-3">{t.faq_items.map(f => <FAQItem key={f.q} q={f.q} a={f.a} />)}</div>
       </div>
     </section>
   );
@@ -545,6 +590,7 @@ function FooterSection() {
 
 /* ---- 主页面 ---- */
 export default function Home() {
+  useRevealAll();
   return (
     <main className="min-h-screen bg-white">
       <Navbar />

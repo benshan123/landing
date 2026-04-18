@@ -63,3 +63,115 @@ body {
   background: #d1d5db;
   border-radius: 3px;
 }
+
+/* ===== 动画增强 ===== */
+
+/* 背景渐变 blob */
+@keyframes blob-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -20px) scale(1.08); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+.blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(72px);
+  opacity: 0.35;
+  pointer-events: none;
+  will-change: transform;
+  animation: blob-drift 18s ease-in-out infinite;
+}
+.blob-purple { background: #a78bfa; }
+.blob-blue { background: #60a5fa; }
+.blob-pink { background: #f0abfc; }
+
+/* 网格点纹背景 */
+.grid-dots {
+  background-image: radial-gradient(rgba(124, 58, 237, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+}
+
+/* 浮动 chip */
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.chip-float {
+  animation: float-y 4s ease-in-out infinite;
+  will-change: transform;
+}
+.chip-float-delay-1 { animation-delay: -1.3s; }
+.chip-float-delay-2 { animation-delay: -2.6s; }
+
+/* 入场动画：配合 useReveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.08s; }
+.reveal-delay-2 { transition-delay: 0.16s; }
+.reveal-delay-3 { transition-delay: 0.24s; }
+.reveal-delay-4 { transition-delay: 0.32s; }
+
+/* 按钮 shine 扫光 */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.7s ease;
+  pointer-events: none;
+}
+.btn-primary:hover::after {
+  left: 130%;
+}
+
+/* feature-card 悬浮加强 */
+.feature-card:hover {
+  transform: translateY(-4px) scale(1.015);
+}
+
+/* Hero mockup 容器 */
+.mockup-tilt {
+  transform: rotate(-2deg);
+  transition: transform 0.6s ease;
+}
+.mockup-tilt:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+/* 尊重用户减少动效偏好 */
+@media (prefers-reduced-motion: reduce) {
+  .blob,
+  .chip-float,
+  .mockup-tilt {
+    animation: none !important;
+    transition: none !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .btn-primary::after { display: none; }
+}
