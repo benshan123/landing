@@ -354,28 +354,46 @@ function PricingSection() {
           <h2 className="reveal text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">{t.pricing_title}</h2>
           <p className="reveal reveal-delay-1 text-gray-500 text-center mb-4">{t.pricing_desc}</p>
           <p className="reveal reveal-delay-1 text-center text-sm text-gray-400 mb-12">{t.pricing_note}</p>
-          <div className="grid md:grid-cols-2 gap-6 items-stretch max-w-3xl mx-auto">
-            {t.pricing_plans.map((p, i) => (
-              <div key={p.name} className={`reveal reveal-delay-${(i % 3) + 1} rounded-2xl p-6 flex flex-col transition-transform duration-300 hover:-translate-y-1 ${p.highlight ? 'bg-white border-2 border-primary shadow-lg shadow-purple-100 hover:shadow-xl hover:shadow-purple-200' : 'bg-white border border-gray-200 hover:shadow-lg'}`}>
-                <div className={`text-xs font-semibold mb-4 ${p.highlight ? 'text-primary' : 'text-gray-400'}`}>{p.tag}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-1">{p.name}</h3>
-                <p className="text-sm text-gray-400 mb-4">{p.duration}</p>
-                <div className="flex items-end gap-2 mb-5">
-                  <span className="text-sm text-gray-400">{t.pricing_currency}</span>
-                  <span className="text-4xl font-bold text-gray-900">{p.price}</span>
-                </div>
+          <div className="grid md:grid-cols-3 gap-6 items-stretch max-w-5xl mx-auto">
+            {t.pricing_plans.map((p, i) => {
+              const plan = p as typeof p & { priceText?: string; contactOnly?: boolean };
+              return (
+              <div key={plan.name} className={`reveal reveal-delay-${(i % 3) + 1} rounded-2xl p-6 flex flex-col transition-transform duration-300 hover:-translate-y-1 ${plan.highlight ? 'bg-white border-2 border-primary shadow-lg shadow-purple-100 hover:shadow-xl hover:shadow-purple-200' : 'bg-white border border-gray-200 hover:shadow-lg'}`}>
+                <div className={`text-xs font-semibold mb-4 ${plan.highlight ? 'text-primary' : 'text-gray-400'}`}>{plan.tag}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">{plan.name}</h3>
+                <p className="text-sm text-gray-400 mb-4">{plan.duration}</p>
+                {plan.contactOnly ? (
+                  <div className="flex items-end gap-2 mb-5 min-h-[3rem]">
+                    <span className="text-2xl font-bold gradient-text">{plan.priceText}</span>
+                  </div>
+                ) : (
+                  <div className="flex items-end gap-2 mb-5 min-h-[3rem]">
+                    <span className="text-sm text-gray-400">{t.pricing_currency}</span>
+                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                  </div>
+                )}
                 <hr className="my-5 border-gray-100" />
                 <ul className="space-y-3 mb-6 flex-1">
-                  {p.features.map(f => <li key={f} className="text-sm text-gray-600 flex items-center gap-2"><span className="text-primary font-bold">✓</span> {f}</li>)}
+                  {plan.features.map(f => <li key={f} className="text-sm text-gray-600 flex items-center gap-2"><span className="text-primary font-bold">✓</span> {f}</li>)}
                 </ul>
-                <button
-                  onClick={() => setModal({ plan: p.plan, planName: p.name, price: p.price })}
-                  className={`block w-full text-center py-3 rounded-xl font-semibold transition mt-auto ${p.highlight ? 'btn-primary' : 'btn-outline'}`}
-                >
-                  {t.pricing_buy}
-                </button>
+                {plan.contactOnly ? (
+                  <a
+                    href="#contact"
+                    className={`block w-full text-center py-3 rounded-xl font-semibold transition mt-auto btn-outline`}
+                  >
+                    {t.pricing_buy_contact}
+                  </a>
+                ) : (
+                  <button
+                    onClick={() => setModal({ plan: plan.plan, planName: plan.name, price: plan.price })}
+                    className={`block w-full text-center py-3 rounded-xl font-semibold transition mt-auto ${plan.highlight ? 'btn-primary' : 'btn-outline'}`}
+                  >
+                    {t.pricing_buy}
+                  </button>
+                )}
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -398,12 +416,12 @@ function DownloadSection() {
             <div className="text-4xl mb-3">💻</div>
             <h3 className="font-bold text-lg text-gray-900 mb-1">{t.download_win_title}</h3>
             <p className="text-sm text-gray-400 mb-4">{t.download_win_spec}</p>
-            <a href="https://github.com/benshan123/wdz/releases/download/v1.20.1/StealthMate-ProMax-Setup-1.20.1.exe" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/benshan123/wdz/releases/download/v1.20.1/StealthMate-Setup-2.0.0.exe" target="_blank" rel="noopener noreferrer"
               className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center mb-2">
               {t.download_win_btn}
             </a>
             <p className="text-xs text-gray-400 mb-3">{t.download_win_note}</p>
-            <a href="https://pan.baidu.com/s/15pKbhVVtpYX8l3_LCYtrlA" target="_blank" rel="noopener noreferrer"
+            <a href="https://pan.baidu.com/s/1uQXtsVO0eYnllLgdNhwlwg" target="_blank" rel="noopener noreferrer"
               className="btn-outline px-6 py-2.5 rounded-xl font-semibold inline-block w-full text-center text-sm mb-3">
               {t.download_win_baidu}
             </a>
@@ -414,12 +432,12 @@ function DownloadSection() {
             <div className="text-4xl mb-3">🍎</div>
             <h3 className="font-bold text-lg text-gray-900 mb-1">{t.download_mac_title}</h3>
             <p className="text-sm text-gray-400 mb-4">{t.download_mac_spec}</p>
-            <a href="https://github.com/benshan123/wdz/releases/download/v1.20.1/StealthMate-ProMax-1.20.1-arm64.dmg" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/benshan123/wdz/releases/download/v1.20.1/StealthMate-2.0.0-universal.dmg" target="_blank" rel="noopener noreferrer"
               className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center mb-2">
               {t.download_mac_btn}
             </a>
             <p className="text-xs text-gray-400 mb-3">{t.download_mac_note}</p>
-            <a href="https://pan.baidu.com/s/14cx_FdIDH8LnBynpIekliA" target="_blank" rel="noopener noreferrer"
+            <a href="https://pan.baidu.com/s/1rCBhEjZYARgcIiKoFNbpjQ" target="_blank" rel="noopener noreferrer"
               className="btn-outline px-6 py-2.5 rounded-xl font-semibold inline-block w-full text-center text-sm mb-3">
               {t.download_mac_baidu}
             </a>
