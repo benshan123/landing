@@ -33,9 +33,9 @@ function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <Image src="/kunkun.png" alt={BRAND} width={36} height={36} className="rounded-lg" />
-          <span className="font-bold text-lg">{BRAND}</span>
+        <div className="flex items-center gap-4">
+          <Image src="/kunkun.png" alt={BRAND} width={48} height={48} className="rounded-lg" />
+          <span className="font-bold text-2xl leading-none tracking-tight">{BRAND}</span>
         </div>
         <div className="hidden md:flex items-center gap-5 text-sm text-gray-600">
           <a href="https://www.bilibili.com/video/BV1WuXPB7Esu/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition">{t.nav_demo}</a>
