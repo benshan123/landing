@@ -7,7 +7,7 @@ import { translations } from './i18n';
 import { useRevealAll } from './useReveal';
 
 const API_BASE = 'https://activation-server-puce.vercel.app';
-const BRAND = 'Cheapest Interview';
+const BRAND = '面试坤';
 
 /* ==========================================================
    Page Sections
