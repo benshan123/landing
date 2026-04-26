@@ -14,6 +14,7 @@ export const translations = {
     nav_buy: '立即购买',
 
     // Hero
+    hero_highlight_pitch: '拥有了面试坤，你只需要练习两天半，就可斩获别人练习时长两年半的 offer。',
     hero_badge: '🔥 限时优惠 · 首月仅 ¥29.9',
     hero_title_prefix: '助你轻松拿 ',
     hero_title_highlight: 'Offer',
@@ -297,6 +298,7 @@ export const translations = {
     nav_buy: 'Buy Now',
 
     // Hero
+    hero_highlight_pitch: 'With Interview Kun, just practice for two and a half days and you can land the kind of offer others spend two and a half years chasing.',
     hero_badge: '🔥 Limited Offer · First month only ¥29.9',
     hero_title_prefix: 'Ace Your ',
     hero_title_highlight: 'Interview',

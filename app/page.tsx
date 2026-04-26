@@ -34,7 +34,7 @@ function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Image src="/logo.png" alt={BRAND} width={36} height={36} className="rounded-lg" />
+          <Image src="/kunkun.png" alt={BRAND} width={36} height={36} className="rounded-lg" />
           <span className="font-bold text-lg">{BRAND}</span>
         </div>
         <div className="hidden md:flex items-center gap-5 text-sm text-gray-600">
@@ -72,6 +72,9 @@ function HeroSection() {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 lg:gap-14 items-center">
         {/* 左：文字 */}
         <div className="text-center md:text-left">
+          <div className="reveal mb-4 inline-flex max-w-2xl items-center justify-center rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 via-white to-orange-50 px-4 py-3 text-sm font-semibold leading-relaxed text-amber-900 shadow-sm shadow-amber-100 md:justify-start md:text-base">
+            {t.hero_highlight_pitch}
+          </div>
           <div className="reveal inline-block mb-4 px-4 py-1.5 bg-purple-50 text-primary text-sm font-medium rounded-full">
             {t.hero_badge}
           </div>
