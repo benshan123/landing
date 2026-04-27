@@ -248,6 +248,9 @@ export default function DocsPage() {
 
             {/* 04 Shortcuts */}
             <SectionCard id="shortcuts" eyebrow={t.s04_eyebrow} title={t.s04_title} description={t.s04_desc}>
+              <div className="mb-5 rounded-2xl border border-purple-100 bg-purple-50 px-5 py-4 text-sm leading-7 text-purple-900">
+                {t.s04_jokeTip}
+              </div>
               <div className="overflow-hidden rounded-2xl border border-gray-200">
                 <div className="overflow-x-auto">
                   <table className="min-w-full border-collapse text-sm">
@@ -286,18 +289,6 @@ export default function DocsPage() {
                     <span className="leading-7">{item}</span>
                   </div>
                 ))}
-              </div>
-              {/* 面试画像 */}
-              <div className="mt-8 rounded-2xl border border-purple-100 bg-purple-50 p-6">
-                <div className="flex flex-col md:flex-row gap-6 items-center">
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2 flex items-center gap-2">🎯 {t.s05_profileTitle}</h3>
-                    <p className="text-gray-700 leading-7 text-sm">{t.s05_profileDesc}</p>
-                  </div>
-                  <div className="flex-shrink-0">
-                    <Image src="/background.png" alt={t.s05_profileTitle} width={280} height={360} className="rounded-xl border border-gray-200 shadow-sm" />
-                  </div>
-                </div>
               </div>
             </SectionCard>
 
