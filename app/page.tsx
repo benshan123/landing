@@ -424,7 +424,7 @@ function DownloadSection() {
               {t.download_win_btn}
             </a>
             <p className="text-xs text-gray-400 mb-3">{t.download_win_note}</p>
-            <a href="https://pan.baidu.com/s/1tPWB66_wUH6uADBtCjai_g" target="_blank" rel="noopener noreferrer"
+            <a href="https://pan.baidu.com/s/1-lYRsuJJ-xM5r8RumAv9Gw" target="_blank" rel="noopener noreferrer"
               className="btn-outline px-6 py-2.5 rounded-xl font-semibold inline-block w-full text-center text-sm mb-3">
               {t.download_win_baidu}
             </a>
@@ -440,7 +440,7 @@ function DownloadSection() {
               {t.download_mac_btn}
             </a>
             <p className="text-xs text-gray-400 mb-3">{t.download_mac_note}</p>
-            <a href="https://pan.baidu.com/s/17mmgc_Sy2-jvtstj_ejQCg" target="_blank" rel="noopener noreferrer"
+            <a href="https://pan.baidu.com/s/1g6VrmwF3v4XbGWopZJkRgw" target="_blank" rel="noopener noreferrer"
               className="btn-outline px-6 py-2.5 rounded-xl font-semibold inline-block w-full text-center text-sm mb-3">
               {t.download_mac_baidu}
             </a>
