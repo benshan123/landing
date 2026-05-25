@@ -419,12 +419,12 @@ function DownloadSection() {
             <div className="text-4xl mb-3">💻</div>
             <h3 className="font-bold text-lg text-gray-900 mb-1">{t.download_win_title}</h3>
             <p className="text-sm text-gray-400 mb-4">{t.download_win_spec}</p>
-            <a href="https://github.com/benshan123/wdz/releases/download/v2.2.0/mianshikun-Setup-2.2.0.exe" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/benshan123/wdz/releases/download/2.3.2/mianshikun-Setup-2.3.2.exe" target="_blank" rel="noopener noreferrer"
               className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center mb-2">
               {t.download_win_btn}
             </a>
             <p className="text-xs text-gray-400 mb-3">{t.download_win_note}</p>
-            <a href="https://pan.baidu.com/s/1-lYRsuJJ-xM5r8RumAv9Gw" target="_blank" rel="noopener noreferrer"
+            <a href="https://pan.baidu.com/s/1YDnVvDJ75jAeWZAs0H5MJg" target="_blank" rel="noopener noreferrer"
               className="btn-outline px-6 py-2.5 rounded-xl font-semibold inline-block w-full text-center text-sm mb-3">
               {t.download_win_baidu}
             </a>
@@ -435,12 +435,12 @@ function DownloadSection() {
             <div className="text-4xl mb-3">🍎</div>
             <h3 className="font-bold text-lg text-gray-900 mb-1">{t.download_mac_title}</h3>
             <p className="text-sm text-gray-400 mb-4">{t.download_mac_spec}</p>
-            <a href="https://github.com/benshan123/wdz/releases/download/v2.2.0/mianshikun-2.2.0-universal.dmg" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/benshan123/wdz/releases/download/2.3.2/mianshikun-2.3.2-universal.dmg" target="_blank" rel="noopener noreferrer"
               className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center mb-2">
               {t.download_mac_btn}
             </a>
             <p className="text-xs text-gray-400 mb-3">{t.download_mac_note}</p>
-            <a href="https://pan.baidu.com/s/1g6VrmwF3v4XbGWopZJkRgw" target="_blank" rel="noopener noreferrer"
+            <a href="https://pan.baidu.com/s/17nfKTjq7PncwaLjngslskA" target="_blank" rel="noopener noreferrer"
               className="btn-outline px-6 py-2.5 rounded-xl font-semibold inline-block w-full text-center text-sm mb-3">
               {t.download_mac_baidu}
             </a>
