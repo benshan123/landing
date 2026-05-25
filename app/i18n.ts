@@ -215,7 +215,7 @@ export const translations = {
       {
         icon: '🔑',
         title: '手机端需要配置 API Key',
-        desc: '双机位模式下，AI 分析由手机端直接调用，因此需要在手机端配置 API Key。配对成功后，点击手机页面右上角的设置图标，填入你的 API Key 即可。推荐使用通义千问（Qwen）的 qwen-vl-max 模型，性价比最高。',
+        desc: '双机位模式下，AI 分析由手机端直接调用，因此需要在手机端配置 API Key。配对成功后，点击手机页面右上角的设置图标，填入你的 API Key 即可。推荐使用通义千问（Qwen）的 kimi-k2.6 模型，性价比最高。',
       },
       {
         icon: '🌐',
@@ -229,13 +229,13 @@ export const translations = {
       },
     ],
     twophone_qwen_title: '通义千问 API Key 配置步骤（推荐）',
-    twophone_qwen_desc: '如果没有 VPN 或希望获得更低延迟，推荐使用通义千问的 qwen-vl-max 模型',
+    twophone_qwen_desc: '如果没有 VPN 或希望获得更低延迟，推荐使用通义千问的 kimi-k2.6 模型',
     twophone_qwen_steps: [
       { step: '1', text: '访问阿里云百炼平台：bailian.console.aliyun.com，注册并登录账号' },
       { step: '2', text: '进入控制台，在左侧菜单找到「API-KEY」，点击「创建新的 API-KEY」' },
       { step: '3', text: '复制生成的 API Key（以 sk- 开头的字符串）' },
       { step: '4', text: '在手机端设置页面，服务商选择「通义千问（Qwen）」，粘贴 API Key' },
-      { step: '5', text: '模型选择 qwen-vl-max（视觉理解能力最强，推荐用于截图分析场景）' },
+      { step: '5', text: '模型选择 kimi-k2.6（视觉理解能力最强，推荐用于截图分析场景）' },
     ],
     twophone_advantage_title: '核心优势',
     twophone_advantages: [
@@ -499,7 +499,7 @@ export const translations = {
       {
         icon: '🔑',
         title: 'Configure API Key on Phone',
-        desc: 'In Dual-Device mode, AI analysis is called directly from the phone, so you need to configure an API Key on the phone side. After pairing, tap the settings icon at the top-right of the phone page and enter your API Key. We recommend using Qwen\'s qwen-vl-max model for the best value.',
+        desc: 'In Dual-Device mode, AI analysis is called directly from the phone, so you need to configure an API Key on the phone side. After pairing, tap the settings icon at the top-right of the phone page and enter your API Key. We recommend using Qwen\'s kimi-k2.6 model for the best value.',
       },
       {
         icon: '🌐',
@@ -508,13 +508,13 @@ export const translations = {
       },
     ],
     twophone_qwen_title: 'Qwen API Key Setup (Recommended)',
-    twophone_qwen_desc: 'If you don\'t have a VPN or want lower latency, we recommend Qwen\'s qwen-vl-max model',
+    twophone_qwen_desc: 'If you don\'t have a VPN or want lower latency, we recommend Qwen\'s kimi-k2.6 model',
     twophone_qwen_steps: [
       { step: '1', text: 'Visit Alibaba Cloud Bailian: bailian.console.aliyun.com, register and log in' },
       { step: '2', text: 'In the console, find "API-KEY" in the left menu and click "Create New API-KEY"' },
       { step: '3', text: 'Copy the generated API Key (a string starting with sk-)' },
       { step: '4', text: 'On the phone settings page, select "Qwen" as the provider and paste your API Key' },
-      { step: '5', text: 'Select qwen-vl-max as the model (strongest vision understanding, recommended for screenshot analysis)' },
+      { step: '5', text: 'Select kimi-k2.6 as the model (strongest vision understanding, recommended for screenshot analysis)' },
     ],
     twophone_advantage_title: 'Key Advantages',
     twophone_advantages: [

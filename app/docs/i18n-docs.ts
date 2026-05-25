@@ -150,7 +150,7 @@ export const docsTranslations = {
     s07_tipsTitle: '使用注意事项',
     s07_tips: [
       { icon: '💻', title: '电脑端图标位置', desc: '双机位版启动后，程序会最小化到电脑右下角的系统托盘区域（时钟旁边）。如果看不到图标，请点击托盘区域的「^」展开箭头查找。右键点击托盘图标即可进行配对、设置等操作。' },
-      { icon: '🔑', title: '手机端需要配置 API Key', desc: '双机位模式下，AI 分析由手机端直接调用，因此需要在手机端配置 API Key。配对成功后，点击手机页面右上角的设置图标，填入你的 API Key 即可。推荐使用通义千问（Qwen）的 qwen-vl-max 模型，性价比最高。' },
+      { icon: '🔑', title: '手机端需要配置 API Key', desc: '双机位模式下，AI 分析由手机端直接调用，因此需要在手机端配置 API Key。配对成功后，点击手机页面右上角的设置图标，填入你的 API Key 即可。推荐使用通义千问（Qwen）的 kimi-k2.6 模型，性价比最高。' },
       { icon: '🌐', title: '建议电脑端开启 VPN', desc: '电脑截图需要通过中转服务器发送到手机，如果不开 VPN，国内网络连接海外服务器会有一定延迟。建议电脑端开启 VPN 以获得最佳体验。如果没有 VPN，推荐配置通义千问（Qwen）API，因为它是国内服务，延迟更低。' },
       { icon: '💡', title: '快捷键使用建议', desc: '模拟面试练习时，建议先熟悉快捷键操作。语音模式下系统会自动识别问题，你也可以手动点击「回答」按钮获取参考回答。' },
     ],
@@ -326,7 +326,7 @@ export const docsTranslations = {
     s07_tipsTitle: 'Important Notes',
     s07_tips: [
       { icon: '💻', title: 'PC Icon Location', desc: 'After launching the Dual-Device version, the program minimizes to the system tray area (near the clock) at the bottom-right corner of your screen. If you cannot see the icon, click the "^" expand arrow in the tray area. Right-click the tray icon to access pairing, settings, and more.' },
-      { icon: '🔑', title: 'Configure API Key on Phone', desc: 'In Dual-Device mode, AI analysis is called directly from the phone, so you need to configure an API Key on the phone side. After pairing, tap the settings icon at the top-right of the phone page and enter your API Key. We recommend using Qwen\'s qwen-vl-max model for the best value.' },
+      { icon: '🔑', title: 'Configure API Key on Phone', desc: 'In Dual-Device mode, AI analysis is called directly from the phone, so you need to configure an API Key on the phone side. After pairing, tap the settings icon at the top-right of the phone page and enter your API Key. We recommend using Qwen\'s kimi-k2.6 model for the best value.' },
       { icon: '🌐', title: 'Recommend VPN on PC', desc: 'Screenshots are sent from PC to phone via a relay server. Without a VPN, connections from mainland China to the overseas server may have noticeable latency. We recommend enabling a VPN on the PC for the best experience. If you don\'t have a VPN, consider using the Qwen API (a domestic service with lower latency).' },
     ],
     s07_downloadTitle: 'Download Dual-Device Version',

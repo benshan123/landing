@@ -92,7 +92,7 @@ const steps = [
         <ul className="list-disc list-inside space-y-1 text-gray-600">
           <li><strong>AI 提供商</strong>：选择「通义千问」</li>
           <li><strong>API Key</strong>：粘贴 sk- 开头的密钥</li>
-          <li><strong>模型</strong>：选择 <code className="bg-gray-100 px-1.5 py-0.5 rounded text-sm">qwen-vl-max</code></li>
+          <li><strong>模型</strong>：选择 <code className="bg-gray-100 px-1.5 py-0.5 rounded text-sm">kimi-k2.6</code></li>
           <li><strong>CORS 代理 URL</strong>：留空即可（通义千问支持直连）</li>
           <li><strong>编程语言</strong>：根据需要选择（如 Python3）</li>
         </ul>
@@ -148,7 +148,7 @@ export default function ApiGuidePage() {
             <div className="bg-white rounded-xl border border-gray-200 p-5 text-center">
               <div className="text-2xl mb-2">👁️</div>
               <h4 className="font-semibold text-gray-900 mb-1">视觉理解强</h4>
-              <p className="text-sm text-gray-500">qwen-vl-max 截图识别准确率高</p>
+              <p className="text-sm text-gray-500">kimi-k2.6 截图识别准确率高</p>
             </div>
           </div>
 
@@ -183,7 +183,7 @@ export default function ApiGuidePage() {
           <div className="mt-10 bg-green-50 border border-green-200 rounded-xl px-6 py-5">
             <h4 className="font-bold text-green-800 mb-2">🎉 配置完成！</h4>
             <p className="text-sm text-green-700 leading-relaxed">
-              配置成功后，截图分析将使用你自己的 API Key 调用通义千问 qwen-vl-max 模型。
+              配置成功后，截图分析将使用你自己的 API Key 调用通义千问 kimi-k2.6 模型。
               费用从你的阿里云账户余额中扣除，每次仅需几分钱。
               如遇问题，可加 QQ 群（1094796213）咨询。
             </p>
