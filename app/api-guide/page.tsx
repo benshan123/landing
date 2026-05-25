@@ -75,7 +75,7 @@ const steps = [
         <ul className="list-disc list-inside space-y-1 text-gray-600">
           <li><strong>API 提供商</strong>：选择「通义千问（国内直连，支持图片）」</li>
           <li><strong>API Key</strong>：粘贴刚才复制的 sk- 开头的密钥</li>
-          <li><strong>模型</strong>：选择 <code className="bg-gray-100 px-1.5 py-0.5 rounded text-sm">qwen-vl-max</code>（视觉理解最强，推荐）</li>
+          <li><strong>模型</strong>：选择 <code className="bg-gray-100 px-1.5 py-0.5 rounded text-sm">kimi-k2.6</code>（目前最强，推荐）</li>
         </ul>
         <p className="mt-2">点击 <strong>「测试连接」</strong>，看到「成功：连接成功」即配置完成。然后点击「保存」。</p>
       </>
