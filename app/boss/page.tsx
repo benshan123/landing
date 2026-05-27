@@ -3,8 +3,8 @@
 import Link from 'next/link';
 
 const WIN_DOWNLOAD = 'https://github.com/benshan123/wdz/releases/download/2.3.2/geekgeekrun-ui_0.17.4_x64_setup.exe';
-const WIN_BAIDU = 'https://pan.baidu.com/s/1kxnkvXycCBoukfr1fexptA';
-const WIN_BAIDU_CODE = 'gpaz';
+const WIN_BAIDU = 'https://pan.baidu.com/s/1-8KWWgreL-YTlUrxVhdI4Q';
+const WIN_BAIDU_CODE = '3v4g';
 const BRAND = 'AI辅助投递';
 
 function SectionCard({
@@ -124,6 +124,23 @@ export default function BossPage() {
 
       <div className="pt-24 pb-20 px-4">
         <div className="max-w-6xl mx-auto">
+          {/* 面试坤广告条 */}
+          <a
+            href="/"
+            className="group mb-6 flex items-center justify-between gap-4 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-500 px-5 py-3.5 text-white shadow-sm transition hover:opacity-95"
+          >
+            <div className="flex items-center gap-3 min-w-0">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/kunkun.png" alt="面试坤" className="h-9 w-9 flex-shrink-0 rounded-lg bg-white/20" />
+              <div className="leading-tight min-w-0">
+                <div className="text-sm font-bold">面试坤 · AI 模拟面试助手</div>
+                <div className="truncate text-xs text-white/85">截图练习智能解析 · 语音模拟面试实时生成参考回答，助你轻松拿 Offer</div>
+              </div>
+            </div>
+            <span className="flex-shrink-0 whitespace-nowrap text-sm font-semibold">
+              立即了解 <span className="inline-block transition-transform group-hover:translate-x-0.5">→</span>
+            </span>
+          </a>
           {/* Hero */}
           <section className="relative overflow-hidden rounded-[32px] border border-purple-100 bg-gradient-to-br from-purple-50 via-white to-blue-50 px-6 py-10 md:px-10 md:py-14 mb-10">
             <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top_right,rgba(124,58,237,0.12),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(37,99,235,0.10),transparent_32%)]" />
