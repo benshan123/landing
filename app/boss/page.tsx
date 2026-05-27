@@ -125,6 +125,7 @@ export default function BossPage() {
       <div className="pt-24 pb-20 px-4">
         <div className="max-w-6xl mx-auto">
           {/* 面试坤广告条 */}
+          <p className="mb-2 text-xs text-gray-400">诚实地说，下面打个广告 👇</p>
           <a
             href="/"
             className="group mb-6 flex items-center justify-between gap-4 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-500 px-5 py-3.5 text-white shadow-sm transition hover:opacity-95"
