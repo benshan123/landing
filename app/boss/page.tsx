@@ -32,6 +32,21 @@ function SectionCard({
   );
 }
 
+function Figure({ src, caption }: { src: string; caption: string }) {
+  return (
+    <figure className="mt-5">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt={caption}
+        loading="lazy"
+        className="w-full rounded-2xl border border-gray-200 shadow-sm"
+      />
+      <figcaption className="mt-2 text-center text-xs text-gray-400">{caption}</figcaption>
+    </figure>
+  );
+}
+
 const quickNav: [string, string][] = [
   ['#features', '核心功能'],
   ['#tools', '辅助功能'],
@@ -42,11 +57,11 @@ const quickNav: [string, string][] = [
 ];
 
 const tools = [
-  { icon: '🔑', title: 'BOSS 登录助手', desc: '用极简单的方式登录 BOSS 直聘，无需手动处理 Cookie、登录凭证、JSON 等技术细节。' },
-  { icon: '🧠', title: '大语言模型设置', desc: '配置运行过程中使用的大模型；支持配置多个备用模型，让生成内容更随机，并在某个模型不可用时自动切换。' },
-  { icon: '✏️', title: '提示词模板编辑', desc: '对自动复聊生成的提醒消息不满意？可自行编辑提示词，获得你期望的效果。' },
-  { icon: '🧪', title: '复聊过程模拟', desc: '测试所配置的模型是否可用，并预览当前配置生成内容的实际效果。' },
-  { icon: '📦', title: '配置模板', desc: '为期望公司、职位筛选、大模型等关键配置提供开箱即用的模板，新手也能快速完成配置。' },
+  { icon: '🔑', title: 'BOSS 登录助手', desc: '用极简单的方式登录 BOSS 直聘，无需手动处理 Cookie、登录凭证、JSON 等技术细节。', img: '/boss/login-helper.png' },
+  { icon: '🧠', title: '大语言模型设置', desc: '配置运行过程中使用的大模型；支持配置多个备用模型，让生成内容更随机，并在某个模型不可用时自动切换。', img: '/boss/llm-settings.png' },
+  { icon: '✏️', title: '提示词模板编辑', desc: '对自动复聊生成的提醒消息不满意？可自行编辑提示词，获得你期望的效果。', img: '/boss/prompt-template.png' },
+  { icon: '🧪', title: '复聊过程模拟', desc: '测试所配置的模型是否可用，并预览当前配置生成内容的实际效果。', img: '/boss/reply-simulation.png' },
+  { icon: '📦', title: '配置模板', desc: '为期望公司、职位筛选、大模型等关键配置提供开箱即用的模板，新手也能快速完成配置。', img: '/boss/config-template-1.png' },
 ];
 
 const requirements = [
@@ -157,6 +172,9 @@ export default function BossPage() {
           <div className="space-y-8">
             {/* 核心功能 */}
             <SectionCard id="features" eyebrow="核心功能" title="两大自动化能力">
+              <div className="mb-6 rounded-2xl border border-gray-100 bg-gray-50 px-5 py-3 text-sm text-gray-500 leading-7">
+                💡 以下为程序实际界面截图；BOSS 直聘网页会不定期改版，部分截图可能与最新界面略有差异，仅供参考。
+              </div>
               <div className="grid lg:grid-cols-2 gap-6">
                 {/* 自动开聊 */}
                 <div className="rounded-2xl border border-blue-100 bg-blue-50 p-6">
@@ -194,6 +212,7 @@ export default function BossPage() {
                     <li className="flex items-start gap-2"><span className="text-primary font-bold">•</span> 当前筛选无更多职位时，自动切换筛选条件 → 切换职位来源 → 全部用尽后等待一段时间，再从头开始查找。</li>
                     <li className="flex items-start gap-2"><span className="text-primary font-bold">•</span> 当天开聊次数用尽时，暂停运行 60 分钟后重试；若重试时已到第二天，则继续开聊。</li>
                   </ul>
+                  <Figure src="/boss/job-filter.png" caption="选择职位来源与筛选条件" />
                 </div>
 
                 {/* 已读不回自动复聊 */}
@@ -219,7 +238,11 @@ export default function BossPage() {
                     <li className="flex items-start gap-2"><span className="text-primary font-bold">•</span>「[盼回复]」表情。</li>
                     <li className="flex items-start gap-2"><span className="text-primary font-bold">•</span> 由大语言模型（结合简历与当前聊天上下文）生成的内容。</li>
                   </ul>
+                  <Figure src="/boss/auto-reply.png" caption="已读不回自动复聊界面" />
                 </div>
+              </div>
+              <div className="mt-6 max-w-2xl mx-auto">
+                <Figure src="/boss/auto-chat-overview.png" caption="自动开聊配置与运行总览" />
               </div>
             </SectionCard>
 
@@ -227,10 +250,19 @@ export default function BossPage() {
             <SectionCard id="tools" eyebrow="辅助功能" title="让配置与求职更省心" description="围绕两大核心能力，提供一系列辅助功能，降低使用门槛。">
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {tools.map((item) => (
-                  <div key={item.title} className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
-                    <div className="text-2xl mb-3">{item.icon}</div>
-                    <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
-                    <p className="text-sm text-gray-600 leading-7">{item.desc}</p>
+                  <div key={item.title} className="rounded-2xl border border-gray-200 bg-gray-50 overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      loading="lazy"
+                      className="w-full h-40 object-cover object-top border-b border-gray-200 bg-white"
+                    />
+                    <div className="p-5">
+                      <div className="text-2xl mb-3">{item.icon}</div>
+                      <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
+                      <p className="text-sm text-gray-600 leading-7">{item.desc}</p>
+                    </div>
                   </div>
                 ))}
               </div>
