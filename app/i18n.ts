@@ -10,6 +10,7 @@ export const translations = {
     nav_download: '下载',
     nav_docs: '使用文档',
     nav_api_guide: 'API配置',
+    nav_boss: '牛人快跑',
     nav_faq: 'FAQ',
     nav_buy: '立即购买',
 
@@ -294,6 +295,7 @@ export const translations = {
     nav_download: 'Download',
     nav_docs: 'Docs',
     nav_api_guide: 'API Guide',
+    nav_boss: 'GeekGeekRun',
     nav_faq: 'FAQ',
     nav_buy: 'Buy Now',
 

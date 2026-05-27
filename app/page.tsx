@@ -41,6 +41,7 @@ function Navbar() {
           <a href="https://www.bilibili.com/video/BV1WuXPB7Esu/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition">{t.nav_demo}</a>
           <a href="/docs" className="px-3 py-1.5 rounded-lg bg-amber-50 text-amber-700 font-semibold hover:bg-amber-100 transition">{t.nav_docs}</a>
           <a href="/api-guide" className="px-3 py-1.5 rounded-lg bg-purple-50 text-primary font-semibold hover:bg-purple-100 transition">{t.nav_api_guide}</a>
+          <a href="/boss" className="px-3 py-1.5 rounded-lg bg-blue-50 text-blue-700 font-semibold hover:bg-blue-100 transition">{t.nav_boss}</a>
           <a href="#features" className="hover:text-primary transition">{t.nav_features}</a>
           <a href="#stealth" className="hover:text-primary transition">{t.nav_stealth}</a>
           <a href="#download" className="hover:text-primary transition">{t.nav_download}</a>
