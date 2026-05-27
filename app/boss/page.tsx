@@ -5,7 +5,7 @@ import Link from 'next/link';
 const WIN_DOWNLOAD = 'https://github.com/benshan123/wdz/releases/download/2.3.2/geekgeekrun-ui_0.17.4_x64_setup.exe';
 const WIN_BAIDU = 'https://pan.baidu.com/s/1kxnkvXycCBoukfr1fexptA';
 const WIN_BAIDU_CODE = 'gpaz';
-const BRAND = '牛人快跑';
+const BRAND = 'AI辅助投递';
 
 function SectionCard({
   id,
@@ -118,7 +118,7 @@ export default function BossPage() {
             <span aria-hidden="true">←</span>
             <span>返回首页</span>
           </Link>
-          <div className="text-sm font-semibold gradient-text">{BRAND} · GeekGeekRun</div>
+          <div className="text-sm font-semibold gradient-text">{BRAND}</div>
         </div>
       </nav>
 
@@ -132,7 +132,7 @@ export default function BossPage() {
                 BOSS 直聘自动投递助手
               </div>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
-                牛人快跑，<span className="gradient-text">自动批量开聊 BOSS</span>
+                AI辅助投递，<span className="gradient-text">自动批量开聊 BOSS</span>
               </h1>
               <p className="text-lg text-gray-600 leading-8 max-w-3xl mb-4">
                 按你的求职偏好，自动开聊推荐列表中匹配的职位；已读不回自动复聊，让沟通双向奔赴。无论小白还是大佬，几步简单配置即可快速开始求职。
@@ -338,7 +338,7 @@ export default function BossPage() {
           {/* Footer */}
           <footer className="mt-10 rounded-3xl border border-gray-200 bg-white px-6 py-8 md:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
-              <p className="text-sm font-semibold text-primary mb-1">{BRAND} · GeekGeekRun</p>
+              <p className="text-sm font-semibold text-primary mb-1">{BRAND}</p>
               <p className="text-gray-500">遇到问题或有建议，欢迎反馈，我们会持续修复与迭代。</p>
             </div>
             <div className="flex flex-wrap gap-3">
