@@ -413,18 +413,18 @@ function DownloadSection() {
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="reveal text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t.download_title}{BRAND}</h2>
         <p className="reveal reveal-delay-1 text-gray-500 mb-10">{t.download_desc}</p>
-        <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {/* Windows */}
           <div className="reveal reveal-delay-1 bg-white rounded-2xl border border-gray-200 p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
             <div className="text-4xl mb-3">💻</div>
             <h3 className="font-bold text-lg text-gray-900 mb-1">{t.download_win_title}</h3>
             <p className="text-sm text-gray-400 mb-4">{t.download_win_spec}</p>
-            <a href="https://github.com/benshan123/wdz/releases/download/2.3.2/mianshikun-Setup-2.3.2.exe" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/benshan123/wdz/releases/download/v3.1/mianshikun-Setup-2.3.9.exe" target="_blank" rel="noopener noreferrer"
               className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center mb-2">
               {t.download_win_btn}
             </a>
             <p className="text-xs text-gray-400 mb-3">{t.download_win_note}</p>
-            <a href="https://pan.baidu.com/s/1YDnVvDJ75jAeWZAs0H5MJg" target="_blank" rel="noopener noreferrer"
+            <a href="https://pan.baidu.com/s/1aI3ATo56WT7rUho5k3hp_Q" target="_blank" rel="noopener noreferrer"
               className="btn-outline px-6 py-2.5 rounded-xl font-semibold inline-block w-full text-center text-sm mb-3">
               {t.download_win_baidu}
             </a>
@@ -435,16 +435,32 @@ function DownloadSection() {
             <div className="text-4xl mb-3">🍎</div>
             <h3 className="font-bold text-lg text-gray-900 mb-1">{t.download_mac_title}</h3>
             <p className="text-sm text-gray-400 mb-4">{t.download_mac_spec}</p>
-            <a href="https://github.com/benshan123/wdz/releases/download/2.3.2/mianshikun-2.3.2-universal.dmg" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/benshan123/wdz/releases/download/v3.1/mianshikun-2.3.9-universal.dmg" target="_blank" rel="noopener noreferrer"
               className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center mb-2">
               {t.download_mac_btn}
             </a>
             <p className="text-xs text-gray-400 mb-3">{t.download_mac_note}</p>
-            <a href="https://pan.baidu.com/s/17nfKTjq7PncwaLjngslskA" target="_blank" rel="noopener noreferrer"
+            <a href="https://pan.baidu.com/s/1DbWthnJTUf6mvrRejvTV3g" target="_blank" rel="noopener noreferrer"
               className="btn-outline px-6 py-2.5 rounded-xl font-semibold inline-block w-full text-center text-sm mb-3">
               {t.download_mac_baidu}
             </a>
             <p className="text-xs text-gray-400">{t.download_mac_warn}</p>
+          </div>
+          {/* Android */}
+          <div className="reveal reveal-delay-3 bg-white rounded-2xl border border-gray-200 p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div className="text-4xl mb-3">📱</div>
+            <h3 className="font-bold text-lg text-gray-900 mb-1">{t.download_android_title}</h3>
+            <p className="text-sm text-gray-400 mb-4">{t.download_android_spec}</p>
+            <a href="https://github.com/benshan123/wdz/releases/download/v3.1/app-debug.apk" target="_blank" rel="noopener noreferrer"
+              className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center mb-2">
+              {t.download_android_btn}
+            </a>
+            <p className="text-xs text-gray-400 mb-3">{t.download_android_note}</p>
+            <a href="https://pan.baidu.com/s/1u_N4NyBTjMDViaGba_mdOQ" target="_blank" rel="noopener noreferrer"
+              className="btn-outline px-6 py-2.5 rounded-xl font-semibold inline-block w-full text-center text-sm mb-3">
+              {t.download_android_baidu}
+            </a>
+            <p className="text-xs text-gray-400">{t.download_android_warn}</p>
           </div>
         </div>
         <p className="text-sm text-gray-400 mt-6">
