@@ -3,8 +3,8 @@
 import Link from 'next/link';
 
 const WIN_DOWNLOAD = 'https://github.com/benshan123/wdz/releases/download/2.3.2/geekgeekrun-ui_0.17.4_x64_setup.exe';
-const WIN_BAIDU = 'https://pan.baidu.com/s/1QdA-DrpeSCbSL8C1jX5ShQ';
-const WIN_BAIDU_CODE = 'zpk1';
+const WIN_BAIDU = 'https://pan.baidu.com/s/18qR_Ox9x2DlUaPTxg4737A';
+const WIN_BAIDU_CODE = 'i94c';
 const BRAND = 'AI辅助投递';
 
 function SectionCard({

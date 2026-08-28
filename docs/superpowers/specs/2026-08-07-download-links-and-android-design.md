@@ -8,8 +8,8 @@
 
 | 平台 | GitHub | 百度网盘 | 提取码 |
 | --- | --- | --- | --- |
-| Windows | `https://github.com/benshan123/wdz/releases/download/v3.1/mianshikun-Setup-2.3.9.exe` | `https://pan.baidu.com/s/1QdA-DrpeSCbSL8C1jX5ShQ` | `zpk1` |
-| macOS | `https://github.com/benshan123/wdz/releases/download/v3.1/mianshikun-2.3.9-universal.dmg` | `https://pan.baidu.com/s/1XUua0GcvrfX5FoSy4p7EsQ` | `tqht` |
+| Windows | `https://github.com/benshan123/wdz/releases/download/v3.1/mianshikun-Setup-2.3.9.exe` | `https://pan.baidu.com/s/18qR_Ox9x2DlUaPTxg4737A` | `i94c` |
+| macOS | `https://github.com/benshan123/wdz/releases/download/v3.1/mianshikun-2.3.9-universal.dmg` | `https://pan.baidu.com/s/1DuAn9NIFz3s0H_-YC338Yg` | `u58n` |
 | Android | `https://github.com/benshan123/wdz/releases/download/v3.1/app-debug.apk` | `https://pan.baidu.com/s/1u_N4NyBTjMDViaGba_mdOQ` | `84mx` |
 
 ## 页面设计
