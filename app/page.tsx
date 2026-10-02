@@ -407,19 +407,32 @@ function PricingSection() {
 
 /* ---- 下载 ---- */
 function DownloadSection() {
-  const { t } = useLanguage();
+  const { locale, t } = useLanguage();
   return (
     <section id="download" className="py-20 px-4 bg-gray-50">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="reveal text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t.download_title}{BRAND}</h2>
         <p className="reveal reveal-delay-1 text-gray-500 mb-10">{t.download_desc}</p>
+        {locale === 'zh' && (
+          <div className="reveal reveal-delay-1 mb-10 rounded-2xl border border-purple-100 bg-white px-6 py-5 text-left shadow-sm">
+            <div className="mb-3 text-sm font-bold text-primary">{t.download_update_title}</div>
+            <ul className="grid gap-2 text-sm leading-relaxed text-gray-600 md:grid-cols-3">
+              {t.download_update_items.map(item => (
+                <li key={item} className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {/* Windows */}
           <div className="reveal reveal-delay-1 bg-white rounded-2xl border border-gray-200 p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
             <div className="text-4xl mb-3">💻</div>
             <h3 className="font-bold text-lg text-gray-900 mb-1">{t.download_win_title}</h3>
             <p className="text-sm text-gray-400 mb-4">{t.download_win_spec}</p>
-            <a href="https://github.com/benshan123/wdz/releases/download/v3.1/mianshikun-Setup-2.3.9.exe" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/benshan123/wdz/releases/download/2.3.2/InterviewKun-Setup-2.4.6.exe" target="_blank" rel="noopener noreferrer"
               className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center mb-2">
               {t.download_win_btn}
             </a>
@@ -435,7 +448,7 @@ function DownloadSection() {
             <div className="text-4xl mb-3">🍎</div>
             <h3 className="font-bold text-lg text-gray-900 mb-1">{t.download_mac_title}</h3>
             <p className="text-sm text-gray-400 mb-4">{t.download_mac_spec}</p>
-            <a href="https://github.com/benshan123/wdz/releases/download/v3.1/mianshikun-2.3.9-universal.dmg" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/benshan123/wdz/releases/download/2.3.2/InterviewKun-2.4.6-arm64.dmg" target="_blank" rel="noopener noreferrer"
               className="btn-primary px-6 py-3 rounded-xl font-semibold inline-block w-full text-center mb-2">
               {t.download_mac_btn}
             </a>
