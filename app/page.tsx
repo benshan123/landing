@@ -437,7 +437,7 @@ function DownloadSection() {
               {t.download_win_btn}
             </a>
             <p className="text-xs text-gray-400 mb-3">{t.download_win_note}</p>
-            <a href="https://pan.baidu.com/s/18qR_Ox9x2DlUaPTxg4737A" target="_blank" rel="noopener noreferrer"
+            <a href={locale === 'zh' ? 'https://pan.baidu.com/s/173eQ_H4GiLsWPiZrOLJdJw?pwd=3f6s' : 'https://pan.baidu.com/s/18qR_Ox9x2DlUaPTxg4737A'} target="_blank" rel="noopener noreferrer"
               className="btn-outline px-6 py-2.5 rounded-xl font-semibold inline-block w-full text-center text-sm mb-3">
               {t.download_win_baidu}
             </a>
@@ -453,7 +453,7 @@ function DownloadSection() {
               {t.download_mac_btn}
             </a>
             <p className="text-xs text-gray-400 mb-3">{t.download_mac_note}</p>
-            <a href="https://pan.baidu.com/s/1DuAn9NIFz3s0H_-YC338Yg" target="_blank" rel="noopener noreferrer"
+            <a href={locale === 'zh' ? 'https://pan.baidu.com/s/12vDGFFnonbfJzuLR46j0bA?pwd=t88g' : 'https://pan.baidu.com/s/1DuAn9NIFz3s0H_-YC338Yg'} target="_blank" rel="noopener noreferrer"
               className="btn-outline px-6 py-2.5 rounded-xl font-semibold inline-block w-full text-center text-sm mb-3">
               {t.download_mac_baidu}
             </a>
