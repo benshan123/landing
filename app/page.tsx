@@ -609,7 +609,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 /* ---- 页脚 ---- */
 function FooterSection() {
-  const { t } = useLanguage();
+  const { locale, t } = useLanguage();
   return (
     <section id="contact" className="py-16 px-4 border-t border-gray-200">
       <div className="max-w-3xl mx-auto text-center">
@@ -618,7 +618,13 @@ function FooterSection() {
         <div className="flex flex-col sm:flex-row justify-center items-stretch gap-6">
           <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm flex flex-col items-center">
             <div className="flex-1 flex items-center">
-              <Image src="/qq-qr.png" alt="QQ" width={200} height={200} className="rounded-xl" />
+              <Image
+                src={locale === 'zh' ? '/qq-qr-zh.png' : '/qq-qr.png'}
+                alt="QQ"
+                width={200}
+                height={363}
+                className="rounded-xl"
+              />
             </div>
             <p className="text-sm text-gray-600 mt-3 font-medium">{t.footer_qq}</p>
           </div>
