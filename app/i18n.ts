@@ -271,7 +271,7 @@ export const translations = {
     // Footer
     footer_title: '联系客服',
     footer_desc: '扫码添加 QQ 好友，咨询购买与使用问题',
-    footer_qq: 'QQ：1245980446',
+    footer_qq: 'QQ：1594553945',
     footer_group_label: 'QQ 交流群：',
     footer_group_note: '加群获取最新版本、交流使用技巧',
     footer_copyright: '© 2026 {brand} · 本产品为 AI 学习辅助工具，请合理使用',
