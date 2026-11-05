@@ -5,7 +5,6 @@ export const translations = {
     // Navbar
     nav_demo: '📺 效果演示',
     nav_features: '功能',
-    nav_stealth: '隐私模式',
     nav_pricing: '价格',
     nav_download: '下载',
     nav_docs: '使用文档',
@@ -44,19 +43,6 @@ export const translations = {
     feat_interview_stat3_label: '本地语音引擎',
     feat_interview_items: ['技术面 / HR 面 / 行为面', '📄 支持上传简历图片，AI 自动解析项目经历与技能', '🎯 面试回答结合你的简历，生成个性化、强相关的参考回答', '本地离线识别，不依赖网络'],
     feat_interview_alt: 'AI 面试助手',
-
-    // Stealth
-    stealth_title: '隐私保护，专注学习',
-    stealth_desc: '注重用户隐私保护，学习窗口采用沉浸式设计，不会被屏幕录制或共享捕获，确保你的学习过程不被打扰。',
-    stealth_cards: [
-      { icon: '🖥️', title: '隐私窗口模式', desc: '学习窗口采用系统级隐私保护，不会出现在屏幕录制或共享画面中，保护你的练习隐私。' },
-      { icon: '🔒', title: '无干扰浮窗', desc: '独立浮窗设计，专注模式下自由切换练习内容，学习过程流畅不中断。' },
-      { icon: '👁️', title: '自由布局', desc: '快捷键移动窗口至任意位置，根据习惯自由调整学习窗口布局。' },
-      { icon: '⌨️', title: '极简交互', desc: '全程快捷键操作，无需鼠标点击，学习效率更高。' },
-    ],
-    stealth_platforms_title: '支持平台',
-    stealth_platforms: ['腾讯会议', '飞书', 'Zoom', 'Teams', '牛客', '赛码', '浏览器网页'],
-    stealth_lockscreen_warn: '💡 提示：部分平台可能有不同的窗口兼容性，建议提前测试确认最佳体验。',
 
     // Compare
     compare_title: '为什么选择 ',

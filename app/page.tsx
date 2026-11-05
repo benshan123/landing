@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { useLanguage } from './LanguageContext';
+import ShortcutReference from './ShortcutReference';
+import { docsTranslations } from './docs/i18n-docs';
 import { translations } from './i18n';
 import { useRevealAll } from './useReveal';
 
@@ -50,7 +52,11 @@ function Navbar() {
             {locale === 'zh' && <span className="hidden rounded bg-white/20 px-1.5 py-0.5 text-xs font-semibold lg:inline">安装后必做</span>}
           </a>
           <a href="#features" className="hover:text-primary transition">{t.nav_features}</a>
-          <a href="#stealth" className="hover:text-primary transition">{t.nav_stealth}</a>
+          {locale === 'zh' ? (
+            <a href="#shortcuts" className="whitespace-nowrap font-semibold text-primary hover:underline">快捷键</a>
+          ) : (
+            <a href="#stealth" className="hover:text-primary transition">{translations.en.nav_stealth}</a>
+          )}
           <a href="#download" className="hover:text-primary transition">{t.nav_download}</a>
           <a href="#faq" className="hover:text-primary transition">{t.nav_faq}</a>
         </div>
@@ -66,7 +72,7 @@ function Navbar() {
 
 /* ---- Hero ---- */
 function HeroSection() {
-  const { t } = useLanguage();
+  const { locale, t } = useLanguage();
   return (
     <section className="relative pt-28 pb-20 px-4 overflow-hidden">
       {/* 背景装饰：blob + 网格 */}
@@ -98,6 +104,11 @@ function HeroSection() {
             <a href="#pricing" className="btn-primary px-8 py-3.5 rounded-xl text-lg font-semibold text-center">{t.hero_buy}</a>
             <a href="#download" className="btn-outline px-8 py-3.5 rounded-xl text-lg font-semibold text-center">{t.hero_download}</a>
           </div>
+          {locale === 'zh' && (
+            <a href="#shortcuts" className="mt-3 inline-flex items-center gap-2 px-3 py-3 text-sm font-semibold text-primary underline underline-offset-4 md:hidden">
+              查看常用快捷键 <span aria-hidden="true">↓</span>
+            </a>
+          )}
           {/* 移动端标签行（桌面端由浮动 chip 替代） */}
           <div className="reveal reveal-delay-4 mt-10 flex flex-wrap justify-center md:hidden gap-x-6 gap-y-3 text-sm text-gray-400">
             <span>{t.hero_tag_stealth}</span><span>{t.hero_tag_fast}</span><span>{t.hero_tag_api}</span><span>{t.hero_tag_platform}</span>
@@ -191,9 +202,25 @@ function FeaturesSection() {
   );
 }
 
-/* ---- 隐身能力 ---- */
+/* ---- 快捷键 ---- */
+function ShortcutsSection() {
+  const { s04_title, s04_desc } = docsTranslations.zh;
+  return (
+    <section id="shortcuts" aria-labelledby="shortcuts-title" className="scroll-mt-20 border-t border-gray-100 px-4 py-12 md:py-16">
+      <div className="mx-auto max-w-4xl">
+        <div className="mb-8 text-center">
+          <h2 id="shortcuts-title" className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">{s04_title}</h2>
+          <p className="mx-auto max-w-2xl text-gray-600">{s04_desc}</p>
+        </div>
+        <ShortcutReference locale="zh" />
+      </div>
+    </section>
+  );
+}
+
+/* ---- 英文版隐身能力 ---- */
 function StealthSection() {
-  const { t } = useLanguage();
+  const t = translations.en;
   return (
     <section id="stealth" className="py-20 px-4">
       <div className="max-w-5xl mx-auto">
@@ -662,13 +689,15 @@ function FooterSection() {
 
 /* ---- 主页面 ---- */
 export default function Home() {
+  const { locale } = useLanguage();
   useRevealAll();
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
       <HeroSection />
+      {locale === 'zh' && <ShortcutsSection />}
       <FeaturesSection />
-      <StealthSection />
+      {locale === 'en' && <StealthSection />}
       <CompareSection />
       <PricingSection />
       <DownloadSection />
