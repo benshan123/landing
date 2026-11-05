@@ -212,7 +212,7 @@ function ShortcutsSection() {
           <h2 id="shortcuts-title" className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">{s04_title}</h2>
           <p className="mx-auto max-w-2xl text-gray-600">{s04_desc}</p>
         </div>
-        <ShortcutReference locale="zh" />
+        <ShortcutReference locale="zh" usageTip="面试坤的操作极为简单，只需要记住使用 Ctrl + 几个英文字母，就可以快捷操作。" />
       </div>
     </section>
   );

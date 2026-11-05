@@ -1,7 +1,7 @@
 import { docsTranslations } from './docs/i18n-docs';
 import type { Locale } from './i18n';
 
-export default function ShortcutReference({ locale }: { locale: Locale }) {
+export default function ShortcutReference({ locale, usageTip }: { locale: Locale; usageTip?: string }) {
   const t = docsTranslations[locale];
   const cellPadding = locale === 'zh' ? 'px-3 sm:px-5' : 'px-5';
   const keyPadding = locale === 'zh' ? 'whitespace-nowrap px-1.5 sm:px-2.5' : 'px-2.5';
@@ -9,7 +9,7 @@ export default function ShortcutReference({ locale }: { locale: Locale }) {
   return (
     <>
       <div className="mb-5 rounded-2xl border border-purple-100 bg-purple-50 px-5 py-4 text-sm leading-7 text-purple-900">
-        {t.s04_jokeTip}
+        {usageTip ?? t.s04_jokeTip}
       </div>
       <div className="overflow-hidden rounded-2xl border border-gray-200">
         <div className="overflow-x-auto">
