@@ -29,7 +29,7 @@ function LanguageSwitch() {
 
 /* ---- 导航栏 ---- */
 function Navbar() {
-  const { t } = useLanguage();
+  const { locale, t } = useLanguage();
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
@@ -40,7 +40,15 @@ function Navbar() {
         <div className="hidden md:flex items-center gap-5 text-sm text-gray-600">
           <a href="https://www.bilibili.com/video/BV1WuXPB7Esu/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition">{t.nav_demo}</a>
           <a href="/docs" className="px-3 py-1.5 rounded-lg bg-amber-50 text-amber-700 font-semibold hover:bg-amber-100 transition">{t.nav_docs}</a>
-          <a href="/api-guide" className="px-3 py-1.5 rounded-lg bg-purple-50 text-primary font-semibold hover:bg-purple-100 transition">{t.nav_api_guide}</a>
+          <a
+            href="/api-guide"
+            className={locale === 'zh'
+              ? 'inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-lg bg-indigo-700 px-3 py-1.5 font-bold text-white shadow-sm shadow-indigo-900/20 transition hover:bg-indigo-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-700'
+              : 'px-3 py-1.5 rounded-lg bg-purple-50 text-primary font-semibold hover:bg-purple-100 transition'}
+          >
+            {t.nav_api_guide}
+            {locale === 'zh' && <span className="hidden rounded bg-white/20 px-1.5 py-0.5 text-xs font-semibold lg:inline">安装后必做</span>}
+          </a>
           <a href="#features" className="hover:text-primary transition">{t.nav_features}</a>
           <a href="#stealth" className="hover:text-primary transition">{t.nav_stealth}</a>
           <a href="#download" className="hover:text-primary transition">{t.nav_download}</a>
@@ -424,6 +432,14 @@ function DownloadSection() {
                 </li>
               ))}
             </ul>
+          </div>
+        )}
+        {locale === 'zh' && (
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-indigo-200 bg-indigo-50 px-4 py-3 text-left">
+            <p className="text-sm font-semibold text-indigo-950">安装完成后，请先配置 API 再开始使用。</p>
+            <a href="/api-guide" className="inline-flex items-center gap-2 rounded-lg bg-indigo-700 px-4 py-3 text-sm font-bold text-white transition hover:bg-indigo-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-700">
+              查看 API 配置指南 <span aria-hidden="true">→</span>
+            </a>
           </div>
         )}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
