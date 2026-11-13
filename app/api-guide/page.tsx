@@ -68,27 +68,27 @@ const steps = [
   },
   {
     num: '4',
-    title: '【单机位版】在电脑客户端中配置 API',
+    title: '在电脑客户端中配置 API',
     desc: (
       <>
-        <p className="mb-2">打开 StealthMate 客户端，进入 <strong>「高级设置」→「自定义 API」</strong>：</p>
+        <p className="mb-2">打开面试坤客户端，进入设置中的 <strong>「API 与语音识别」→「截图解题 API」</strong>：</p>
         <ul className="list-disc list-inside space-y-1 text-gray-600">
-          <li><strong>API 提供商</strong>：选择「通义千问（国内直连，支持图片）」</li>
+          <li><strong>API 提供商</strong>：选择「通义千问」</li>
           <li><strong>API Key</strong>：粘贴刚才复制的 sk- 开头的密钥</li>
           <li><strong>模型</strong>：选择 <code className="bg-gray-100 px-1.5 py-0.5 rounded text-sm">kimi-k2.6</code>（截至 2026-06-01 表现最强，推荐）</li>
         </ul>
-        <p className="mt-2">点击 <strong>「测试连接」</strong>，看到「成功：连接成功」即配置完成。然后点击「保存」。</p>
+        <p className="mt-2">点击 <strong>「测试截图解题 API」</strong>，确认连接成功后点击「保存」。</p>
       </>
     ),
-    img: '/api-guide-desktop.png',
-    imgAlt: '单机位客户端 API 设置',
+    img: '/api-guide-desktop.jpg',
+    imgAlt: '面试坤客户端的截图解题 API 设置',
   },
   {
     num: '5',
-    title: '【双机位版】在手机端配置 API（新版「局域网模式」可跳过此步骤，电脑端配置完成后会自动同步到手机）',
+    title: '【手机卡视野版 · 非必须】在手机端配置 API（新版「局域网模式」可跳过此步骤，电脑端配置完成后会自动同步到手机）',
     desc: (
       <>
-        <p className="mb-2">双机位版的 AI 分析由手机端直接调用。配对连接成功后，点击手机页面右上角 <strong>「设置」</strong> 图标：</p>
+        <p className="mb-2">手机卡视野版的 AI 分析由手机端直接调用。配对连接成功后，点击手机页面右上角 <strong>「设置」</strong> 图标：</p>
         <ul className="list-disc list-inside space-y-1 text-gray-600">
           <li><strong>AI 提供商</strong>：选择「通义千问」</li>
           <li><strong>API Key</strong>：粘贴 sk- 开头的密钥</li>
