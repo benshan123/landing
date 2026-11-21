@@ -75,9 +75,29 @@ const steps = [
         <ul className="list-disc list-inside space-y-1 text-gray-600">
           <li><strong>API 提供商</strong>：选择「通义千问」</li>
           <li><strong>API Key</strong>：粘贴刚才复制的 sk- 开头的密钥</li>
-          <li><strong>模型</strong>：选择 <code className="bg-gray-100 px-1.5 py-0.5 rounded text-sm">kimi-k2.6</code>（截至 2026-06-01 表现最强，推荐）</li>
+          <li>
+            <strong>模型</strong>：点击输入框里的文字区域，<strong className="rounded bg-amber-100 px-1.5 py-0.5 text-amber-900">手动输入或粘贴</strong>{' '}
+            <code className="bg-gray-100 px-1.5 py-0.5 rounded text-sm">kimi-k2.6</code>，再按回车确认。右侧箭头可以展开模型列表。
+          </li>
         </ul>
         <p className="mt-2">点击 <strong>「测试截图解题 API」</strong>，确认连接成功后点击「保存」。</p>
+        <div className="mt-4 rounded-lg border border-blue-100 bg-blue-50 p-4">
+          <h4 className="mb-2 font-semibold text-gray-900">通义千问 API 无法正常使用时，可切换到 Kimi</h4>
+          <ol className="list-decimal space-y-1.5 pl-5">
+            <li>
+              打开 <a href="https://platform.kimi.com/console/api-keys" target="_blank" rel="noopener noreferrer"
+                className="font-semibold text-blue-700 underline underline-offset-2 hover:text-blue-900">Kimi 开放平台的 API Key 管理页</a>，
+              注册或登录后点击「新建」，复制生成的 API Key。如果余额不足，按平台提示完成认证和充值。
+            </li>
+            <li>
+              回到客户端，将「API 提供商」切换为 <strong>「Kimi」</strong>，粘贴新申请的 API Key。
+              参考 <a href="https://platform.kimi.com/docs/models" target="_blank" rel="noopener noreferrer"
+                className="font-semibold text-blue-700 underline underline-offset-2 hover:text-blue-900">Kimi 官方模型列表</a>，
+              选择支持图片输入的模型，将模型 ID 手动填入「模型」框，再按回车确认。
+              点击「测试截图解题 API」，连接成功后点击「保存」。
+            </li>
+          </ol>
+        </div>
       </>
     ),
     img: '/api-guide-desktop.jpg',
@@ -92,7 +112,7 @@ const steps = [
         <ul className="list-disc list-inside space-y-1 text-gray-600">
           <li><strong>AI 提供商</strong>：选择「通义千问」</li>
           <li><strong>API Key</strong>：粘贴 sk- 开头的密钥</li>
-          <li><strong>模型</strong>：选择 <code className="bg-gray-100 px-1.5 py-0.5 rounded text-sm">kimi-k2.6</code></li>
+          <li><strong>模型</strong>：手动输入 <code className="bg-gray-100 px-1.5 py-0.5 rounded text-sm">kimi-k2.6</code></li>
           <li><strong>CORS 代理 URL</strong>：留空即可（通义千问支持直连）</li>
           <li><strong>编程语言</strong>：根据需要选择（如 Python3）</li>
         </ul>
@@ -183,8 +203,7 @@ export default function ApiGuidePage() {
           <div className="mt-10 bg-green-50 border border-green-200 rounded-xl px-6 py-5">
             <h4 className="font-bold text-green-800 mb-2">🎉 配置完成！</h4>
             <p className="text-sm text-green-700 leading-relaxed">
-              配置成功后，截图分析将使用你自己的 API Key 调用通义千问 kimi-k2.6 模型。
-              费用从你的阿里云账户余额中扣除，每次仅需几分钱。
+              配置成功后，截图分析会使用你填写的 API Key，由所选 API 提供商按用量计费。
               如遇问题，可加 QQ 群（1094796213）咨询。
             </p>
           </div>
