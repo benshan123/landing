@@ -135,7 +135,7 @@ export default function BossPage() {
               <img src="/kunkun.png" alt="面试坤" className="h-9 w-9 flex-shrink-0 rounded-lg bg-white/20" />
               <div className="leading-tight min-w-0">
                 <div className="text-sm font-bold">面试坤 · AI 模拟面试助手</div>
-                <div className="truncate text-xs text-white/85">截图练习智能解析 · 语音模拟面试实时生成参考回答，助你轻松拿 Offer</div>
+                <div className="mt-1 text-xs leading-relaxed text-white/90">仅供模拟面试练习与复盘。严禁用于真实笔试或面试。</div>
               </div>
             </div>
             <span className="flex-shrink-0 whitespace-nowrap text-sm font-semibold">
