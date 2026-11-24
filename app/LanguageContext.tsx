@@ -1,9 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { usePathname } from 'next/navigation';
 import { Locale, Translations, translations } from './i18n';
-import { siteMetadata } from './siteMetadata';
 
 type LanguageContextType = {
   locale: Locale;
@@ -15,8 +13,6 @@ const LanguageContext = createContext<LanguageContextType | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState<Locale>('zh');
-  const section = usePathname().split('/')[1];
-  const pageLocale = section === 'api-guide' || section === 'boss' ? 'zh' : locale;
 
   useEffect(() => {
     const saved = localStorage.getItem('locale') as Locale;
@@ -25,17 +21,10 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
-  useEffect(() => {
-    const metadata = siteMetadata[pageLocale];
-    document.documentElement.lang = pageLocale === 'zh' ? 'zh-CN' : 'en';
-    document.title = metadata.title;
-    document.querySelector('meta[name="description"]')?.setAttribute('content', metadata.description);
-    document.querySelector('meta[name="keywords"]')?.setAttribute('content', metadata.keywords);
-  }, [pageLocale]);
-
   const handleSetLocale = (newLocale: Locale) => {
     setLocale(newLocale);
     localStorage.setItem('locale', newLocale);
+    document.documentElement.lang = newLocale === 'zh' ? 'zh-CN' : 'en';
   };
 
   return (

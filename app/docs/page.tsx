@@ -73,7 +73,7 @@ export default function DocsPage() {
                 {t.badge}
               </div>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
-                {t.heroTitle_prefix}<span className="gradient-text">{locale === 'zh' ? '模拟面试' : 'Cheapest Interview'}</span>
+                {t.heroTitle_prefix}<span className="gradient-text">Cheapest Interview</span>
               </h1>
               <p className="text-lg text-gray-600 leading-8 max-w-3xl mb-8">{t.heroDesc}</p>
               <div className="flex flex-wrap gap-3">
@@ -337,7 +337,7 @@ export default function DocsPage() {
           {/* Footer */}
           <footer className="mt-10 rounded-3xl border border-gray-200 bg-white px-6 py-8 md:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
-              <p className="text-sm font-semibold text-primary mb-1">{locale === 'zh' ? '面试坤' : 'Cheapest Interview'}</p>
+              <p className="text-sm font-semibold text-primary mb-1">Cheapest Interview</p>
               <p className="text-gray-500">{t.footerDesc}</p>
             </div>
             <div className="flex flex-wrap gap-3">

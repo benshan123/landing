@@ -40,9 +40,7 @@ function Navbar() {
           <span className="font-bold text-2xl leading-none tracking-tight">{BRAND}</span>
         </div>
         <div className="hidden md:flex items-center gap-5 text-sm text-gray-600">
-          {locale === 'en' && (
-            <a href="https://www.bilibili.com/video/BV1WuXPB7Esu/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition">{translations.en.nav_demo}</a>
-          )}
+          <a href="https://www.bilibili.com/video/BV1WuXPB7Esu/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition">{t.nav_demo}</a>
           <a href="/docs" className="px-3 py-1.5 rounded-lg bg-amber-50 text-amber-700 font-semibold hover:bg-amber-100 transition">{t.nav_docs}</a>
           <a
             href="/api-guide"
@@ -124,7 +122,7 @@ function HeroSection() {
 
         {/* 右：产品 mockup + 浮动 chip */}
         <div className="reveal reveal-delay-2 relative mx-auto md:mx-0 w-full max-w-xl md:max-w-none">
-          <figure className="mockup-tilt relative rounded-2xl overflow-hidden shadow-2xl shadow-purple-200/50 border border-gray-200 bg-white">
+          <div className="mockup-tilt relative rounded-2xl overflow-hidden shadow-2xl shadow-purple-200/50 border border-gray-200 bg-white">
             <Image
               src="/interview-demo.png"
               alt={t.feat_interview_alt}
@@ -133,10 +131,7 @@ function HeroSection() {
               priority
               className="w-full h-auto block"
             />
-            {locale === 'zh' && (
-              <figcaption className="px-4 py-2.5 text-sm text-gray-600">模拟面试演示 · 和练习搭档讨论网页性能优化</figcaption>
-            )}
-          </figure>
+          </div>
 
           {/* 浮动 chip（仅桌面端） */}
           <div className="hidden md:block absolute -top-4 -left-6 chip-float">
@@ -163,7 +158,7 @@ function HeroSection() {
 
 /* ---- 功能展示 ---- */
 function FeaturesSection() {
-  const { locale, t } = useLanguage();
+  const { t } = useLanguage();
   return (
     <section id="features" className="py-20 px-4 bg-gray-50">
       <div className="max-w-6xl mx-auto">
@@ -180,10 +175,7 @@ function FeaturesSection() {
               ))}
             </div>
           </div>
-          <figure className="flex-1 reveal reveal-delay-2">
-            <Image src="/exam-demo.png" alt={t.feat_exam_alt} width={600} height={400} className="rounded-2xl shadow-xl border border-gray-200 transition-transform duration-500 hover:scale-[1.02]" />
-            {locale === 'zh' && <figcaption className="mt-3 text-center text-sm text-gray-600">模拟面试练习示例 · 自己做完链表题后，再对照参考解法</figcaption>}
-          </figure>
+          <div className="flex-1 reveal reveal-delay-2"><Image src="/exam-demo.png" alt={t.feat_exam_alt} width={600} height={400} className="rounded-2xl shadow-xl border border-gray-200 transition-transform duration-500 hover:scale-[1.02]" /></div>
         </div>
         <div className="flex flex-col md:flex-row-reverse items-center gap-12">
           <div className="flex-1 reveal">
@@ -203,10 +195,7 @@ function FeaturesSection() {
               ))}
             </div>
           </div>
-          <figure className="flex-1 reveal reveal-delay-2">
-            <Image src="/interview-demo.png" alt={t.feat_interview_alt} width={600} height={400} className="rounded-2xl shadow-xl border border-gray-200 transition-transform duration-500 hover:scale-[1.02]" />
-            {locale === 'zh' && <figcaption className="mt-3 text-center text-sm text-gray-600">模拟问答示例 · 回顾自己提到了哪些网页优化方法</figcaption>}
-          </figure>
+          <div className="flex-1 reveal reveal-delay-2"><Image src="/interview-demo.png" alt={t.feat_interview_alt} width={600} height={400} className="rounded-2xl shadow-xl border border-gray-200 transition-transform duration-500 hover:scale-[1.02]" /></div>
         </div>
       </div>
     </section>
@@ -223,7 +212,7 @@ function ShortcutsSection() {
           <h2 id="shortcuts-title" className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">{s04_title}</h2>
           <p className="mx-auto max-w-2xl text-gray-600">{s04_desc}</p>
         </div>
-        <ShortcutReference locale="zh" usageTip="做模拟题时，先说出自己的解法，再用快捷键对照解析。" />
+        <ShortcutReference locale="zh" usageTip="面试坤的操作极为简单，只需要记住使用 Ctrl + 几个英文字母，就可以快捷操作。" />
       </div>
     </section>
   );
@@ -474,7 +463,7 @@ function DownloadSection() {
         )}
         {locale === 'zh' && (
           <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-indigo-200 bg-indigo-50 px-4 py-3 text-left">
-            <p className="text-sm font-semibold text-indigo-950">安装完成后，请先配置 API，再开始第一次模拟面试。</p>
+            <p className="text-sm font-semibold text-indigo-950">安装完成后，请先配置 API 再开始使用。</p>
             <a href="/api-guide" className="inline-flex items-center gap-2 rounded-lg bg-indigo-700 px-4 py-3 text-sm font-bold text-white transition hover:bg-indigo-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-700">
               查看 API 配置指南 <span aria-hidden="true">→</span>
             </a>

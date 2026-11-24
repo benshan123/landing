@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 
-const BRAND = '面试坤';
+const BRAND = 'Cheapest Interview';
 
 const steps = [
   {
@@ -105,10 +105,10 @@ const steps = [
   },
   {
     num: '5',
-    title: '双设备练习时，在手机端配置 API（可选）',
+    title: '【手机卡视野版 · 非必须】在手机端配置 API（新版「局域网模式」可跳过此步骤，电脑端配置完成后会自动同步到手机）',
     desc: (
       <>
-        <p className="mb-2">新版「局域网模式」会把电脑端的 API 设置同步到手机，可直接跳过这一步。使用中转模式时，手机会直接调用模型。配对后，打开手机页面右上角的 <strong>「设置」</strong>，填写以下项目。</p>
+        <p className="mb-2">手机卡视野版的 AI 分析由手机端直接调用。配对连接成功后，点击手机页面右上角 <strong>「设置」</strong> 图标：</p>
         <ul className="list-disc list-inside space-y-1 text-gray-600">
           <li><strong>AI 提供商</strong>：选择「通义千问」</li>
           <li><strong>API Key</strong>：粘贴 sk- 开头的密钥</li>
@@ -149,7 +149,7 @@ export default function ApiGuidePage() {
               通义千问 API 配置指南
             </h1>
             <p className="text-gray-500 max-w-2xl mx-auto">
-              按以下步骤连接模型，用练习题截图检验配置。面试坤仅供模拟面试，严禁用于任何真实笔试或面试。
+              5 分钟完成配置，每次分析仅需几分钱，性价比最高的 AI 模型选择
             </p>
           </div>
 
@@ -167,8 +167,8 @@ export default function ApiGuidePage() {
             </div>
             <div className="bg-white rounded-xl border border-gray-200 p-5 text-center">
               <div className="text-2xl mb-2">👁️</div>
-              <h4 className="font-semibold text-gray-900 mb-1">练习题图片识别</h4>
-              <p className="text-sm text-gray-500">可读取练习截图中的题干和图表</p>
+              <h4 className="font-semibold text-gray-900 mb-1">视觉理解强</h4>
+              <p className="text-sm text-gray-500">kimi-k2.6 截图识别准确率高</p>
             </div>
           </div>
 
@@ -203,7 +203,7 @@ export default function ApiGuidePage() {
           <div className="mt-10 bg-green-50 border border-green-200 rounded-xl px-6 py-5">
             <h4 className="font-bold text-green-800 mb-2">🎉 配置完成！</h4>
             <p className="text-sm text-green-700 leading-relaxed">
-              现在可以截取一道做过的模拟题，查看解析并核对自己的解法。分析会使用你填写的 API Key，由所选服务商按用量计费。
+              配置成功后，截图分析会使用你填写的 API Key，由所选 API 提供商按用量计费。
               如遇问题，可加 QQ 群（1094796213）咨询。
             </p>
           </div>
@@ -220,7 +220,7 @@ export default function ApiGuidePage() {
       {/* 页脚 */}
       <section className="py-10 px-4 border-t border-gray-200">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-xs text-gray-500">© 2026 {BRAND} · 仅供模拟面试，严禁用于真实笔试或面试。</p>
+          <p className="text-xs text-gray-300">© 2026 {BRAND} · 本产品为 AI 学习辅助工具，请合理使用</p>
         </div>
       </section>
     </main>
